@@ -1,11 +1,8 @@
-console.log("je suis dans le mainController");
-// On crée le initController
-const mainController = {
-    init:async(req,res)=>{
-        const initiation = new ;
-        await initiation.save();
 
-        return initiation;
+const mainController = {
+    // Creation de la methode 
+    init:async(req,res)=>{
+       console.log("Nous sommes dans le mainController")
     }
 
 };
