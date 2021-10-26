@@ -51,7 +51,9 @@ CREATE TABLE "administrator" (
 );
 CREATE TABLE "supervise" (
     "id_administrator" int REFERENCES "administrator"("id"), 
-    "id_promo" int REFERENCES "promo"("id")
+    "id_promo" int REFERENCES "promo"("id"),
+    -- -- the primary key is the combination of the two foreign keys of our association table
+    PRIMARY KEY("id_administrator", "id_promo")
 );
 
 COMMIT;
