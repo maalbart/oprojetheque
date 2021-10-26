@@ -89,10 +89,10 @@ BEGIN;
 -- It is therefore necessary to update the current value of each of the sequences by selecting the maximum id of each table
  -- When inserting another row in one of the tables, the id will be incremented automatically from the max id, no duplicate id possible
 
-SELECT settval('promo_id_seq', (SELECT MAX(id) FROM "promo"));
-SELECT settval('student_id_seq', (SELECT MAX(id) FROM "student"));
+SELECT setval('promo_id_seq', (SELECT MAX(id) FROM "promo"));
+SELECT setval('student_id_seq', (SELECT MAX(id) FROM "student"));
 SELECT setval('project_id_seq', (SELECT MAX(id) FROM "project"));
-SELECT tval('administrator_id_seq', (SELECT MAX(id) FROM "administrator"));
+SELECT setval('administrator_id_seq', (SELECT MAX(id) FROM "administrator"));
 
 
 

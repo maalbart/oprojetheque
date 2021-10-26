@@ -1,10 +1,13 @@
+/* ICI IL FAUT REQUIRE LES MODELS APRES LES AVOIR CODER */
 
 const mainController = {
-    // Creation de la methode 
+    /* method to display the home page */
     homePage:async(req,res)=>{
-       console.log("Nous sommes dans le mainController")
+       console.log("Bienvenue sur la page d'accueil")
     }
 
 };
-// Je rend exportable le initController
+
+
+/* Exportation of mainController */
 module.exports = mainController;
