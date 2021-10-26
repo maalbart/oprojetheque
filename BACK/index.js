@@ -1,12 +1,12 @@
 // On require le dotenv
 require('dotenv').config();
-// On initialise expresse
+// On initialise express
 const express = require('express');
 // On require nos routes
 const router = require("./app/router");
 app.use(router);
 
-// on appel espress
+// On appel express
 const app = express();
 
 app.use(express.json());
