@@ -2,6 +2,6 @@
 
 BEGIN;
 
--- XXX Add DDLs here.
+DROP TABLE IF EXISTS promo, student, project, administrator, supervise ;
 
 COMMIT;

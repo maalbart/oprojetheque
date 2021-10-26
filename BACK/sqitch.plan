@@ -2,3 +2,4 @@
 %project=oprojetheque
 
 init 2021-10-26T12:26:11Z Etudiant O'clock <student@teleporter> # test creation oprojetheque BDD
+dataInsert 2021-10-26T13:15:19Z Etudiant O'clock <student@teleporter> # insertion des données
