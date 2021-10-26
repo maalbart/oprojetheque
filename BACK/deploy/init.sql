@@ -1,45 +1,57 @@
+-- Deploy oprojetheque:init to PG
+
 BEGIN;
-CREATE TABLE promo IF NOT EXISTS(
-    id serial PRIMARY KEY,
-    name TEXT NOT NULL,
-    logo  TEXT NOT NULL,
-    starting_date DATE NOT NULL,
-    ending_date DATE NOT NULL
+
+-- Delete tables if they already exist for security reasons
+DROP TABLE IF EXISTS 
+"promo", "student", "project", "administrator";
+
+-- Creation of differents tables
+CREATE TABLE "promo" (
+    "id" serial PRIMARY KEY, -- -- the serial type is specific to POSTGRESQL, it uses functions to automatically increment the id
+    "name" text NOT NULL,
+    "logo" text NOT NULL,
+    "starting_date" date NOT NULL,
+    "ending_date" date NOT NULL
     
 );
-CREATE TABLE student IF NOT EXISTS(
-    id serial PRIMARY KEY,
-    firstname TEXT NOT NULL,
-    lastname TEXT NOT NULL,
-    email TEXT NOT NULL,
-    password TEXT NOT NULL,
-    biography TEXT, 
-    avatar TEXT, 
-    id_promo INT NOT NULL REFERENCES promo(id),
-    id_project INT NOT NULL REFERENCES project(id)
+
+CREATE TABLE "student" (
+    "id" serial PRIMARY KEY,
+    "firstname" text NOT NULL,
+    "lastname" text NOT NULL,
+    "email" text NOT NULL,
+    "password" text NOT NULL,
+    "biography" text, -- Authorization to write the biography later (it can be NULL) / as well as for the other elements that are not null (avatar, logo, etc.)
+    "avatar" text, 
+    -- foreign key
+    "id_promo" int NOT NULL REFERENCES "promo"("id"),
+    "id_project" int NOT NULL REFERENCES "project"("id")
 );
-CREATE TABLE project IF NOT EXISTS(
-    id serial PRIMARY KEY,
-    name TEXT NOT NULL, 
-    logo TEXT, 
-    description TEXT,
-    site_link TEXT,
-    site_screen TEXT,
-    youtube_link TEXT,
-    id_promo INT NOT NULL REFERENCES promo(id)
+
+CREATE TABLE "project" (
+    "id" serial PRIMARY KEY,
+    "name" text NOT NULL, 
+    "logo" text, 
+    "description" text,
+    "site_link" text,
+    "site_screen" text
+    "youtube_link" text
+    -- foreign key
+    "id_promo" int NOT NULL REFERENCES "promo"("id") 
 );
-CREATE TABLE administrator IF NOT EXISTS (
-    id serial PRIMARY KEY, 
-    firstname TEXT NOT NULL,
-    lastname TEXT NOT NULL,
-    email TEXT NOT NULL,
-    password TEXT NOT NULL, 
-    job_title TEXT,
-    avatar TEXT
+CREATE TABLE "administrator" (
+    "id" serial PRIMARY KEY, 
+    "firstname" text NOT NULL,
+    "lastname" text NOT NULL,
+    "email" text NOT NULL,
+    "password" text NOT NULL, 
+    "job_title" text,
+    "avatar" text
 );
-CREATE TABLE supervise IF NOT EXISTS (
-    id_admin INT FOREIGN KEY (id_admin) REFERENCES administrator(id),
-    id_promo INT FOREIGN KEY (id_promo) REFERENCES promo(id)
+CREATE TABLE "supervise" (
+    "id_administrator" int REFERENCES "administrator"("id"), 
+    "id_promo" int REFERENCES "promo"("id")
 );
 
 COMMIT;

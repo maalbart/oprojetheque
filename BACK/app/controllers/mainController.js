@@ -1,7 +1,7 @@
 
 const mainController = {
     // Creation de la methode 
-    init:async(req,res)=>{
+    homePage:async(req,res)=>{
        console.log("Nous sommes dans le mainController")
     }
 
