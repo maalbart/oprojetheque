@@ -7,7 +7,7 @@ export default function Footer () {
     <footer className="footer">
       <img src={logoMug} alt="logo Mug" className="footer-logo" />
       <div className="footer-contact">
-        <p className="footer-contact-text">Contactez nous</p>
+        <p className="footer-contact-text">Contactez-nous</p>
         <p className="footer-contact-arrow">></p>
       </div>
       <div className="footer-socials">
