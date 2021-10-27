@@ -1,16 +1,22 @@
-/* ICI IL FAUT REQUIRE LES MODELS APRES LES AVOIR CODER */
-const Project = require ("../models/project.js");
+/* HERE WE HAVE TO REQUIRE THE MODELS AFTER WE'VE CODED THEM */
+const Project = require ("../models/projects.js");
 
 const mainController = {
-    /* method to display the home page */
+    /* Method to display the home page */
     homePage:async(req,res)=>{
-        console.log("Bienvenue sur la page des projets");
+        console.log("Bienvenue sur la page de l'accueil");
+        // const id = getOneProject.id;
         const projects = await Project.getAllProjects();
+        // const projectsRandom = Math.floor(Math.random * projects.id.length);
+
+        // console.log("PROJECTSRANDOM", projectsRandom);
         res.json(projects);
+        // projectsRandom
      }
 
 };
 
 
-/* Exportation of mainController */
+/* Exports mainController */
 module.exports = mainController;
+
