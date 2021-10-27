@@ -1,14 +1,17 @@
+/* Router initialization */
 const express = require("express");
-
-// On require nos controllers
-const mainController = require('./controllers/mainController.js');
-
-
-// Je récupère les routes
 const router = express.Router();
 
-/****** ROUTES  ******
-******************************/
+/* Controllers import */
+const mainController = require('./controllers/mainController.js');
+const projectController = require('./controllers/projectController.js');
+const promoController = require('./controllers/promoController.js');
+const userController = require('./controllers/userController.js');
+
+
+
+/****** All roads ******/
+
 /**
  * Preconfigue l'application 
  * @route GET /
@@ -16,6 +19,10 @@ const router = express.Router();
  * @returns {object} 200 - 
  * @returns {Error}  default - Une erreur est survenue
  */
- router.get("/", mainController.init);
+ router.get("/", mainController.homePage);
 
+
+
+
+/* Exportation of router */
  module.exports = router;
