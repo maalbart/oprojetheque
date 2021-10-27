@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Valhalla",
+        "logo": "lien",
+        "starting_date": "2021-06-07",
+        "ending_date": "2021-11-19"
+    },
+    {
+        "id": 2,
+        "name": "Astro",
+        "logo": "lien",
+        "starting_date": "2021-01-04",
+        "ending_date": "2021-06-19"
+    },
+    {
+        "id": 3,
+        "name": "Tipix",
+        "logo": "lien",
+        "starting_date": "2021-05-03",
+        "ending_date": "2021-10-15"
+    }
+]

@@ -53,5 +53,9 @@
 
 
 
-A FAIRE EN FONCTION DU TIMING:
+## A FAIRE EN FONCTION DU TIMING:
 - gestion du cache avec Redis (augmenter les performances)
+
+
+## A CHECKER PLUS TARD
+Type de donnees des dates car la date apparait en TMPZ (voir la page d'une promo pour l'affichage) 

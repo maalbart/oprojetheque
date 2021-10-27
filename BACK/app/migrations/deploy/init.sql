@@ -1,6 +1,6 @@
 -- Deploy oprojetheque:init to PG
 
-BEGIN;
+BEGIN; 
 
 -- Delete tables if they already exist for security reasons
 DROP TABLE IF EXISTS 
@@ -15,7 +15,17 @@ CREATE TABLE "promo" (
     "ending_date" date NOT NULL
     
 );
-
+CREATE TABLE "project" (
+    "id" serial PRIMARY KEY,
+    "name" text NOT NULL, 
+    "logo" text, 
+    "description" text,
+    "site_link" text,
+    "site_screen" text,
+    "youtube_link" text,
+    -- foreign key
+    "id_promo" int NOT NULL REFERENCES "promo"("id") 
+);
 CREATE TABLE "student" (
     "id" serial PRIMARY KEY,
     "firstname" text NOT NULL,
@@ -29,17 +39,7 @@ CREATE TABLE "student" (
     "id_project" int NOT NULL REFERENCES "project"("id")
 );
 
-CREATE TABLE "project" (
-    "id" serial PRIMARY KEY,
-    "name" text NOT NULL, 
-    "logo" text, 
-    "description" text,
-    "site_link" text,
-    "site_screen" text
-    "youtube_link" text
-    -- foreign key
-    "id_promo" int NOT NULL REFERENCES "promo"("id") 
-);
+
 CREATE TABLE "administrator" (
     "id" serial PRIMARY KEY, 
     "firstname" text NOT NULL,
@@ -55,5 +55,10 @@ CREATE TABLE "supervise" (
     -- -- the primary key is the combination of the two foreign keys of our association table
     PRIMARY KEY("id_administrator", "id_promo")
 );
+ALTER TABLE project OWNER TO oprojetheque;
+ALTER TABLE promo OWNER TO oprojetheque;
+ALTER TABLE student OWNER TO oprojetheque;
+ALTER TABLE administrator OWNER TO oprojetheque;
+ALTER TABLE supervise OWNER TO oprojetheque;
 
 COMMIT;
