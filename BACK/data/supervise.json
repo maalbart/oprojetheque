@@ -1,0 +1,26 @@
+[
+    {
+        "id_administrator": 1,
+        "id_promo": 1
+    },
+    {
+        "id_administrator": 2,
+        "id_promo": 1
+    },
+    {
+        "id_administrator": 3,
+        "id_promo": 2
+    },
+    {
+        "id_administrator": 3,
+        "id_promo": 3
+    },
+    {
+        "id_administrator": 4,
+        "id_promo": 2
+    },
+    {
+        "id_administrator": 4,
+        "id_promo": 3
+    }
+]

@@ -3,13 +3,13 @@ require('dotenv').config();
 
 /* Initialising Express */
 const express = require('express');
-
-/* Requiring router */
-const router = require("./app/router");
-app.use(router);
-
 /* Calling Express */
 const app = express();
+/* Requiring router */
+const router = require("./app/router.js");
+app.use(router);
+
+
 
 /* Access rights agreement to the information of a POST via req.body -
 The extented to false allows to receive only values of type string or array. 
@@ -19,14 +19,14 @@ The middleware to parse the data received especially when sending a form.
 app.use(express.urlencoded({ extended: true }));
 
 /* User management through middlewares (visitor, student, administrator) */
-const adminMiddleware = require(".app/middlewares/adminMiddleware");
-app.use(adminMiddleware);
+// const adminMiddleware = require(".app/middlewares/adminMiddleware");
+// app.use(adminMiddleware);
 
-const studentMiddleware = require(".app/middlewares/studentMiddleware");
-app.use(studentMiddleware);
+// const studentMiddleware = require(".app/middlewares/studentMiddleware");
+// app.use(studentMiddleware);
 
-const visitorMiddleware = require(".app/middlewares/visitorMiddleware");
-app.use(visitorMiddleware);
+// const visitorMiddleware = require(".app/middlewares/visitorMiddleware");
+// app.use(visitorMiddleware);
 
 /* Middleware that allows to display and receive json via POST */
 app.use(express.json());

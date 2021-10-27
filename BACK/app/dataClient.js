@@ -12,7 +12,7 @@ const client = new Pool({
       rejectUnauthorized: false
     }
   });
-  // client.connect();
+  client.connect();
 
 
 /* Exportation of client */
