@@ -1,0 +1,19 @@
+@use 'src/styles/vars';
+
+.button {
+  width: fit-content;
+  font-weight: bolder;
+  height: 2em;
+  padding: .5em;
+  display: flex;
+  align-items: space-between;
+  background-color: vars.$backgroundColor;
+  &-text {
+    color: vars.$textColor;
+    font-family: 'Raleway', 'Roboto', sans-serif;
+  }
+}
+
+.button-text:hover {
+  color: vars.$textColor;
+}
