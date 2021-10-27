@@ -1,0 +1,11 @@
+@use 'src/styles/vars';
+
+.menubar {
+    background-color: vars.$backgroundColor;
+    color: vars.$textColor;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: row; 
+    align-items: space-around;
+    justify-content: space-around;
+}
