@@ -1,13 +1,19 @@
 @use 'src/styles/vars';
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  background-color: vars.$backgroundColor;
+  height: 10%;
   &-logo {
-    width: 10%;
-    height: 10%;
+    width: 5%;
+    height: auto;
   }
   &-contact {
     display: flex;
@@ -18,11 +24,13 @@
       margin: 0 2em 0 0;
       font-size: 1.5em;
       color: vars.$textColor;
+      font-family: 'Raleway', 'Roboto', sans-serif;
     }
     &-arrow {
-      font-size: 3em;
+      font-size: 2em;
       font-weight: bold;
       color: vars.$textColor;
+      font-family: 'Raleway', 'Roboto', sans-serif;
     }
   }
 }

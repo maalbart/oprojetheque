@@ -1,0 +1,32 @@
+@use 'src/styles/vars';
+
+.homepage {
+    background-color: vars.$homepageBackgroundColor;
+    color: vars.$textColor;
+    padding-bottom: 15em;
+
+    &-presentation {
+        margin-bottom: 5em;
+    }    
+
+    &-presentation-logo {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding-top: 5em;
+    }
+
+    &-presentation-description {
+        font-family: 'Raleway', 'Roboto', sans-serif;
+        text-align: center;
+        margin: 2em 15em 2em 15em;
+    }
+    
+    &-suggest{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding-bottom: 4em;
+    }
+}
