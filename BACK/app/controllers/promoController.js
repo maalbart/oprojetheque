@@ -1,8 +1,8 @@
-/* ICI IL FAUT REQUIRE LES MODELS APRES LES AVOIR CODER */
-const Promo = require ("../models/promo.js");
+/* HERE WE HAVE TO REQUIRE THE MODELS AFTER WE'VE CODED THEM */
+const Promo = require ("../models/promos.js");
 
 const promoController = {
-    /* method to display the promo page */
+    /* Method to display the promo page */
     getAllPromos:async(req,res)=>{
        console.log("Bienvenue sur la page des promos");
        const promos = await Promo.getAllPromos();
@@ -12,5 +12,5 @@ const promoController = {
 };
 
 
-/* Exportation of mainController */
+/* Exports mainController */
 module.exports = promoController;

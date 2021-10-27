@@ -21,7 +21,7 @@ const userController = require('./controllers/userController.js');
  */
 router.get("/", mainController.homePage);
 router.get("/projects", projectController.getAllProjects);
-// router.get("/project/:id", projectController.getOneProject);
+router.get("/project/:id", projectController.getOneProject);
 router.get("/promos", promoController.getAllPromos);
 // router.get("/promo/:id", promoController.getOnePromo);
 router.get("/students", userController.getAllStudents);

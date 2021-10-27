@@ -1,28 +1,29 @@
 const pool = require("../dataClient.js");
 
-console.log ("je suis dans le model de projet")
+console.log ("Je suis dans le model de projet")
 
 class Project{
     
     constructor(object){
-        this.name = object.name;;
+        this.id = object.id;
+        this.name = object.name;
         this.logo = object.logo;
-        this.descirption = object.descirption;
+        this.description = object.description;
         this.site_link = object.site_link;
         this.site_screen = object.site_screen;
         this.youtube_link = object.youtube_link; 
         this.id_promo = object.id_promo;
-        // console.log(object, "je--")
     }
 
 
     async save(){
         const query = {
-            text:"INSERT INTO project (name, logo, description, site_link, site_screen, youtube_link, id_promo) VALUES ($1,$2,$3,$4,$5,$6,$7) RETURNING id",
+            text:"INSERT INTO project (id, name, logo, description, site_link, site_screen, youtube_link, id_promo) VALUES ($1,$2,$3,$4,$5,$6,$7,$8) RETURNING id",
             values:[
+                this.id,
                 this.name,
                 this.logo,
-                this.descirption,
+                this.description,
                 this.site_link,
                 this.site_screen,
                 this.youtube_link,
@@ -55,10 +56,26 @@ class Project{
             result.push(new Project(projectDB));
         }
 
-        // return a table of instances Project
+        // Return a table of instances Project
         return result;
     }
+
+    static async getOneProject(id){
+        const query = {
+            text:"SELECT * FROM project WHERE id=$1",
+            values:[id]
+        };
+
+        const result = await pool.query(query); 
+        console.log("Resultat de getOneProject", result);
+
+        console.log("Nous sommes dans la methode getOneProject du model");
+        console.log(result.rows);
+        return result.rows[id];
+    }
+    
 };
+
 
 
 module.exports = Project;
