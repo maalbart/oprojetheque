@@ -12,6 +12,13 @@ const mainController = {
         // console.log("PROJECTSRANDOM", projectsRandom);
         res.json(projects);
         // projectsRandom
+     },
+     /* Method to display the project page */
+    getOneProject:async(req,res)=>{
+        console.log("Bienvenue sur la page d'un projet");
+        const projectId = await Project.getOneProject(req.params.id);
+        console.log("projectId", projectId);
+        res.json(projectId);
      }
 
 };

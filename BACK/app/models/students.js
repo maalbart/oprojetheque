@@ -60,6 +60,20 @@ class Student {
         return result;
         
     }
+    static async getOneStudent(id){
+        const query = {
+            text:"SELECT * FROM student WHERE id=$1",
+            values:[id]
+        };
+        console.log ("voici l'id", id);
+
+        const result = await pool.query(query); 
+        console.log("Resultat de getOneStudent", result);
+
+        console.log("Nous sommes dans la methode getOneStudent du model");
+        console.log(result.rows);
+        return result.rows[0];
+    }
 };
 
 module.exports = Student;
