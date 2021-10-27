@@ -3,8 +3,12 @@
 .homepage {
     background-color: vars.$homepageBackgroundColor;
     color: vars.$textColor;
+    width: 100%;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
     &-presentation {
-        margin-bottom: 5em;
+        margin: 4em 0;
     }    
 
     &-presentation-logo {
@@ -12,6 +16,7 @@
         justify-content: center;
         margin: auto;
         padding-top: 5em;
+        max-width: 100vw;
     }
 
     &-presentation-description {
@@ -20,11 +25,11 @@
         margin: 2em 15em 2em 15em;
     }
     
-    &-suggest{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-around;
-      padding-bottom: 4em;
+    &-suggest {
+      padding: 3em 2em 3em 2em;
+      
+      &-cards {
+        
+      }
     }
 }

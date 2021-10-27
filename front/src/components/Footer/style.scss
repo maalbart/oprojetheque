@@ -1,12 +1,16 @@
 @use 'src/styles/vars';
 
 .footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 8vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   background-color: vars.$backgroundColor;
-  height: 10%;
   &-logo {
     width: 5%;
     height: auto;
