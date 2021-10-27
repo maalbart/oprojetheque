@@ -2,6 +2,10 @@
 
 .menubar {
     background-color: vars.$backgroundColor;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     color: vars.$textColor;
     font-family: 'Raleway', sans-serif;
     display: flex;
