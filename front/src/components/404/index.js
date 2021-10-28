@@ -5,15 +5,11 @@ import Benjicowboy from 'src/assets/benjicowboy.jpg';
 
 
 const Error = () => (
-  <Page>
-    <Header />
-    <Content
-      title="Erreur 404"
-      text="Nous sommes désolé, une erreur s'est produite."
-    />
-    <img src={Benjicowboy} alt="benjicowboy" className="error-benjicowboy"/>
-    <Footer />
-  </Page>
+    <div className="error">
+    <h2>Erreur 404</h2>
+    <p>Nous sommes désolé, une erreur s'est produite.</p>
+    <img src={Benjicowboy} alt="benjicowboy" className="error-benjicowboy"/>    
+    </div>
 );
 
 export default Error;

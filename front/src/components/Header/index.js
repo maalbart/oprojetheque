@@ -13,10 +13,10 @@ export default function Header () {
     <HeaderButton className="menubar-button" content='La Team' />
     <HeaderButton className="menubar-button" content='Contact' />
     <HeaderButton className="menubar-button" content='Connexion' /> */}
-    <Button content="PROJETS" />
-    <Button content="PROMOS" />
-    <Button content="ETUDIANTS" />
-    <Button content="LA TEAM" />
+    <Button content="PROJETS" path="/projects" />
+    <Button content="PROMOS" path="/promos" />
+    <Button content="ETUDIANTS" path="/students" />
+    <Button content="LA TEAM" path="/team" />
     <Button content="CONTACT" />
     <Button content="CONNEXION" />
   </header>
