@@ -1,0 +1,45 @@
+@use 'src/styles/vars';
+
+.students {
+    background-color: vars.$homepageBackgroundColor;
+    color: vars.$textColor;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-title {
+      width: fit-content;
+      padding-top: 1em;
+      font-family: 'Raleway', 'Roboto', sans-serif;
+    }
+    &-searchbar {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      .ui.button {
+        font-size: 1.35rem;
+      }
+    }
+    &-description {
+        font-family: 'Raleway', 'Roboto', sans-serif;
+        text-align: center;
+        margin: 2em 15em 2em 15em;
+        width: fit-content;
+    }
+    &-list {
+      padding: 3em 2em 3em 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-card {
+        max-width: 80%;
+      }
+    }
+}
+
+
