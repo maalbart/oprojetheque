@@ -12,7 +12,13 @@ const userController = {
         console.log("Bienvenue sur la page des projets");
         const students = await Student.getAllStudents();
         res.json(students);
-    }
+    },
+    getOneStudent:async(req,res)=>{
+        console.log("Bienvenue sur la page d'une promo");
+        const studentId = await Student.getOneStudent(req.params.id);
+        console.log("projectId", studentId);
+        res.json(studentId);
+     }
 
 };
 

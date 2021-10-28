@@ -51,6 +51,20 @@ class Promo {
         return result;
         
     }
+    static async getOnePromo(id){
+        const query = {
+            text:"SELECT * FROM promo WHERE id=$1",
+            values:[id]
+        };
+        console.log ("voici l'id", id);
+
+        const result = await pool.query(query); 
+        console.log("Resultat de getOnePromo", result);
+
+        console.log("Nous sommes dans la methode getOnePromo du model");
+        console.log(result.rows);
+        return result.rows[0];
+    }
 };
 
 module.exports = Promo;

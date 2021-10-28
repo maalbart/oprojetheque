@@ -65,13 +65,14 @@ class Project{
             text:"SELECT * FROM project WHERE id=$1",
             values:[id]
         };
+        console.log ("voici l'id", id);
 
         const result = await pool.query(query); 
         console.log("Resultat de getOneProject", result);
 
         console.log("Nous sommes dans la methode getOneProject du model");
         console.log(result.rows);
-        return result.rows[id];
+        return result.rows[0];
     }
     
 };

@@ -23,9 +23,9 @@ router.get("/", mainController.homePage);
 router.get("/projects", projectController.getAllProjects);
 router.get("/project/:id", projectController.getOneProject);
 router.get("/promos", promoController.getAllPromos);
-// router.get("/promo/:id", promoController.getOnePromo);
+router.get("/promo/:id", promoController.getOnePromo);
 router.get("/students", userController.getAllStudents);
-//  router.get("/student/:id", userController.getOneStudent);
+router.get("/student/:id", userController.getOneStudent);
 
 
 
