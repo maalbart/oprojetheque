@@ -1,7 +1,8 @@
 -- Deploy oprojetheque:init to PG
 
 BEGIN; 
-
+CREATE ROLE oprojetheque WITH LOGIN PASSWORD 'oprojetheque';
+CREATE DATABASE oprojetheque WITH OWNER oprojetheque;
 -- Delete tables if they already exist for security reasons
 DROP TABLE IF EXISTS 
 "promo", "student", "project", "administrator";
@@ -55,8 +56,6 @@ CREATE TABLE "supervise" (
     -- -- the primary key is the combination of the two foreign keys of our association table
     PRIMARY KEY("id_administrator", "id_promo")
 );
---CREATE ROLE oprojetheque WITH LOGIN PASSWORD 'oprojetheque';
---CREATE DATABASE oprojetheque WITH OWNER oprojetheque;
 ALTER TABLE project OWNER TO oprojetheque;
 ALTER TABLE promo OWNER TO oprojetheque;
 ALTER TABLE student OWNER TO oprojetheque;

@@ -34,10 +34,10 @@ router.get("/student/:id", userController.getOneStudent);
 // router.get("/admin", adminMiddleware.isAdmin, adminController.createPromo);
 // router.get("/admin", adminMiddleware.isAdmin, adminController.createStudent);
 
-// Admin route with methods for submitting  projects, promos and students creations
-// router.post("/admin", adminMiddleware.isAdmin, adminController.createProject);
-// router.post("/admin", adminMiddleware.isAdmin, adminController.createPromo);
-// router.post("/admin", adminMiddleware.isAdmin, adminController.createStudent);
+// Admin route with methods for submitting  projects, promos and students add
+// router.post("/admin", adminMiddleware.isAdmin, adminController.addProject);
+// router.post("/admin", adminMiddleware.isAdmin, adminController.addPromo);
+// router.post("/admin", adminMiddleware.isAdmin, adminController.addStudent);
 
 
 
