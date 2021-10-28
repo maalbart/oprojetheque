@@ -1,4 +1,3 @@
-/* HERE WE HAVE TO REQUIRE THE MODELS AFTER WE'VE CODED THEM */
 const Project = require ("../models/projects.js");
 
 const projectController = {
