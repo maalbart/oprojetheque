@@ -20,8 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 
 /* User management through middlewares (visitor, student) */
 
-// const userMiddleware = require(".app/middlewares/userMiddleware");
-// app.use(userMiddleware);
+const userMiddleware = require("./app/middlewares/userMiddleware.js");
+app.use(userMiddleware);
 
 // const visitorMiddleware = require(".app/middlewares/visitorMiddleware");
 // app.use(visitorMiddleware);

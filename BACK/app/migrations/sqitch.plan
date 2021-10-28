@@ -1,5 +1,5 @@
 %syntax-version=1.0.0
 %project=oprojetheque
 
-init 2021-10-26T12:26:11Z Etudiant O'clock <student@teleporter> # test creation oprojetheque BDD
-dataInsert 2021-10-26T13:15:19Z Etudiant O'clock <student@teleporter> # insertion des données
+init 2021-10-28T12:19:10Z Etudiant O'clock <student@teleporter> # Initialisation sqitch BDD oprojetheque
+dataInsert 2021-10-28T12:19:50Z Etudiant O'clock <student@teleporter> # Insert BDD oprojetheque
