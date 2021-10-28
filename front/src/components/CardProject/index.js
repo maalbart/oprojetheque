@@ -1,21 +1,17 @@
-import { Card } from 'semantic-ui-react'
+import { Card, Image } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
 import projectTest from 'src/assets/cookies.png'
 
 export default function CardProject ({ title, description}) {
   return (
     <Card>
-      <div class="ui card">
-        <a class="image" href="#">
-          <img src={projectTest} />
-        </a>
-        <div class="content">
-          <a class="header" href="#">{title}</a>
-          <div class="meta">
-            <a>{description}</a>
-          </div>
-        </div>
-      </div>
+      <Image src={projectTest} wrapped ui={false} />
+      <Card.Content>
+        <Card.Header>{title}</Card.Header>
+        <Card.Description>
+          {description}
+        </Card.Description>
+      </Card.Content>
     </Card>
   )
 }
