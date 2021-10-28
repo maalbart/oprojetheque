@@ -10,7 +10,7 @@ export default function Projects () {
         <h1 className="projects-title">Les projets</h1>
         <p className="projects-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente deserunt libero dicta nesciunt eius commodi fuga voluptate natus reprehenderit voluptates vitae, sit eum? Rem deserunt ea doloremque ex qui labore.
         Possimus cumque et numquam deleniti quas accusamus itaque. Error nemo, totam vitae ipsam ea quo rerum sint eveniet sed dolorem labore natus expedita culpa! Dolor quis fugiat dolore culpa.</p>
-        <Input action='Rechercher' placeholder='Rechercher une promotion' className="projects-searchbar" />
+        <Input action='Rechercher' placeholder='Rechercher un projet' className="projects-searchbar" />
       </div>
       <div className="projects-list">
         <Card.Group 
