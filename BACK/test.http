@@ -1,0 +1,41 @@
+GET http://localhost:3000/
+###
+GET http://localhost:3000/projects
+###
+GET http://localhost:3000/project/:id
+###
+GET http://localhost:3000/promos
+###
+GET http://localhost:3000/promo/:id
+###
+GET http://localhost:3000/students
+###
+GET http://localhost:3000/student/:id
+###
+GET http://localhost:3000/contact
+###
+POST http://localhost:3000/contact
+###
+GET http://localhost:3000/connection
+###
+POST http://localhost:3000/connection/:id
+###
+GET http://localhost:3000/theteam
+###
+GET http://localhost:3000/404
+###
+GET http://localhost:3000/admin/
+###
+POST http://localhost:3000/admin/
+###
+PATCH http://localhost:3000/promo/:id/admin
+###
+PATCH http://localhost:3000/projet/:id/admin
+###
+PATCH http://localhost:3000/student/:id/admin
+###
+GET http://localhost:3000/profil
+###
+POST http://localhost:3000/profil
+###
+PATCH http://localhost:3000/profil
