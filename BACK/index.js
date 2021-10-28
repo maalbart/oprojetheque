@@ -18,12 +18,10 @@ The middleware to parse the data received especially when sending a form.
 */
 app.use(express.urlencoded({ extended: true }));
 
-/* User management through middlewares (visitor, student, administrator) */
-// const adminMiddleware = require(".app/middlewares/adminMiddleware");
-// app.use(adminMiddleware);
+/* User management through middlewares (visitor, student) */
 
-// const studentMiddleware = require(".app/middlewares/studentMiddleware");
-// app.use(studentMiddleware);
+const userMiddleware = require("./app/middlewares/userMiddleware.js");
+app.use(userMiddleware);
 
 // const visitorMiddleware = require(".app/middlewares/visitorMiddleware");
 // app.use(visitorMiddleware);

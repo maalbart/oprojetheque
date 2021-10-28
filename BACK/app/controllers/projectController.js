@@ -1,4 +1,3 @@
-/* HERE WE HAVE TO REQUIRE THE MODELS AFTER WE'VE CODED THEM */
 const Project = require ("../models/projects.js");
 
 const projectController = {
@@ -15,6 +14,7 @@ const projectController = {
         //console.log("projectId", projectId);
         res.json(projectId);
      },
+     /* Method to random projects in homePage */
      projetsRandom:async(req, res)=>{
       console.log("Je suis dans la methode randomProjects de l'accueil");
       const random = await Project.projetsRandom();

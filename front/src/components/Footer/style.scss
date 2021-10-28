@@ -1,11 +1,11 @@
 @use 'src/styles/vars';
 
 .footer {
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100vw;
-  height: 8vh;
+  // height: 8vh;
   display: flex;
   flex-direction: row;
   align-items: center;
