@@ -5,22 +5,14 @@ const mainController = {
     /* Method to display the home page */
     homePage:async(req,res)=>{
         console.log("Bienvenue sur la page de l'accueil");
-        // const id = getOneProject.id;
-        const projects = await Project.getAllProjects();
-        const projectsRandom = Math.floor(Math.random * projects.id.length);
-
-        console.log("PROJECTSRANDOM", projectsRandom);
+       
+        const projects = await Project.projetsRandom();
+        console.log("-----------------");
         res.json(projects);
-        // projectsRandom
-     },
-     /* Method to display the project page */
-    // getOneProject:async(req,res)=>{
-    //     console.log("Bienvenue sur la page d'un projet");
-    //     const projectId = await Project.getOneProject(req.params.id);
-    //     console.log("projectId", projectId);
-    //     res.json(projectId);
-    //  }
-
+        console.log("Voici un random de tous les projets", projects);
+        console.log("-----------------");
+       
+     }
 };
 
 

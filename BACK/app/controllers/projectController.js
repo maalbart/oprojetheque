@@ -15,6 +15,11 @@ const projectController = {
         //console.log("projectId", projectId);
         res.json(projectId);
      },
+     projetsRandom:async(req, res)=>{
+      console.log("Je suis dans la methode randomProjects de l'accueil");
+      const random = await Project.projetsRandom();
+      res.json(random);
+     }
 
 
 };

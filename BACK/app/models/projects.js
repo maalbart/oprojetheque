@@ -75,6 +75,19 @@ class Project{
         return result.rows[0];
     }
     
+    static async projetsRandom(){
+        const query = {
+            text:"SELECT * FROM project ORDER BY RANDOM()",
+            values:[]
+        };
+        console.log("Me voici dans la methode projectsRandom du model projects");
+        
+        const result = await pool.query(query);
+        //console.log(result);
+        
+        return result.rows;
+    }
+    
 };
 
 
