@@ -27,6 +27,20 @@ router.get("/promo/:id", promoController.getOnePromo);
 router.get("/students", userController.getAllStudents);
 router.get("/student/:id", userController.getOneStudent);
 
+/* ADMIN */
+// Express allows us to chain middlewares / controllers by a next
+// Admin route with methods to create projects, promos and students,
+// router.get("/admin", adminMiddleware.isAdmin, adminController.createProject);
+// router.get("/admin", adminMiddleware.isAdmin, adminController.createPromo);
+// router.get("/admin", adminMiddleware.isAdmin, adminController.createStudent);
+
+// Admin route with methods for submitting  projects, promos and students creations
+// router.post("/admin", adminMiddleware.isAdmin, adminController.createProject);
+// router.post("/admin", adminMiddleware.isAdmin, adminController.createPromo);
+// router.post("/admin", adminMiddleware.isAdmin, adminController.createStudent);
+
+
+
 
 
 

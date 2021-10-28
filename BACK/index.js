@@ -22,8 +22,8 @@ app.use(express.urlencoded({ extended: true }));
 // const adminMiddleware = require(".app/middlewares/adminMiddleware");
 // app.use(adminMiddleware);
 
-// const studentMiddleware = require(".app/middlewares/studentMiddleware");
-// app.use(studentMiddleware);
+// const studentMiddleware = require(".app/middlewares/userMiddleware");
+// app.use(userMiddleware);
 
 // const visitorMiddleware = require(".app/middlewares/visitorMiddleware");
 // app.use(visitorMiddleware);
