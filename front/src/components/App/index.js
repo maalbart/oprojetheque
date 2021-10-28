@@ -5,6 +5,7 @@ import Homepage from 'src/components/Homepage';
 import Promos from 'src/components/Promos';
 import Footer from 'src/components/Footer';
 import Projects from 'src/components/Projects';
+import Studients from 'src/components/Studients';
 
 // == Composant
 const App = () => (
@@ -12,7 +13,8 @@ const App = () => (
     <Header />
     {/* <Homepage /> */}
     {/* <Promos /> */}
-    <Projects />
+    {/* <Projects /> */}
+    <Studients />
     <Footer />
   </div>
 );
