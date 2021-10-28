@@ -12,7 +12,7 @@ const projectController = {
     getOneProject:async(req,res)=>{
         console.log("Bienvenue sur la page d'un projet");
         const projectId = await Project.getOneProject(req.params.id);
-        console.log("projectId", projectId);
+        //console.log("projectId", projectId);
         res.json(projectId);
      },
 
