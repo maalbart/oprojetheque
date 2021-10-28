@@ -20,8 +20,6 @@ const projectController = {
       const random = await Project.projetsRandom();
       res.json(random);
      }
-
-
 };
 
 
