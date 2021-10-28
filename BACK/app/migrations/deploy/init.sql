@@ -1,8 +1,8 @@
 -- Deploy oprojetheque:init to PG
 
 BEGIN; 
-CREATE ROLE oprojetheque WITH LOGIN PASSWORD 'oprojetheque';
-CREATE DATABASE oprojetheque WITH OWNER oprojetheque;
+-- CREATE ROLE oprojetheque WITH LOGIN PASSWORD 'oprojetheque';
+-- CREATE DATABASE oprojetheque WITH OWNER oprojetheque;
 -- Delete tables if they already exist for security reasons
 DROP TABLE IF EXISTS 
 "promo", "student", "project", "administrator";
