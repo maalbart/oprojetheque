@@ -1,6 +1,5 @@
 // == Import
 import './style.scss';
-import React, { useState, useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom'
 
 // import components
@@ -19,28 +18,12 @@ import Login from 'src/components/Login';
 import Contact from 'src/components/Contact';
 import axios from 'axios';
 
+//import data
+import projectsData from 'src/data/projects'
+
 // == Composant
 export default function App () {
-  // data from api request store into state
-  // const [results, setResults] = useState([]);
-  // const [query, setQuery] = useState('')
-  // function for request api
-  // const loadData = () => {
-  //   axios.get(``)
-  //     .then((response) => {
-  //       const newData = [
-  //         ...results,
-  //         ...response.data.items
-  //       ];
-  //       // store new data in state result
-  //       setResults(newData);
-  //     })
-  //     .catch((error) => console.log(error))
-  //     .finally(() => {
-
-  //     })
-  // }
-
+  
   return (
   <div className="app">
     <Header />
