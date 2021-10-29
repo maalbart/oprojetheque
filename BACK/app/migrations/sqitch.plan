@@ -1,6 +1,5 @@
 %syntax-version=1.0.0
 %project=oprojetheque
 
-init 2021-10-28T12:19:10Z Etudiant O'clock <student@teleporter> # Initialisation sqitch BDD oprojetheque
-dataInsert 2021-10-28T12:19:50Z Etudiant O'clock <student@teleporter> # Insert BDD oprojetheque
-newTableRole 2021-10-29T08:26:37Z Etudiant O'clock <student@teleporter> # modification tables student admin en user
+init 2021-10-29T11:22:14Z Etudiant O'clock <student@teleporter> # initialisation BDD oprojetheque
+dataInsert 2021-10-29T11:22:58Z Etudiant O'clock <student@teleporter> # insertion données BDD oprojetheque

@@ -1,6 +1,6 @@
 const Project = require ("../models/projects.js");
 const Promo = require ("../models/promos.js");
-const Student = require ("../models/users.js");
+const User = require ("../models/users.js");
 
 
 const adminController = {
@@ -37,13 +37,13 @@ const adminController = {
     /* Method to add new student */
     addStudent: async(req, res)=>{
         console.log("Je suis dans la methode addStudent de l'adminController");
-        const newStudent = await Student.addStudent(req.body);
+        const newStudent = await User.addStudent(req.body);
         res.json(newStudent);
     },
     /* Method to update student */
     updateStudent: async(req, res)=>{
         console.log("Je suis dans la methode updateStudent de l'adminController")
-        const updateStudent = await Student.updateStudent(req.body)
+        const updateStudent = await User.updateStudent(req.body)
         res.json(updateStudent);
     },
     

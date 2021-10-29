@@ -9,7 +9,10 @@ const studentController = {
     getAllStudents:async(req,res)=>{
         console.log("Bienvenue sur la page des students");
         const students = await User.getAllStudents();
+        console.log("-----------------");
         res.json(students);
+        console.log(students);
+        console.log("-----------------");
     },
     /* Method to display the student page */
     getOneStudent:async(req,res)=>{
