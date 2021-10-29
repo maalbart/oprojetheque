@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP TABLE IF EXISTS promo, student, project, administrator, supervise ;
+DROP TABLE IF EXISTS promo, project, theuser, therole  ;
 
 COMMIT;

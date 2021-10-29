@@ -2,19 +2,22 @@
     - brypt
     saltRounds (permet de hasher le mot de passe autant de fois qu'on le souhaite )
 */
-const Student = require ("../models/students.js");
+const User = require ("../models/users.js");
 
 const studentController = {
     /* Method to display the students page */
     getAllStudents:async(req,res)=>{
-        console.log("Bienvenue sur la page des projets");
-        const students = await Student.getAllStudents();
+        console.log("Bienvenue sur la page des students");
+        const students = await User.getAllStudents();
+        console.log("-----------------");
         res.json(students);
+        console.log(students);
+        console.log("-----------------");
     },
     /* Method to display the student page */
     getOneStudent:async(req,res)=>{
-        console.log("Bienvenue sur la page d'une promo");
-        const studentId = await Student.getOneStudent(req.params.id);
+        console.log("Bienvenue sur la page d'un student");
+        const studentId = await User.getOneStudent(req.params.id);
         // console.log("projectId", studentId);
         res.json(studentId);
      },

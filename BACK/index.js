@@ -17,26 +17,26 @@ The middleware to parse the data received especially when sending a form.
 app.use(express.urlencoded({ extended: true }));
 
 /* Sessions management */
-const session = require("express-session");
-app.use(session({
-    secret:process.env.SECRET,
-    resave:true,
-    saveUninitialized:true,
-    cookie: {
-        secure: false,
-        maxAge: (1000*60*60) // one hour
-      }
-}));
+// const session = require("express-session");
+// app.use(session({
+//     secret:process.env.SECRET,
+//     resave:true,
+//     saveUninitialized:true,
+//     cookie: {
+//         secure: false,
+//         maxAge: (1000*60*60) // one hour
+//       }
+// }));
 
 
 /* User management through middlewares (visitor, student, admin) */
 /* Tracks visitors */
-const visitorMiddleware = require("./app/middlewares/visitorMiddleware");
-app.use(visitorMiddleware);
+// const visitorMiddleware = require("./app/middlewares/visitorMiddleware");
+// app.use(visitorMiddleware);
 
 /* update locals with user data */
-const userMiddleware = require("./app/middlewares/userMiddleware");
-app.use(userMiddleware);
+// const userMiddleware = require("./app/middlewares/userMiddleware");
+// app.use(userMiddleware);
 
 /* Middleware that allows to display and receive json via POST */
 app.use(express.json());

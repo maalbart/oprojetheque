@@ -1,8 +1,8 @@
 const pool = require("../dataClient.js");
 
-console.log("Je suis dans le model de student");
+console.log("Je suis dans le model de user");
 
-class Student {
+class User {
     constructor(object){
         this.id = object.id;
         this.firstname = object.name;
@@ -13,12 +13,13 @@ class Student {
         this.avatar = object.avatar;
         this.id_promo = object.id_promo;
         this.id_project = object.id_project;
-
+        this.id_therole = object.id_therole;
+console.log("Mon objet user", object);
     }
 
     async save(){
         const query = {
-            text: "INSERT INTO student (id, firstname, lastname, email, password, biography, avatar, id_promo, id_project) VALUES ($1, $2, $3, &4, $5, $6, $7, $8, $9) RETURNING id",
+            text: "INSERT INTO theuser (id, firstname, lastname, email, password, biography, avatar, id_promo, id_project, id_therole) VALUES ($1, $2, $3, &4, $5, $6, $7, $8, $9, $10) RETURNING id",
             values: [
                 this.id,
                 this.firstname,
@@ -28,7 +29,8 @@ class Student {
                 this.biography,
                 this.avatar,
                 this.id_promo,
-                this.id_project
+                this.id_project, 
+                this.id_therole
             ]
         };
 
@@ -46,7 +48,7 @@ class Student {
      */
     static async getAllStudents(){
         const query = {
-            text: "SELECT * FROM student",
+            text: "SELECT * FROM theuser",
             values: []
         };
 
@@ -58,7 +60,7 @@ class Student {
 
         // Loop on the elements returned by the database  & creation of the Student instances
         for (const studentDB of studentsDB){
-            result.push(new Student(studentDB));
+            result.push(new User(studentDB));
         }
 
         // return a table of instances Student
@@ -74,7 +76,7 @@ class Student {
      */
     static async getOneStudent(id){
         const query = {
-            text:"SELECT * FROM student WHERE id=$1",
+            text:"SELECT * FROM theuser WHERE id=$1",
             values:[id]
         };
         console.log ("voici l'id", id);
@@ -93,8 +95,8 @@ class Student {
      */
       static async addStudent(){
         const query = {
-            text: "INSERT INTO student (id, firstname, lastname, email, password, biography,  avatar, id_promo, id_project) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)",
-            values: [id, firstname, lastname, email, password, biography,  avatar, id_promo, id_project]
+            text: "INSERT INTO theuser (id, firstname, lastname, email, password, biography,  avatar, id_promo, id_project, id_therole) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
+            values: [id, firstname, lastname, email, password, biography,  avatar, id_promo, id_project, id_therole]
         };
         
         console.log("Me voici dans la methode addStudent du model student");
@@ -113,11 +115,11 @@ class Student {
      */
      static async updateStudent(){
         const query = {
-            text: "UPDATE student SET id=$1, firstname=$2, lastname=$3, email=$4, password=$5, biography=$6, avatar=$7, id_promo=$8, id_project=$9",
-            values: [id, firstname, lastname, email, password, biography,  avatar, id_promo, id_project]
+            text: "UPDATE theuser SET id=$1, firstname=$2, lastname=$3, email=$4, password=$5, biography=$6, avatar=$7, id_promo=$8, id_project=$9, id_therole=$10",
+            values: [id, firstname, lastname, email, password, biography,  avatar, id_promo, id_project, id_therole]
         };
         
-        console.log("Me voici dans la methode updateStudent du model student");
+        console.log("Me voici dans la methode updateStudent du model user");
         
         const result = await pool.query(query);
         // console.log(result);
@@ -126,4 +128,4 @@ class Student {
     }
 };
 
-module.exports = Student;
+module.exports = User;

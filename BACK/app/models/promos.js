@@ -7,6 +7,7 @@ class Promo {
         this.logo = object.logo;
         this.starting_date = object.starting_date;
         this.ending_date = object.ending_date;
+        console.log("Mon objet promo", object);
     }
 
     async save(){
