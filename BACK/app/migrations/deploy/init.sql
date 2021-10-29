@@ -45,9 +45,6 @@ CREATE TABLE "theuser" (
     "id_therole" int NOT NULL REFERENCES "therole"("id")
 );
 
-ALTER TABLE project OWNER TO oprojetheque;
-ALTER TABLE promo OWNER TO oprojetheque;
-ALTER TABLE therole OWNER TO oprojetheque;
-ALTER TABLE theuser OWNER TO oprojetheque;
+
 
 COMMIT;
