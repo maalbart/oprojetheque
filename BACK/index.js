@@ -31,12 +31,12 @@ app.use(session({
 
 /* User management through middlewares (visitor, student, admin) */
 /* Tracks visitors */
-const visitorMiddleware = require("./app/middlewares/visitorMiddleware");
-app.use(visitorMiddleware);
+// const visitorMiddleware = require("./app/middlewares/visitorMiddleware");
+// app.use(visitorMiddleware);
 
 /* update locals with user data */
-const userMiddleware = require("./app/middlewares/userMiddleware");
-app.use(userMiddleware);
+// const userMiddleware = require("./app/middlewares/userMiddleware");
+// app.use(userMiddleware);
 
 /* Middleware that allows to display and receive json via POST */
 app.use(express.json());
