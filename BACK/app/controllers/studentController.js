@@ -22,16 +22,42 @@ const studentController = {
         res.json(studentId);
      },
     /* method for the student to log in */
-    // login: (req, res, next)=>{
+    // connection: (req, res, next)=>{
     //     res.render("connexion/login");
     // },
-    /* method for the student to disconnect*/
-    // disconnect: (req, res, next) => {
+    // /* method for the student to disconnect*/
+    // disconnection: (req, res, next) => {
     // // destruction of the session to disconnect the user
     // req.session.user = null;
 
     // res.redirect("/");
+    // },
+    // /* method for the user to connect*/
+    //  loginUser: (req, res, next)=>{
+    //     const form = req.body;
+    //     console.log(form);
+
+    //     // check that none of the sent properties are null!
+    //     const isOnePropertyNull = !(form.email && form.password);
+
+    //      if (isOnePropertyNull) {
+    //          /* return an error message */
+    //      } 
+    //      else {
+    //     // verification that the email address is in the right format   
+    //         if(validator.validate(form.email)) {
+    //             // returns true if it is an email
+    //             console.log("Email vérifié !");
+    //             // a user can create two accounts with the same email address
+                
+    //         } 
+
+
+    // ]
+
+
     // }
+
 
 };
 

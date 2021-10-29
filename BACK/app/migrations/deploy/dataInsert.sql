@@ -67,14 +67,14 @@ INSERT INTO "theuser" ("id", "firstname", "lastname","email","password", "biogra
 (42, 'Jeremy', 'M', 'jeremy@yahoo.fr', 'valhalla42', 'Développeur Fullstack spécialité React', 'lien', 1, 9, 2),
 (43, 'Michel', 'Deckert', 'michel@yahoo.fr', 'valhalla43', 'Développeur Fullstack spécialité Data/API', 'lien', 1, 9, 2),
 (44, 'Simon', 'Pelletier', 'simon@yahoo.fr', 'oclock1', 'Je suis Helper', 'lien', 1, 1, 1),
-(45, 'Benjamin', 'Nougadère', 'benji@yahoo.fr', 'oclock2', 'Je suis un Professeur', 'lien', 1, 2, 1),
+(45, 'Benjamin', 'Nougadère', 'benji@yahoo.fr', 'oclock2', 'Je suis Professeur', 'lien', 1, 2, 1),
 (46, 'Marc', 'Charton', 'marcc@yahoo.fr', 'oclock3', 'Je suis Helper', 'lien', 1, 3, 1),
 (47, 'Jordan', 'B', 'jordan@yahoo.fr', 'oclock4', 'Je suis Helper', 'lien', 1, 4, 1),
-(48, 'Benoit', 'Nib', 'Benoit@yahoo.fr', 'oclock5', 'Je suis un Professeur', 'lien', 1, 5, 1),
-(49, 'Clément', 'Uther', 'clement@yahoo.fr', 'oclock6', 'Je suis un Professeur', 'lien', 1, 6, 1),
-(50, 'Alexis', 'Batman', 'alexis@yahoo.fr', 'oclock7', 'Je suis un Professeur', 'lien', 1, 7, 1),
-(51, 'Yann', 'Robin', 'yann@yahoo.fr', 'oclock8', 'Je suis un Professeur', 'lien', 1, 8, 1),
-(52, 'Quentin', 'Logie', 'quentin@yahoo.fr', 'oclock9', 'Je suis un Professeur', 'lien', 1, 9, 1);
+(48, 'Benoit', 'NiB', 'Benoit@yahoo.fr', 'oclock5', 'Je suis Professeur', 'lien', 1, 5, 1),
+(49, 'Clément', 'Uther', 'clement@yahoo.fr', 'oclock6', 'Je suis Professeur', 'lien', 1, 6, 1),
+(50, 'Alexis', 'Batman', 'alexis@yahoo.fr', 'oclock7', 'Je suis Professeur', 'lien', 1, 7, 1),
+(51, 'Yann', 'Robin', 'yann@yahoo.fr', 'oclock8', 'Je suis Professeur', 'lien', 1, 8, 1),
+(52, 'Quentin', 'Logie', 'quentin@yahoo.fr', 'oclock9', 'Je suis Professeur', 'lien', 1, 9, 1);
 
 -- PostGres with type serial does not automatically increment the sequence attached to the column!
 -- It is therefore necessary to update the current value of each of the sequences by selecting the maximum id of each table

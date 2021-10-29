@@ -95,7 +95,7 @@ console.log("Mon objet user", object);
      */
       static async addStudent(){
         const query = {
-            text: "INSERT INTO theuser (id, firstname, lastname, email, password, biography,  avatar, id_promo, id_project, id_therole) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
+            text: "INSERT INTO theuser (id, firstname, lastname, email, password, biography, avatar, id_promo, id_project, id_therole) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
             values: [id, firstname, lastname, email, password, biography,  avatar, id_promo, id_project, id_therole]
         };
         
