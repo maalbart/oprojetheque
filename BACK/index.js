@@ -9,8 +9,6 @@ const app = express();
 const router = require("./app/router.js");
 app.use(router);
 
-
-
 /* Access rights agreement to the information of a POST via req.body -
 The extented to false allows to receive only values of type string or array. 
 If it is true, we can receive any type of value.
@@ -18,13 +16,27 @@ The middleware to parse the data received especially when sending a form.
 */
 app.use(express.urlencoded({ extended: true }));
 
-/* User management through middlewares (visitor, student) */
+/* Sessions management */
+const session = require("express-session");
+app.use(session({
+    secret:process.env.SECRET,
+    resave:true,
+    saveUninitialized:true,
+    cookie: {
+        secure: false,
+        maxAge: (1000*60*60) // one hour
+      }
+}));
 
-const userMiddleware = require("./app/middlewares/userMiddleware.js");
+
+/* User management through middlewares (visitor, student, admin) */
+/* Tracks visitors */
+const visitorMiddleware = require("./app/middlewares/visitorMiddleware");
+app.use(visitorMiddleware);
+
+/* update locals with user data */
+const userMiddleware = require("./app/middlewares/userMiddleware");
 app.use(userMiddleware);
-
-// const visitorMiddleware = require(".app/middlewares/visitorMiddleware");
-// app.use(visitorMiddleware);
 
 /* Middleware that allows to display and receive json via POST */
 app.use(express.json());
