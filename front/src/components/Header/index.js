@@ -11,8 +11,8 @@ export default function Header () {
     <Button content="PROMOS" path="/promos" />
     <Button content="ETUDIANTS" path="/students" />
     <Button content="LA TEAM" path="/team" />
-    <Button content="CONTACT" />
-    <Button content="CONNEXION" />
+    <Button content="CONTACT" path="/contact" />
+    <Button content="CONNEXION" path="/login" />
   </header>
   )
 }
