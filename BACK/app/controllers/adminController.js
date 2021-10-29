@@ -1,6 +1,6 @@
 const Project = require ("../models/projects.js");
 const Promo = require ("../models/promos.js");
-const Student = require ("../models/students.js");
+const Student = require ("../models/users.js");
 
 
 const adminController = {
