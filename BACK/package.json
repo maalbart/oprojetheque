@@ -16,5 +16,6 @@
     "pg": "^8.7.1",
     "session": "^0.1.0"
   },
+  "devDependencies": {},
   "description": ""
 }
