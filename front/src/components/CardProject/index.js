@@ -2,12 +2,18 @@ import { Card, Image } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
 import projectTest from 'src/assets/cookies.png'
 
-export default function CardProject ({ title, description, date1, date2 }) {
+export default function CardProject ({ 
+  name, 
+  description, 
+  date1, 
+  date2,
+  logo,
+}) {
   return (
     <Card>
-      <Image src={projectTest} wrapped ui={false} />
+      <Image src={logo} wrapped ui={false} />
       <Card.Content>
-        <Card.Header>{title}</Card.Header>
+        <Card.Header>{name}</Card.Header>
           <Card.Description>
             {description}
           </Card.Description>
@@ -20,8 +26,9 @@ export default function CardProject ({ title, description, date1, date2 }) {
 }
 
 CardProject.propTypes = {
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   description: PropTypes.string,
   date1: PropTypes.string,
   date2: PropTypes.string,
+  logo: PropTypes.string,
 }

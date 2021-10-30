@@ -1,10 +1,19 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
 import logo from 'src/assets/logo-principal.png'
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getRandomProjects } from 'src/actions/projects';
 import CardProject from "src/components/CardProject";
 import './style.scss';
 
 export default function Homepage () {
+  const dispatch = useDispatch()
+  const projectsRandom = useSelector((state) => state.projects.list)
+  console.log(projectsRandom);
+  useEffect(() => {
+    dispatch(getRandomProjects())
+  }, [])
   return (
     <div className="homepage">
       <div className="homepage-presentation">
@@ -19,11 +28,9 @@ export default function Homepage () {
           centered
           className="homepage-suggest-cards"
         >
-          <CardProject title="test1" description="c'est le test 1"/>
-          <CardProject title="test2" description="c'est le test 2"/>
-          <CardProject title="test3" description="c'est le test 3"/>
-          <CardProject title="test4" description="c'est le test 4"/>
-          <CardProject title="test5" description="c'est le test 5"/>
+          {projectsRandom.map((projectRandom) => (
+            <CardProject key={projectRandom.id} {...projectRandom} />
+          ))}
         </Card.Group>
       </div>
     </div>
