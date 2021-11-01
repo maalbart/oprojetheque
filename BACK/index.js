@@ -16,8 +16,8 @@ app.use(router);
 
 /* ------------------------------------- */
 /* Authorization to access the API for the whole world*/
-const cors = require('cors');
-app.use(cors());
+// const cors = require('cors');
+// app.use(cors());
 
 /* ------------------------------------- */
 /* Access rights agreement to the information of a POST via req.body -
@@ -29,27 +29,27 @@ app.use(express.urlencoded({ extended: true }));
 
 /* ------------------------------------- */
 /* Sessions management */
-const session = require("express-session");
-app.use(session({
-    secret: process.env.SECRET,
-    resave: true,
-    saveUninitialized: true,
-    cookie: {
-        secure: false,
-        maxAge: (1000 * 60 * 60) // one hour
-    }
-}));
+// const session = require("express-session");
+// app.use(session({
+//     secret: process.env.SECRET,
+//     resave: true,
+//     saveUninitialized: true,
+//     cookie: {
+//         secure: false,
+//         maxAge: (1000 * 60 * 60) // one hour
+//     }
+// }));
 
 /* ------------------------------------- */
 /* User management through middlewares (visitor, student, admin) */
 /* Tracks visitors */
-const visitorMiddleware = require("./app/middlewares/visitorMiddleware");
-app.use(visitorMiddleware);
+// const visitorMiddleware = require("./app/middlewares/visitorMiddleware.js");
+// app.use(visitorMiddleware);
 
 /* ------------------------------------- */
 /* update locals with user data */
-const userMiddleware = require("./app/middlewares/userMiddleware");
-app.use(userMiddleware);
+// const userMiddleware = require("./app/middlewares/userMiddleware");
+// app.use(userMiddleware);
 
 /* ------------------------------------- */
 /* Middleware that allows to display and receive json via POST */

@@ -48,8 +48,8 @@ class User {
         const query = {
             //! TO TEST - doesn't display first and last names 
             // Display all users with the role of student and sorted by firstname
-            text: "SELECT MAX (id), firstname, lastname, biography, avatar, id_promo, id_project FROM theuser WHERE id_therole=$1 ORDER BY firstname",
-            values: [2]
+            text: "SELECT * FROM theuser ",
+            values: []
         };
 
         const dbresult = await pool.query(query);
