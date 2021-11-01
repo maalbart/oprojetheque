@@ -1,12 +1,10 @@
-// const validator = require("email-validator");
-const { Session } = require("inspector");
+const validator = require("email-validator");
 const User = require("../models/user.js");
 
+const bcrypt = require('bcrypt');
+// const saltRounds = 10; // Hasher 10 times the password to make it more complex
 
 const authController = {
-    /***************************************/
-    /*      CONNECTION / DECONNECTION      */
-    /***************************************/
     /* Method for the student to log in */
     connection: (req, res, next) => {
         res.render("connection/login");
@@ -16,19 +14,30 @@ const authController = {
     loginUser: async (req, res, next) => {
         // data entered in the login form 
         const form = req.body;
-        console.log(form);
+        console.log("J'affiche ce qu'il y a dans mon req.body", form);
 
         // check that none of the sent properties are null!
         const isOnePropertyNull = !(form.email && form.password);
 
         if (isOnePropertyNull) {
-            /* return an error message */
-            return "Une erreur est survenue dans la tentative de connexion. Réintère!";
+            /* send an error message */
+            res.send("Veuillez renseigner tous les champs pour vous connecter!");
+        } else {
+            // check that the email is in the right format
+            if (validator.validate(form.email)) {
+                // returns true if it's an email
+                console.log("L'email est au bon format!");
+            } else {
+                //Send error response here
+                res.status(400).send({
+                    message: "This is an error"
+                });
+            }
         }
 
         try {
             // recovery of the user by mail
-            const user = await User.getOneStudent(req.body.email);
+            const user = await User.getOneStudent(form.email);
 
             // check that the user is well found
             if (user) {
@@ -61,6 +70,7 @@ const authController = {
 
                         } catch (error) {
                             console.log(error);
+                            res.redirect("/404");
                         }
                     }
                 }
@@ -71,10 +81,11 @@ const authController = {
                 removal of the 'password' key (and thus the associated value)
                 */
                 req.session.user = {
+                    id: user.id,
                     email: user.email,
                     firstname: user.firstname,
                     lastname: user.lastname,
-                    role: user.role
+                    role: user.id_therole
                 };
 
                 console.log(req.session.user);

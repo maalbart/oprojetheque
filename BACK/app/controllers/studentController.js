@@ -6,12 +6,11 @@ const studentController = {
         try {
             console.log("Bienvenue sur la page des students");
             const students = await User.getAllStudents();
-            console.log("-----------------");
             res.json(students);
-            console.log(students);
-            console.log("-----------------");
+            // console.log(students);
         } catch (error) {
             res.status(500).send(error);
+            res.redirect("/404");
         }
     },
     /* ---------------------------------------------- */
@@ -20,14 +19,16 @@ const studentController = {
         try {
             console.log("Bienvenue sur la page d'un student");
             const studentId = await User.getOneStudent(req.params.id);
-            // console.log("projectId", studentId);
             res.json(studentId);
+            // console.log("projectId", studentId);
         } catch (error) {
             res.status(500).send(error);
+            res.redirect("/404");
         }
     },
     profilStudent: (req, res, next) => {
         console.log("Je suis dans la methode profil dans le studentCOntroller!");
+        // res.redirect("/404");
     }
 };
 
