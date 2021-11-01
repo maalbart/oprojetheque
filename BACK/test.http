@@ -18,7 +18,7 @@ POST http://localhost:3000/contact
 ###
 GET http://localhost:3000/connection
 ###
-POST http://localhost:3000/connection/:id
+POST http://localhost:3000/connection
 ###
 GET http://localhost:3000/theteam
 ###
@@ -28,11 +28,11 @@ GET http://localhost:3000/admin/
 ###
 POST http://localhost:3000/admin/
 ###
-PATCH http://localhost:3000/promo/:id/admin
+PUT http://localhost:3000/promo/:id/admin
 ###
-PATCH http://localhost:3000/projet/:id/admin
+PUT http://localhost:3000/projet/:id/admin
 ###
-PATCH http://localhost:3000/student/:id/admin
+PUT http://localhost:3000/student/:id/admin
 ###
 GET http://localhost:3000/profil
 ###

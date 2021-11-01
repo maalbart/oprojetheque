@@ -36,9 +36,7 @@ class Project{
         // recovery of the generated id
         this.id = result.rows[0].id;
     }
-
     /* ---------------------------------------------- */
-    
     /**
      * Return all projects
      * @returns [Projects]
@@ -61,9 +59,7 @@ class Project{
         // Return a table of instances Project
         return result;
     }
-    
     /* ---------------------------------------------- */
-    
     /**
      * Return one project
      * @returns [Project]
@@ -82,28 +78,25 @@ class Project{
         console.log(result.rows);
         return result.rows[0];
     }
-    
     /* ---------------------------------------------- */
-    
     /**
      * Return random projects
      * @returns [projectsRandom]
      */
     static async projetsRandom(){
         const query = {
-            text:"SELECT * FROM project ORDER BY RANDOM()",
+            // display of 5 projects at random
+            text:"SELECT * FROM project ORDER BY RANDOM() LIMIT 5",
             values:[]
         };
-        console.log("Me voici dans la methode projectsRandom du model projects");
+        console.log("Me voici dans la methode projectsRandom du model project");
         
         const result = await pool.query(query);
         //console.log(result);
         
         return result.rows;
     }
-    
     /* ---------------------------------------------- */
-    
     /**
      * Return new project
      * @returns [addProject]
@@ -114,16 +107,14 @@ class Project{
             values: [id, name, logo, description, site_link, site_screen, youtube_link, id_promo]
         };
         
-        console.log("Me voici dans la methode addProject du model projects");
+        console.log("Me voici dans la methode addProject du model project");
         
         const result = await pool.query(query);
         // console.log(result);
         
         return result.rows;
     }
-    
     /* ---------------------------------------------- */
-    
     /**
      * Return update project
      * @returns [updateProject]
@@ -134,7 +125,7 @@ class Project{
             values: [id, name, logo, description, site_link, site_screen, youtube_link, id_promo8]
         };
         
-        console.log("Me voici dans la methode updateProject du model projects");
+        console.log("Me voici dans la methode updateProject du model project");
         
         const result = await pool.query(query);
         // console.log(result);
@@ -144,5 +135,5 @@ class Project{
 };
 
 
-
+/* Exports Project model */
 module.exports = Project;

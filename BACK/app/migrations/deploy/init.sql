@@ -6,11 +6,19 @@ DROP TABLE IF EXISTS
 "promo", "project", "theuser", "therole";
 
 -- Creation of differents tables
+
+---------------------------
+-- Table "therole"
+---------------------------
 CREATE TABLE "therole" (
     "id" serial PRIMARY KEY,
     "name" text NOT NULL
 );
 
+
+---------------------------
+-- Table "promo"
+---------------------------
 CREATE TABLE "promo" (
     "id" serial PRIMARY KEY, -- the serial type is specific to POSTGRESQL, it uses functions to automatically increment the id
     "name" text NOT NULL,
@@ -19,6 +27,10 @@ CREATE TABLE "promo" (
     "ending_date" date NOT NULL
 );
 
+
+---------------------------
+-- Table "project"
+---------------------------
 CREATE TABLE "project" (
     "id" serial PRIMARY KEY,
     "name" text NOT NULL, 
@@ -31,6 +43,10 @@ CREATE TABLE "project" (
     "id_promo" int NOT NULL REFERENCES "promo"("id") 
 );
 
+
+---------------------------
+-- Table "theuser"
+---------------------------
 CREATE TABLE "theuser" (
     "id" serial PRIMARY KEY,
     "firstname" text NOT NULL,

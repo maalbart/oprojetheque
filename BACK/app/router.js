@@ -7,49 +7,117 @@ const mainController = require('./controllers/mainController.js');
 const projectController = require('./controllers/projectController.js');
 const promoController = require('./controllers/promoController.js');
 const studentController = require('./controllers/studentController.js');
-// const adminController = require('./controllers/adminController.js');
-// const adminMiddleware = require("./middlewares/adminMiddleware.js");
+const adminController = require('./controllers/adminController.js');
+const adminMiddleware = require("./middlewares/adminMiddleware.js");
 
 
-/****** All roads ******/
-
+/***************************************/
+/*          HOMEPAGE                   */
+/***************************************/
 /**
- * Preconfigue l'application 
+ * Home page of the website
  * @route GET /
- * @group 
- * @returns {object} 200 - 
- * @returns {Error}  default - Une erreur est survenue
+ * @group homePage 
+ * @returns {object} 200 - Ramdom projects
+ * @returns {Error}  default - An error has occurred
  */
 router.get("/", mainController.homePage);
+
+
+/***************************************/
+/*          ROADS OF PROJECTS          */
+/***************************************/
+/**
+ * Recovery of all projects
+ * @route GET /projects
+ * @group Projects - API to display all end of course projects
+ * @returns {object} 200 - All projects
+ * @returns {Error}  default - An error has occurred
+ */
 router.get("/projects", projectController.getAllProjects);
+
+/**
+ * Recovery of one project
+ * @route GET /project/:id"
+ * @group Projects - API to display one project
+ * @returns {object} 200 - One project
+ * @returns {Error}  default - An error has occurred
+ */
 router.get("/project/:id", projectController.getOneProject);
+
+
+/***************************************/
+/*          ROADS OF PROMOS         */
+/***************************************/
+/**
+ * Recovery of all promos
+ * @route GET /promos
+ * @group Projects - API to display all promotions
+ * @returns {object} 200 - All promos 
+ * @returns {Error}  default - An error has occurred
+ */
 router.get("/promos", promoController.getAllPromos);
+
+/**
+ * Recovery of one promo
+ * @route GET /promo/:id"
+ * @group Projects - API to display one promo
+ * @returns {object} 200 - One promo
+ * @returns {Error}  default - An error has occurred
+ */
 router.get("/promo/:id", promoController.getOnePromo);
+
+
+/***************************************/
+/*          ROADS OF STUDENTS          */
+/***************************************/
+/**
+ * Recovery of all students
+ * @route GET /students
+ * @group Projects - API to display all students
+ * @returns {object} 200 - All students 
+ * @returns {Error}  default - An error has occurred
+ */
 router.get("/students", studentController.getAllStudents);
+
+/**
+ * Recovery of one student
+ * @route GET /student/:id"
+ * @group Projects - API to display one student
+ * @returns {object} 200 - One student
+ * @returns {Error}  default - An error has occurred
+ */
 router.get("/student/:id", studentController.getOneStudent);
 
 
+/*****************************************/
+/*      ROAD OF LOGIN / DISCONNECT       */
+/*****************************************/
+router.get("/connection", studentController.connection); // connection page
+router.post("/connection", studentController.loginUser) // submission of the login form
+router.get("disconnect", studentController.disconnection) // disconnection page
 
-/* CONNECTION ROUTER */ 
-// router.get("/connection", studentController.login); // connection page
-// router.post("/connection/:id") 
 
-
-/* ADMIN */
+/***************************************/
+/*          ROADS OF ADMIN             */
+/***************************************/
+//! TEST ALL ADMIN ROADS
 /* Express allows us to chain middlewares / controllers by a next
 Admin route with methods to add projects, promos and students
 Verification that the user, who wants to use the route /admin, has the role of admin, then chain the methods add and update of the 3 tables
 */ 
-// router.get("/admin", adminMiddleware.isAdmin, adminController.addProject, adminController.updateProject);
-// router.get("/admin", adminMiddleware.isAdmin, adminController.addPromo, adminController.updatePromo);
-// router.get("/admin", adminMiddleware.isAdmin, adminController.addStudent, adminController.updateStudent);
 
+/******* Projects management *******/
+router.post("/admin", adminMiddleware.isAdmin, adminController.addProject);
+router.put("/admin", adminMiddleware.isAdmin, adminController.updateProject);
 
+/******* Promos management *******/
+router.post("/admin", adminMiddleware.isAdmin, adminController.addPromo);
+router.put("/admin", adminMiddleware.isAdmin,adminController.updatePromo); 
 
-// Admin route with methods for submitting  projects, promos and students add
-// router.post("/admin", adminMiddleware.isAdmin, adminController.addProject);
-// router.post("/admin", adminMiddleware.isAdmin, adminController.addPromo);
-// router.post("/admin", adminMiddleware.isAdmin, adminController.addStudent);
+/******* Students management *******/
+router.post("/admin", adminMiddleware.isAdmin, adminController.addStudent)
+router.put("/admin", adminMiddleware.isAdmin, adminController.updateStudent); 
 
 
 
