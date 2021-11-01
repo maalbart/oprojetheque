@@ -93,7 +93,7 @@ router.get("/student/:id", studentController.getOneStudent);
 /*****************************************/
 /*      ROAD OF LOGIN / DISCONNECT       */
 /*****************************************/
-router.get("/connection", studentController.connection); // connection page
+//router.get("/connection", studentController.connection); // connection page
 router.post("/connection", studentController.loginUser) // submission of the login form
 router.get("disconnect", studentController.disconnection) // disconnection page
 

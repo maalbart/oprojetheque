@@ -46,16 +46,16 @@ app.use(express.urlencoded({ extended: true }));
 
 /* ------------------------------------- */
 /* Sessions management */
-// const session = require("express-session");
-// app.use(session({
-//     secret: process.env.SECRET,
-//     resave: true,
-//     saveUninitialized: true,
-//     cookie: {
-//         secure: false,
-//         maxAge: (1000 * 60 * 60) // one hour
-//     }
-// }));
+const session = require("express-session");
+app.use(session({
+    secret: process.env.SECRET,
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+        secure: false,
+        maxAge: (1000 * 60 * 60) // one hour
+    }
+}));
 
 /* ------------------------------------- */
 /* User management through middlewares (visitor, student, admin) */
@@ -65,8 +65,8 @@ app.use(express.urlencoded({ extended: true }));
 
 /* ------------------------------------- */
 /* update locals with user data */
-// const userMiddleware = require("./app/middlewares/userMiddleware");
-// app.use(userMiddleware);
+const userMiddleware = require("./app/middlewares/userMiddleware");
+app.use(userMiddleware);
 
 /* ------------------------------------- */
 /* Middleware that allows to display and receive json via POST */
