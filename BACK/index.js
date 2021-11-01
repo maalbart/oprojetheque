@@ -21,7 +21,7 @@ app.use(function(req, res, next) {
     next();
   });
 app.use(cors({
-    origin: 'http://localhost:8080'}));
+    origin: '*'}));
 
 // const cors = require('cors');
 // const corsOptions ={
