@@ -7,7 +7,9 @@ const user = (store) => (next) => (action) => {
     case HANDLE_LOGIN: {
       const state = store.getState();
       console.log('on est bien dans mon handlelogin');
-      axios.post('', {
+      console.log(state.user.email, state.user.password)
+      axios.post('https://o-projetheque.herokuapp.com/connection', {
+        headers: { 'Access-Control-Allow-Origin': 'http://localhost:8080/login' },
         email: state.user.email,
         password: state.user.password,
       })
