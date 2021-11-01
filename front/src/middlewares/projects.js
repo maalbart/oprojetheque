@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_RANDOM_PROJECTS } from 'src/actions/projects';
+import { GET_RANDOM_PROJECTS, saveProjects } from 'src/actions/projects';
 
 const projectMiddleware = (store) => (next) => (action) => {
   switch(action.type) {
@@ -9,6 +9,7 @@ const projectMiddleware = (store) => (next) => (action) => {
         .then((response) => {
           console.log(response)
           const list = response.data
+          console.log(list)
           store.dispatch(saveProjects(list));
         })
         .catch((error) => {
