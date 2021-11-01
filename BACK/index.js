@@ -13,7 +13,6 @@ const app = express();
 /* ------------------------------------- */
 // /! Authorization to access the API for the whole world/
 const cors = require('cors');
-app.use(cors({origin: '*'}));
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", '*');
     res.header("Access-Control-Allow-Credentials", true);
@@ -21,6 +20,8 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
     next();
   });
+app.use(cors({
+    origin: 'http://localhost:8080'}));
 
 // const cors = require('cors');
 // const corsOptions ={
