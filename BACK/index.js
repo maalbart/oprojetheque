@@ -32,8 +32,8 @@ app.use(express.urlencoded({ extended: true }));
 const session = require("express-session");
 app.use(session({
     secret: process.env.SECRET,
-    resave: true,
-    saveUninitialized: true,
+    resave: true, //autosave at the end of the request
+    saveUninitialized: true, // save all sessions - even empties
     cookie: {
         secure: false,
         maxAge: (1000 * 60 * 60) // one hour
@@ -47,7 +47,7 @@ const visitorMiddleware = require("./app/middlewares/visitorMiddleware");
 app.use(visitorMiddleware);
 
 /* ------------------------------------- */
-/* update locals with user data */
+/* Update locals with user data */
 const userMiddleware = require("./app/middlewares/userMiddleware");
 app.use(userMiddleware);
 
@@ -64,3 +64,4 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log(`Server started on http://localhost:${port}`);
 });
+
