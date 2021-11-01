@@ -4,7 +4,7 @@ const adminMiddleware = {
         // console.log("-  isAdmin");
         // console.log(req.session.user);
         // Test to know if you are connected and if you have the admin role
-        if(req.session.user && req.session.user.role == "admin"){
+        if(req.session.user && req.session.user.id_role == 2){
             // isadmin is true in the locals to add the css file in the header
             res.locals.isadmin = true;
             next();
