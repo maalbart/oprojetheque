@@ -17,7 +17,7 @@ app.use(router);
 /* ------------------------------------- */
 /* Authorization to access the API for the whole world*/
 const cors = require('cors');
-app.use(cors());
+app.use(cors({origin: '*'}));
 
 /* ------------------------------------- */
 /* Access rights agreement to the information of a POST via req.body -
