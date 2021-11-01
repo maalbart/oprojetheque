@@ -9,22 +9,18 @@ const express = require('express');
 /* Calling Express */
 const app = express();
 
-/* ------------------------------------- */
-/* Requiring router */
-const router = require("./app/router.js");
-app.use(router);
 
 /* ------------------------------------- */
-/! Authorization to access the API for the whole world/
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", '*');
-    res.header("Access-Control-Allow-Credentials", true);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-    next();
-  });
-// const cors = require('cors');
-// app.use(cors({origin: '*'}));
+// /! Authorization to access the API for the whole world/
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", '*');
+//     res.header("Access-Control-Allow-Credentials", true);
+//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+//     res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+//     next();
+//   });
+const cors = require('cors');
+app.use(cors({origin: '*'}));
 // const cors = require('cors');
 // const corsOptions ={
 //     origin:'http://localhost:8080/', 
@@ -77,7 +73,10 @@ app.use(express.json());
 /* ------------------------------------- */
 /* Port setup - support for the port chosen by the developer if there is one, otherwise 5000 */
 const port = process.env.PORT || 5000;
-
+/* ------------------------------------- */
+/* Requiring router */
+const router = require("./app/router.js");
+app.use(router);
 /* ------------------------------------- */
 /* Launching server */
 app.listen(port, () => {
