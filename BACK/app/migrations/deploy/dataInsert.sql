@@ -71,7 +71,7 @@ INSERT INTO "theuser" ("id", "firstname", "lastname","email","password", "biogra
 (31, 'Sophie', 'Bayram', 'sophie.bayram@oclock.io', 'valhalla31', 'Développeuse Fullstack spécialité Data/API', 'lien', 1, 7, 2),
 (32, 'Elias', 'Gueye', 'elias@oclock.io', 'valhalla32', 'Développeur Fullstack spécialité Data/API', 'lien', 1, 7, 2),
 (33, 'Emilien', 'Boucherie', 'emilien@oclock.io', 'valhalla33', 'Développeur Fullstack spécialité React', 'lien', 1, 7, 2),
-(34, 'Morgan', 'Vaysset', 'morgan@oclock.io', 'valhalla34', 'Développeuse Fullstack spécialité React', 'lien', 1, 7, 2),
+(34, 'Morgan', 'Veysset', 'morgan@oclock.io', 'valhalla34', 'Développeuse Fullstack spécialité React', 'lien', 1, 7, 2),
 (35, 'Thomas', 'Capo', 'thomas@oclock.io', 'valhalla35', 'Développeur Fullstack spécialité Data/API', 'lien', 1, 8, 2),
 (36, 'Rémi', 'Henry', 'remiH@oclock.io', 'valhalla36', 'Développeur Fullstack spécialité React', 'lien', 1, 8, 2),
 (37, 'Paulo', 'Goncalves Ferreira', 'paulo@oclock.io', 'valhalla37', 'Développeur Fullstack spécialité Data/API', 'lien', 1, 8, 2),
