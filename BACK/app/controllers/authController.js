@@ -41,7 +41,7 @@ const authController = {
 
         try {
             // recovery of the user by mail
-            const user = await User.getOneStudent(form.email);
+            const user = await User.getOneUser(form.email);
 
             // check that the user is well found
             if (user) {
