@@ -30,6 +30,7 @@ export default function Login () {
   }
   return (
     <div className="login-form">
+      <p className="login-form-description">Connectez-vous</p>
     <form autoComplete="off" className="login-form-element" onSubmit={handleSubmit}>
         <div className="login-form-email">
           <Field

@@ -10,8 +10,11 @@
   height: 85.1vh;
   font-family: 'Raleway', 'Roboto', sans-serif;
   font-weight: bold;
-  &-email, &-password {
-    padding: 2em 0;
-    color: vars.$textColor;
+  color: vars.$textColor;
+  &-description {
+    font-size: 200%;
+  }
+  &-email, &-password, &-submit {
+    padding: 1em 0 1em 0;
   }
 }
