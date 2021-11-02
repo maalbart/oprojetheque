@@ -76,7 +76,7 @@ class User {
             text: "SELECT * FROM theuser WHERE id=$1",
             values: [id]
         };
-        console.log("voici l'id", id);
+        // console.log("voici l'id", id);
 
         const result = await pool.query(query);
         console.log("Resultat de getOneStudent", result);
@@ -121,6 +121,26 @@ class User {
 
         return result.rows;
     }
+    /* ---------------------------------------------- */
+    /**
+     * Return getUserEmail
+     * @returns [getUserEmail]
+     */
+    static async getOneUser(email) {
+        const query = {
+            text: "SELECT * FROM theuser WHERE theuser.email=$1",
+            values: [email]
+        };
+        console.log("voici l'email", email);
+
+        const result = await pool.query(query);
+        console.log("Resultat de getOneUser", result);
+
+        console.log("Nous sommes dans la methode getOneUser du model");
+        console.log(result.rows);
+        return result.rows[0];
+    }
+    
 };
 
 
