@@ -12,6 +12,7 @@ const mainController = {
             console.log("-----------------");
         } catch (error){
             res.status(500).send(error);
+            res.redirect("/404");
         }
      }
 };

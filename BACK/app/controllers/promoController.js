@@ -9,6 +9,7 @@ const promoController = {
          res.json(promos);
       } catch (error) {
          res.status(500).send(error);
+         res.redirect("/404");
       }
    },
    /* ---------------------------------------------- */
@@ -21,6 +22,7 @@ const promoController = {
          res.json(promoId);
       } catch (error) {
          res.status(500).send(error);
+         res.redirect("/404");
       }
    }
 };
