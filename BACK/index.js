@@ -15,7 +15,7 @@ const jwt = require('express-jwt');
 
 /* ------------------------------------- */
 /* Requiring jsonwebtoken */
-// const jsonwebtoken = require('jsonwebtoken');
+const jsonwebtoken = require('jsonwebtoken');
 
 /* ------------------------------------- */
 // const jwtSecret = 'IIUFHW98YW4TFHJCX7fr4r90ixjjnxcxe98208eJIHXKSIFOR9T2KAK';
@@ -28,10 +28,11 @@ The middleware to parse the data received especially when sending a form.
 */
 app.use(express.urlencoded({ extended: true }));
 /* ------------------------------------- */
-const authorizationMiddleware = jwt({
-    secret: jwtSecret, 
-    algorithms: ['HS256']
-});
+
+// const authorizationMiddleware = jwt({
+//     secret: jwtSecret, 
+//     algorithms: ['HS256'
+// });
 
 /* ------------------------------------- */
 /* User management through middlewares (visitor, student, admin) */
