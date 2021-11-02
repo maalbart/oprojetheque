@@ -5,8 +5,8 @@ console.log("Je suis dans le model de user");
 class User {
     constructor(object) {
         this.id = object.id;
-        this.firstname = object.name;
-        this.lastname = object.logo;
+        this.firstname = object.firstname;
+        this.lastname = object.lastname;
         this.email = object.email;
         this.password = object.password;
         this.biography = object.biography;
@@ -46,9 +46,8 @@ class User {
     */
     static async getAllStudents() {
         const query = {
-            //! TO TEST - doesn't display first and last names 
             // Display all users with the role of student and sorted by firstname
-            text: "SELECT MAX (id), firstname, lastname, biography, avatar, id_promo, id_project FROM theuser WHERE id_therole=$1 ORDER BY firstname",
+            text: "SELECT * FROM theuser WHERE theuser.id_therole=$1 ORDER BY firstname",
             values: [2]
         };
 
