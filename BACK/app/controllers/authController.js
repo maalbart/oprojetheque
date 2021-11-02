@@ -1,7 +1,7 @@
 const validator = require("email-validator");
 const User = require("../models/user.js");
 
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 // const saltRounds = 10; // Hasher 10 times the password to make it more complex
 
 const authController = {
@@ -42,57 +42,30 @@ const authController = {
             // check that the user is well found
             if (user) {
                 // verification that the password is correct
-                if (bcrypt.compareSync(form.password, user.password)) {
-                    // check if the student has ticked on "remember me"
-                    if (form.remember == "true") {
-                        // recovery of the id in session
-                        const sessionID = req.session.id;
-
-                        try {
-                            // check if a session exists in DB
-                            const session = await Session.getOneStudent(sessionID);
-
-                            if (!session) {
-                                // recording a new session
-                                const newSession = new Session(sessionID)
-
-                                // register a new session instance (new) to generate its id
-                                await newSession.save();
-
-                                /* 
-                                Link of the session to user.
-                                The setUser doesn't need a save, it automatically saves to the DB.
-                                It only needs the instance (newSession) to come from it
-                                */
-                                await newSession.setUser(user);
-                            };
-
-
-                        } catch (error) {
-                            console.log(error);
-                            res.redirect("/404");
-                        }
+                if ((form.password, user.password)) {
+                    try {
+                        const jwtContent = { userId: user.id };
+                        const jwtOptions = {
+                            algorithm: 'HS256',
+                            expiresIn: '1h'
+                        };
+                        console.log('200', user.firstname);
+                        res.json({
+                            logged: true,
+                            firstname: user.firstname,
+                            lastname: user.lastname,
+                            token: JsonWebTokenError.sign(jwtContent, jwtSecret, jwtOptions),
+                        })
+                    } catch (error) {
+                        console.log('401, UNAUTHORIZED');
+                        res.redirect("/404");
                     }
                 }
-                /* 
-                Registration the user in the session
-                req.session.user = user;
-                delete req.session.user.password; 
-                removal of the 'password' key (and thus the associated value)
-                */
-                req.session.user = {
-                    id: user.id,
-                    email: user.email,
-                    firstname: user.firstname,
-                    lastname: user.lastname,
-                    role: user.id_therole
-                };
-
-                console.log(req.session.user);
-
                 res.redirect("/");
-            } else {
+            }
+            else {
                 console.log(error);
+                res.redirect("/404");
             }
         } catch (error) {
             console.log(error);

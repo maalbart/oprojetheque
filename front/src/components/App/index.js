@@ -34,19 +34,19 @@ export default function App () {
       <Route path="/promos">
         <Promos />
       </Route>
-      <Route path="/promos/promo">
+      <Route path="/onepromo">
         <Promo />
       </Route>
       <Route path="/projects">
         <Projects />
       </Route>
-      <Route path="/projects/project">
+      <Route path="/oneproject">
         <Project />
       </Route>
       <Route path="/students">
         <Students />
       </Route>
-      <Route path="/students/student">
+      <Route path="/onestudent">
         <Student />
       </Route>
       <Route path="/team">

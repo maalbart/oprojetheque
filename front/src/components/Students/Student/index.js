@@ -1,12 +1,14 @@
 import React from 'react'
 import './style.scss'
+import projectTest from 'src/assets/cookies.png'
+
 
 export default function Student () {    
     return (
 <div className="student">
         <div className="student-header">
             <h1>Bienvenue sur le profil de...</h1>
-            <img src="" alt="avatar de student" className="student-header-img"/>
+            <img src={projectTest} alt="avatar de student" className="student-header-img"/>
             <p className="student-header-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus natus numquam doloremque quas adipisci facere ea sit deserunt sunt nulla. Harum veniam eum exercitationem nisi asperiores nesciunt tempora ratione officiis!</p>
             <h2>Cupcake Chocolat</h2>
         </div>

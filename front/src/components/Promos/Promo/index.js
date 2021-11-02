@@ -2,6 +2,7 @@ import React from 'react'
 import { Card } from 'semantic-ui-react'
 import CardProject from "src/components/CardProject"
 import Button from "src/components/Button"
+import promoLogo from 'src/assets/cupcake-bleu.png'
 import './style.scss'
 
 export function Promo () {
@@ -9,7 +10,7 @@ export function Promo () {
       <div className="promo">
         <div className="promo-content">
             <div className="promo-content-header-identity">
-                <img src="" alt="logo de la promo" className="promo-content-header-identity-img"/>
+                <img src={promoLogo} alt="logo de la promo" className="promo-content-header-identity-img"/>
             </div>
             <div className="promo-content-header-description">
                 <h1 className="promo-content-header-description-title">Nom de la promo</h1>
