@@ -6,7 +6,8 @@ const router = express.Router();
 const mainController = require('./controllers/mainController.js');
 const projectController = require('./controllers/projectController.js');
 const promoController = require('./controllers/promoController.js');
-const studentController = require('./controllers/studentController.js');
+const studentController = require('./controllers/studentController.js')
+const authController = require('./controllers/authController.js')
 const adminController = require('./controllers/adminController.js');
 const adminMiddleware = require("./middlewares/adminMiddleware.js");
 
@@ -38,7 +39,7 @@ router.get("/projects", projectController.getAllProjects);
 
 /**
  * Recovery of one project
- * @route GET /project/:id"
+ * @route GET /project/:id
  * @group Projects - API to display one project
  * @returns {object} 200 - One project
  * @returns {Error}  default - An error has occurred
@@ -60,7 +61,7 @@ router.get("/promos", promoController.getAllPromos);
 
 /**
  * Recovery of one promo
- * @route GET /promo/:id"
+ * @route GET /promo/:id
  * @group Projects - API to display one promo
  * @returns {object} 200 - One promo
  * @returns {Error}  default - An error has occurred
@@ -82,7 +83,7 @@ router.get("/students", studentController.getAllStudents);
 
 /**
  * Recovery of one student
- * @route GET /student/:id"
+ * @route GET /student/:id
  * @group Projects - API to display one student
  * @returns {object} 200 - One student
  * @returns {Error}  default - An error has occurred
@@ -93,9 +94,38 @@ router.get("/student/:id", studentController.getOneStudent);
 /*****************************************/
 /*      ROAD OF LOGIN / DISCONNECT       */
 /*****************************************/
+<<<<<<< HEAD
+/**
+ * Connection page
+ * @route GET /connection
+ * @group Connection - API to connection
+ * @returns {object} 200 - Connection
+ * @returns {Error}  default - An error has occurred 
+ */
+router.get("/connection", authController.connection); 
+
+/**
+ * Connection page
+ * @route POST /connection
+ * @group Connection - API to connection
+ * @returns {object} 200 - Submission of the login form
+ * @returns {Error}  default - An error has occurred 
+ */
+router.post("/connection", authController.loginUser) 
+
+/**
+ * Disconnection page
+ * @route POST /disconnect
+ * @group Connection - API to disconnect
+ * @returns {object} 200 - Submission of disconnect form
+ * @returns {Error}  default - An error has occurred 
+ */
+router.post("/disconnect", authController.disconnection) 
+=======
 //router.get("/connection", studentController.connection); // connection page
 router.post("/connection", studentController.loginUser) // submission of the login form
 router.get("disconnect", studentController.disconnection) // disconnection page
+>>>>>>> development
 
 
 /***************************************/
@@ -109,15 +139,15 @@ Verification that the user, who wants to use the route /admin, has the role of a
 
 /******* Projects management *******/
 router.post("/admin", adminMiddleware.isAdmin, adminController.addProject);
-router.put("/admin", adminMiddleware.isAdmin, adminController.updateProject);
+router.patch("/admin", adminMiddleware.isAdmin, adminController.updateProject);
 
 /******* Promos management *******/
 router.post("/admin", adminMiddleware.isAdmin, adminController.addPromo);
-router.put("/admin", adminMiddleware.isAdmin,adminController.updatePromo); 
+router.patch("/admin", adminMiddleware.isAdmin,adminController.updatePromo); 
 
 /******* Students management *******/
 router.post("/admin", adminMiddleware.isAdmin, adminController.addStudent)
-router.put("/admin", adminMiddleware.isAdmin, adminController.updateStudent); 
+router.patch("/admin", adminMiddleware.isAdmin, adminController.updateStudent); 
 
 
 

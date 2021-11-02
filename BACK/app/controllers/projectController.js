@@ -9,6 +9,7 @@ const projectController = {
          res.json(projects);
       } catch (error) {
          res.status(500).send(error);
+         res.redirect("/404");
       }
    },
    /* ---------------------------------------------- */
@@ -21,6 +22,7 @@ const projectController = {
          res.json(projectId);
       } catch (error) {
          res.status(500).send(error);
+         res.redirect("/404");
       }
    },
    /* ---------------------------------------------- */
@@ -32,6 +34,7 @@ const projectController = {
          res.json(random);
       } catch (error) {
          res.status(500).send(error);
+         res.redirect("/404");
       }
    }
 };

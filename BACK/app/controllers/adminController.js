@@ -32,7 +32,6 @@ const adminController = {
     /*************************/
     /*      PROMO            */
     /*************************/
-    /* -----------------------------------------*/
     /* Method to add new promo */
     addPromo: async (req, res) => {
         try {
@@ -57,7 +56,6 @@ const adminController = {
     /*************************/
     /*      STUDENT          */
     /*************************/
-    /* -----------------------------------------*/
     /* Method to add new student */
     addStudent: async (req, res) => {
         try {
