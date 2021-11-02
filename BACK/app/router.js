@@ -7,7 +7,7 @@ const mainController = require('./controllers/mainController.js');
 const projectController = require('./controllers/projectController.js');
 const promoController = require('./controllers/promoController.js');
 const studentController = require('./controllers/studentController.js')
-const authController = require('./controllers/authController.js')
+const authController = require('./controllers/authController.js');
 // const adminController = require('./controllers/adminController.js');
 // const adminMiddleware = require("./middlewares/adminMiddleware.js");
 
