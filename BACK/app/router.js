@@ -94,7 +94,6 @@ router.get("/student/:id", studentController.getOneStudent);
 /*****************************************/
 /*      ROAD OF LOGIN / DISCONNECT       */
 /*****************************************/
-<<<<<<< HEAD
 /**
  * Connection page
  * @route GET /connection
@@ -121,11 +120,6 @@ router.post("/connection", authController.loginUser)
  * @returns {Error}  default - An error has occurred 
  */
 router.post("/disconnect", authController.disconnection) 
-=======
-//router.get("/connection", studentController.connection); // connection page
-router.post("/connection", studentController.loginUser) // submission of the login form
-router.get("disconnect", studentController.disconnection) // disconnection page
->>>>>>> development
 
 
 /***************************************/
