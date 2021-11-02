@@ -1,5 +1,8 @@
 const validator = require("email-validator");
 const User = require("../models/user.js");
+const jsonwebtoken = require('jsonwebtoken');
+const jwtSecret = 'IIUFHW98YW4TFHJCX7fr4r90ixjjnxcxe98208eJIHXKSIFOR9T2KAK';
+
 
 // const bcrypt = require('bcrypt');
 // const saltRounds = 10; // Hasher 10 times the password to make it more complex
@@ -54,7 +57,7 @@ const authController = {
                             logged: true,
                             firstname: user.firstname,
                             lastname: user.lastname,
-                            token: JsonWebTokenError.sign(jwtContent, jwtSecret, jwtOptions),
+                            token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions),
                         })
                     } catch (error) {
                         console.log('401, UNAUTHORIZED');

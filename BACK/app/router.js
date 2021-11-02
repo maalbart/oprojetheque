@@ -8,8 +8,8 @@ const projectController = require('./controllers/projectController.js');
 const promoController = require('./controllers/promoController.js');
 const studentController = require('./controllers/studentController.js')
 const authController = require('./controllers/authController.js')
-const adminController = require('./controllers/adminController.js');
-const adminMiddleware = require("./middlewares/adminMiddleware.js");
+// const adminController = require('./controllers/adminController.js');
+// const adminMiddleware = require("./middlewares/adminMiddleware.js");
 
 
 /***************************************/
@@ -132,16 +132,16 @@ Verification that the user, who wants to use the route /admin, has the role of a
 */ 
 
 /******* Projects management *******/
-router.post("/admin", adminMiddleware.isAdmin, adminController.addProject);
-router.patch("/admin", adminMiddleware.isAdmin, adminController.updateProject);
+// router.post("/admin", adminMiddleware.isAdmin, adminController.addProject);
+// router.patch("/admin", adminMiddleware.isAdmin, adminController.updateProject);
 
-/******* Promos management *******/
-router.post("/admin", adminMiddleware.isAdmin, adminController.addPromo);
-router.patch("/admin", adminMiddleware.isAdmin,adminController.updatePromo); 
+// /******* Promos management *******/
+// router.post("/admin", adminMiddleware.isAdmin, adminController.addPromo);
+// router.patch("/admin", adminMiddleware.isAdmin,adminController.updatePromo); 
 
-/******* Students management *******/
-router.post("/admin", adminMiddleware.isAdmin, adminController.addStudent)
-router.patch("/admin", adminMiddleware.isAdmin, adminController.updateStudent); 
+// /******* Students management *******/
+// router.post("/admin", adminMiddleware.isAdmin, adminController.addStudent)
+// router.patch("/admin", adminMiddleware.isAdmin, adminController.updateStudent); 
 
 
 
