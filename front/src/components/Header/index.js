@@ -7,6 +7,7 @@ import './style.scss';
 export default function Header () {
   return (
   <header className="menubar">
+    <Button content="ACCUEIL" path="/" />
     <Button content="PROJETS" path="/projects" />
     <Button content="PROMOS" path="/promos" />
     <Button content="ETUDIANTS" path="/students" />
