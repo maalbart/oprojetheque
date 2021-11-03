@@ -1,6 +1,5 @@
 import { Card, Image } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
-import projectTest from 'src/assets/cookies.png'
 import { Link } from 'react-router-dom'
 
 export default function CardStudent ({ 
