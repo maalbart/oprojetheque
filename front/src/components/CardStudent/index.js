@@ -1,8 +1,10 @@
 import { Card, Image } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
 import projectTest from 'src/assets/cookies.png'
+import { Link } from 'react-router-dom'
 
 export default function CardStudent ({ 
+  id,
   avatar,
   firstname,
   lastname,
@@ -10,7 +12,9 @@ export default function CardStudent ({
 }) {
   return (
     <Card>
-      <Image src={projectTest} wrapped ui={false} />
+      <Link to={`/student/${id}`}>
+        <Image src={avatar} wrapped ui={false} />
+      </Link>
       <Card.Content>
         <Card.Header>{firstname} {lastname}</Card.Header>
           <Card.Description>
