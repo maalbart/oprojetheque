@@ -13,7 +13,7 @@ export default function CardStudent ({
   return (
     <Card>
       <Link to={`/student/${id}`}>
-        <Image src={projectTest} wrapped ui={false} />
+        <Image src={avatar} wrapped ui={false} />
       </Link>
       <Card.Content>
         <Card.Header>{firstname} {lastname}</Card.Header>
