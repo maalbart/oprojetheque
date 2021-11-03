@@ -281,7 +281,7 @@
     {
                 "id": 24,
                 "firstname": "Pierre-Joel",
-                "lastname": "PJ",
+                "lastname": "Mbabo",
                 "email":"pierrejoel@oclock.io",
                 "password": "valhalla24",
                 "biography":"Développeur Fullstack spécialité Data/API",
@@ -570,7 +570,7 @@
                 "id": 48,
                 "firstname": "Benoit",
                 "lastname": "Schiex",
-                "email":"Benoit@oclock.io",
+                "email":"benoit@oclock.io",
                 "password": "oclock5",
                 "biography":"Je suis Professeur",
                 "avatar": "lien",

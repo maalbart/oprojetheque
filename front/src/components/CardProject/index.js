@@ -5,20 +5,20 @@ import projectTest from 'src/assets/cookies.png'
 export default function CardProject ({ 
   name, 
   description, 
-  date1, 
-  date2,
+  starting_date, 
+  ending_date,
   logo,
 }) {
   return (
     <Card>
-      <Image src={projectTest} wrapped ui={false} />
+      <Image src={logo} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{name}</Card.Header>
           <Card.Description>
             {description}
           </Card.Description>
           <Card.Meta>
-            <span className='date'>{date1}-{date2}</span>
+            <span className='date'>{starting_date} - {ending_date}</span>
           </Card.Meta>
       </Card.Content>
     </Card>
