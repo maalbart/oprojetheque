@@ -1,9 +1,18 @@
 import React from "react";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllStudents } from 'src/actions/students';
 import { Card, Input } from "semantic-ui-react";
-import CardProject from "src/components/CardProject";
+import CardStudent from "src/components/CardStudent";
 import './style.scss';
 
 export default function Students () {
+  const dispatch = useDispatch()
+  const allStudents = useSelector((state) => state.students.list)
+  console.log(allStudents);
+  useEffect(() => {
+    dispatch(getAllStudents())
+  }, [])
   return (
     <div className="students">
       <div className="students-header">
@@ -19,11 +28,9 @@ export default function Students () {
           centered
           className="students-list-card"
         >
-          <CardProject title="Projet 1" description="description du projet" />
-          <CardProject title="Projet 2" description="description du projet" />
-          <CardProject title="Projet 3" description="description du projet" />
-          <CardProject title="Projet 4" description="description du projet" />
-          <CardProject title="Projet 5" description="description du projet" />
+          {allStudents.map((allStudent) => (
+            <CardStudent key={allStudent.id} {...allStudent} />
+          ))}
         </Card.Group>
       </div>
     </div>

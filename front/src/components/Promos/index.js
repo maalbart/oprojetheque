@@ -1,9 +1,18 @@
 import React from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllPromos } from 'src/actions/promos'
 import { Card, Input } from "semantic-ui-react";
 import CardProject from "src/components/CardProject";
 import './style.scss';
 
 export default function Promos () {
+  const dispatch = useDispatch();
+  const allPromos = useSelector(state => state.promos.list)
+  console.log(allPromos);
+  useEffect(() => {
+    dispatch(getAllPromos())
+  }, [])
   return (
     <div className="promos">
       <div className="promos-header">
@@ -19,11 +28,9 @@ export default function Promos () {
           centered
           className="promos-list-card"
         >
-          <CardProject title="Promo 1" date1="28/10/2021" date2="07/06/2021" />
-          <CardProject title="Promo 2" date1="28/10/2021" date2="07/06/2021" />
-          <CardProject title="Promo 3" date1="28/10/2021" date2="07/06/2021" />
-          <CardProject title="Promo 4" date1="28/10/2021" date2="07/06/2021" />
-          <CardProject title="Promo 5" date1="28/10/2021" date2="07/06/2021" />
+          {allPromos.map((allPromo) => (
+            <CardProject key={allPromos.id} {...allPromo} />
+          ))}
         </Card.Group>
       </div>
     </div>
