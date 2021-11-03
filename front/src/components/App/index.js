@@ -16,10 +16,6 @@ import Error from 'src/components/404';
 import Team from 'src/components/Team';
 import Login from 'src/components/Login';
 import Contact from 'src/components/Contact';
-// import axios from 'axios';
-
-//import data
-// import projectsData from 'src/data/projects'
 
 // == Composant
 export default function App () {

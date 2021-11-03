@@ -3,12 +3,12 @@ import { combineReducers } from 'redux';
 import promosReducer from './promos';
 import userReducer from './user';
 import projectsReducer from './projects'
-import studentReducer from './students'
+import studentsReducer from './students'
 
 const rootReducer = combineReducers({
   promos: promosReducer,
   user: userReducer,
-  student: studentReducer,
+  students: studentsReducer,
   projects: projectsReducer
 });
 
