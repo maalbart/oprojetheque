@@ -1,4 +1,4 @@
-import { GET_RANDOM_PROJECTS, SAVE_PROJECTS } from "src/actions/projects";
+import { GET_RANDOM_PROJECTS, SAVE_PROJECTS, GET_ALL_PROJECTS } from "src/actions/projects";
 
 export const initialState = {
   list: [],
@@ -10,12 +10,15 @@ const projectsReducer = (state = initialState, action = {}) => {
       return {
         ...state
       };
-    case SAVE_PROJECTS: {
+    case SAVE_PROJECTS:
       return {
         ...state,
         list: action.list,
       }
-    }
+    case GET_ALL_PROJECTS:
+      return {
+        ...state
+      }
     default:
       return state;
   }

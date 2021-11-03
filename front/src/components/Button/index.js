@@ -1,13 +1,17 @@
 import React from "react";
+import { NavLink } from 'react-router-dom'
 import './style.scss';
 import PropTypes from 'prop-types'
 
 export default function Button ({ content, path }) {
   return (
     <div className="button">
-      <a href={path} className="button-text">
+    <NavLink 
+      to={path}
+      activeClassName="selected"
+    >
       {content}
-      </a>
+    </NavLink>
     </div>
   )
 }

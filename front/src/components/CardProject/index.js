@@ -5,8 +5,8 @@ import projectTest from 'src/assets/cookies.png'
 export default function CardProject ({ 
   name, 
   description, 
-  date1, 
-  date2,
+  starting_date, 
+  ending_date,
   logo,
 }) {
   return (
@@ -18,7 +18,7 @@ export default function CardProject ({
             {description}
           </Card.Description>
           <Card.Meta>
-            <span className='date'>{date1}-{date2}</span>
+            <span className='date'>{starting_date} - {ending_date}</span>
           </Card.Meta>
       </Card.Content>
     </Card>
