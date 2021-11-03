@@ -14,9 +14,9 @@ INSERT INTO "therole" ("id", "name") VALUES
 -- Table "promo"
 ---------------------------
 INSERT INTO "promo" ("id", "name", "logo", "starting_date", "ending_date") VALUES
-(1, 'Valhalla', 'lien', '2021-06-07', '2021-11-19'),
-(2, 'Astro', 'lien', '2021-01-04', '2021-06-19'),
-(3, 'Tipix', 'lien', '2021-05-03', '2021-10-15');
+(1, 'Valhalla', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635511371/oProjetheque/logo/O_rouge_un0lb8.png', '2021-06-07', '2021-11-19'),
+(2, 'Astro', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635511366/oProjetheque/logo/logo_O_bleu_htx4nh.png', '2021-01-04', '2021-06-19'),
+(3, 'Tipix', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635511369/oProjetheque/logo/O_jaune_hrarf1.png', '2021-05-03', '2021-10-15');
 
 
 ---------------------------

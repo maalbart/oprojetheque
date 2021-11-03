@@ -1,7 +1,24 @@
 /* Requiring dotenv allows loads environment variables from a .env file into process.env. */
 require('dotenv').config();
 
-/* ------------------------------------- */
+/* -------------------------------------* /
+/* Initialising Cloudinary */
+// const cloudinary = require('cloudinary');
+// cloudinary.config({ 
+//     cloud_name : 'sample' , 
+//     api_key : '874837483274837' , 
+//     api_secret : 'a676b67565c6767a6767d6767f676fe1' ,
+//     secure : true 
+//  });
+
+// /* ------------------------------------- */
+// function upload(file, options, callback);
+
+// cloudinary.v2.uploader.upload("/home/my_image.jpg", 
+//     function(error, result) {console.log(result, error)});
+
+
+/* -------------------------------------* /
 /* Initialising Express */
 const express = require('express');
 
