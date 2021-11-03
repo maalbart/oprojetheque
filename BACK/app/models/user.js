@@ -85,6 +85,24 @@ class User {
         console.log(result.rows);
         return result.rows[0];
     }
+     /* ---------------------------------------------- */
+    /**
+     * Return search student
+     * @returns [search student]
+     */
+     static async researchStudent(){
+        const query = {
+            // display of research
+            text:"SELECT firstname, lastname FROM theuser",
+            values:[]
+        };
+        console.log("Me voici dans la methode de recherche d'un student du model user");
+        
+        const result = await pool.query(query);
+        //console.log(result);
+        
+        return result.rows;
+    }
     /* ---------------------------------------------- */
     /**
      * Return new student
