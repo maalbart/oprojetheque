@@ -12,17 +12,21 @@ import Projects from 'src/components/Projects';
 import Project from 'src/components/Projects/Project';
 import Students from 'src/components/Students';
 import Student from 'src/components/Students/Student';
+import Loader from 'src/components/Loader';
 import Error from 'src/components/404';
-import Team from 'src/components/Team';
+import Team from 'src/components/Team'; 
 import Login from 'src/components/Login';
 import Contact from 'src/components/Contact';
 
 // == Composant
 export default function App () {
-  
+
+  // const [isLoading, setLoader] = useState(true);
   return (
-  <div className="app">
+    <div className="app">  
     <Header />
+    //{isLoading && <Loader />}
+    //{!isLoading && (
     <Switch>
       <Route path="/" exact>
         <Homepage />
@@ -30,19 +34,19 @@ export default function App () {
       <Route path="/promos">
         <Promos />
       </Route>
-      <Route path="/onepromo">
+      <Route path="/promo/:id">
         <Promo />
       </Route>
       <Route path="/projects">
         <Projects />
       </Route>
-      <Route path="/oneproject">
+      <Route path="/project/:id">
         <Project />
       </Route>
       <Route path="/students">
         <Students />
       </Route>
-      <Route path="/onestudent">
+      <Route path="/student/:id">
         <Student />
       </Route>
       <Route path="/team">
@@ -58,7 +62,8 @@ export default function App () {
         <Error />
       </Route>
     </Switch>
+    )}
     <Footer />
-  </div>
+    </div>
   );
 };

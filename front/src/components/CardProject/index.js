@@ -11,7 +11,7 @@ export default function CardProject ({
 }) {
   return (
     <Card>
-      <Image src={projectTest} wrapped ui={false} />
+      <Image src={logo} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{name}</Card.Header>
           <Card.Description>

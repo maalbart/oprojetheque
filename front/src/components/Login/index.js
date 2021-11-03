@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeField, handleLogin, handleDisconnect } from 'src/actions/user'
 import { Button, Checkbox, Form } from "semantic-ui-react";
 import Field from './Field';
+import './style.scss';
 
 
 export default function Login () {
@@ -28,7 +29,10 @@ export default function Login () {
     dispatch(changeField(evt.target.value), 'email')
   }
   return (
+    <div className="login-form">
+      <p className="login-form-description">Connectez-vous</p>
     <form autoComplete="off" className="login-form-element" onSubmit={handleSubmit}>
+        <div className="login-form-email">
           <Field
             name="email"
             placeholder="Adresse Email"
@@ -37,6 +41,8 @@ export default function Login () {
               dispatch(changeField(event.target.value, 'email'));
             }}
           />
+        </div>
+        <div className="login-form-password">
           <Field
             name="password"
             type="password"
@@ -46,13 +52,17 @@ export default function Login () {
               dispatch(changeField(event.target.value, 'password'));
             }}
           />
+        </div>
+        <div className="login-form-submit">
           <button
             type="submit"
             className="login-form-button"
           >
             OK
           </button>
+        </div>
         </form>
+        </div>
   )
 }
 
