@@ -2,6 +2,7 @@ import { GET_ALL_PROMOS, SAVE_PROMOS } from 'src/actions/promos';
 
 export const initialState = {
   list: [],
+  loader: true,
 }
 
 const promosReducer = (state = initialState, action = {}) => {

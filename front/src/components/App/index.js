@@ -25,8 +25,8 @@ export default function App () {
   return (
     <div className="app">  
     <Header />
-    //{isLoading && <Loader />}
-    //{!isLoading && (
+    {/* {isLoading && <Loader />} */}
+    {/* {!isLoading && ( */}
     <Switch>
       <Route path="/" exact>
         <Homepage />
@@ -62,7 +62,6 @@ export default function App () {
         <Error />
       </Route>
     </Switch>
-    )}
     <Footer />
     </div>
   );
