@@ -1,15 +1,37 @@
 /* Requiring dotenv allows loads environment variables from a .env file into process.env. */
 require('dotenv').config();
 
-/* ------------------------------------- */
+/* -------------------------------------* /
 /* Initialising Express */
 const express = require('express');
-
+/* -------------------------------------* /
+/* Initialising Cloudinary */
+const cloudinary = require('cloudinary');
+const { CloudinaryStorage } = require("multer-storage-cloudinary");
+const multer = require("multer");
 /* ------------------------------------- */
 /* Calling Express */
 const app = express();
 
-/* ------------------------------------- */
+
+cloudinary.config({ 
+    cloud_name : "dieupu7jn" , 
+    api_key : '761866131662332' , 
+    api_secret : 'Ch_tOPLd7DInTQj4S6iudmVvhEo' ,
+ });
+
+ const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+      folder: "oProjethèque",
+    },
+  });
+  const upload = multer({ storage: storage });
+  app.post("/", upload.single("picture"), async (req, res) => {
+    return res.json({ picture: req.file.path });
+  });
+  
+  /* ------------------------------------- */
 /* Requiring Express-JWT*/
 const jwt = require('express-jwt');
 
@@ -61,6 +83,7 @@ app.use(function(req, res, next) {
 app.use(cors({
     origin: '*'}));
 
+const multerMiddleware = multer({storage: storage});
 /* ------------------------------------- */
 /* Port setup - support for the port chosen by the developer if there is one, otherwise 5000 */
 const port = process.env.PORT || 5000;
@@ -76,3 +99,16 @@ app.listen(port, () => {
     console.log(`Server started on http://localhost:${port}`);
 });
 
+app.post('/upload',
+    multerMiddleware.single('mon-fichier'),
+    (req, res) => {
+        // A ce stade, le middleware multer a déjà uploadé le fichier sur cloudinary,
+        // le lien de l'image uploadée est accessible dans req
+        const fileURL = req.file.path;
+
+        // Ici, vous pouvez enregistrer ce lien dans votre base de donnée
+
+        console.log('Lien Cloudinary', fileURL)
+
+        res.json({ path: fileURL });
+    });

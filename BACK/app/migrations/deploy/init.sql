@@ -23,8 +23,8 @@ CREATE TABLE "promo" (
     "id" serial PRIMARY KEY, -- the serial type is specific to POSTGRESQL, it uses functions to automatically increment the id
     "name" text NOT NULL,
     "logo" text NOT NULL,
-    "starting_date" date NOT NULL,
-    "ending_date" date NOT NULL
+    "starting_date" text NOT NULL,
+    "ending_date" text NOT NULL
 );
 
 
