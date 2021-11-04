@@ -22,12 +22,10 @@ import Admin from 'src/components/Admin';
 // == Composant
 export default function App () {
 
-  // const [isLoading, setLoader] = useState(true);
   return (
     <div className="app">  
     <Header />
-    {/* {isLoading && <Loader />} */}
-    {/* {!isLoading && ( */}
+    
     <Switch>
       <Route path="/" exact>
         <Homepage />
