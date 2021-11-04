@@ -97,6 +97,8 @@ router.get("/student/:id", studentController.getOneStudent);
 router.post("/promos/search", searchController.searchPromo);
 router.post("/projects/search", searchController.searchProject);
 router.post("/students/search", searchController.searchStudent);
+
+
 /*****************************************/
 /*      ROAD OF LOGIN / DISCONNECT       */
 /*****************************************/
