@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllPromos } from 'src/actions/promos'
 import { Card, Input } from "semantic-ui-react";
-import CardProject from "src/components/CardProject";
+import CardPromo from "src/components/CardPromo";
 import './style.scss';
 
 export default function Promos () {
@@ -29,7 +29,7 @@ export default function Promos () {
           className="promos-list-card"
         >
           {allPromos.map((allPromo) => (
-            <CardProject key={allPromos.id} {...allPromo} />
+            <CardPromo key={allPromos.id} {...allPromo} />
           ))}
         </Card.Group>
       </div>

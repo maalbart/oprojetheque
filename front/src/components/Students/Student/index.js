@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { findStudent } from 'src/selectors/students'
 import './style.scss'
-import projectTest from 'src/assets/cookies.png';
 import { Redirect, useLocation, useParams } from 'react-router-dom';
 
 
@@ -16,9 +15,9 @@ export default function Student () {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-  // if (!student) {
-  //   return <Redirect to="/error" />;
-  // }
+  if (!student) {
+    return <Redirect to="/error" />;
+  }
   return (
     <div className="student">
       <div className="student-header">
