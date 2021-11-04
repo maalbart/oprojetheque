@@ -66,7 +66,7 @@ router.get("/promos", promoController.getAllPromos);
  * @returns {object} 200 - One promo
  * @returns {Error}  default - An error has occurred
  */
-router.get("/promo/:id", promoController.getStudentsFromPromo );
+router.get("/promo/:id", promoController.getOnePromo);
 // promoController.getOnePromo 
 /**
  * Recovery of students of one promo

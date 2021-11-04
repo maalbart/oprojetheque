@@ -144,11 +144,18 @@ class User {
      * @returns [StudentsFromPromo]
      */
      //SELECT * FROM theuser WHERE id_promo=$1"
-    static async getStudentsFromPromo (){
-        
+    //  SELECT * FROM theuser LEFT JOIN promo ON theuser.id_promo=promo.id
+    static async getStudentsFromPromo (id){
+        //         SELECT *
+        //         FROM `table`
+        //      WHERE `nom_colonne` = (
+        //     SELECT `valeur`
+        //     FROM `table2`
+        //     LIMIT 1)
+        //   
         const query = {
-            text: "SELECT * FROM theuser LEFT JOIN promo ON theuser.id_promo = promo.id",
-            values: []
+            text: "SELECT * FROM theuser WHERE id_promo=$1",
+            values: [id]
         };
         
         const result = await pool.query(query);
