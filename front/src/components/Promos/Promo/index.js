@@ -22,14 +22,16 @@ export function Promo () {
     return (
       <div className="promo">
         <div className="promo-content">
+          <div className='promo-content-header'>
             <div className="promo-content-header-identity">
                 <img src={promo.logo} alt="logo de la promo" className="promo-content-header-identity-img"/>
             </div>
             <div className="promo-content-header-description">
                 <h1 className="promo-content-header-description-title">{promo.name}</h1>
-                <h2 className="promo-content-header-description-date">{promo.starting_date} {promo.ending_date} </h2>
-                <h3 className="promo-content-header-description-referent">Referent = Simon</h3>
+                <h2 className="promo-content-header-description-date"> {promo.starting_date} - {promo.ending_date} </h2>
+                <h3 className="promo-content-header-description-referent">Référent : Simon</h3>
             </div>
+          </div>
             {/* <Button content="Projets/Etudiants" className="promo-button"/> */}
             <div className="promo-content-body">
                 <Card.Group
@@ -45,6 +47,6 @@ export function Promo () {
                 </Card.Group>
             </div>
         </div>
-    </div>
+      </div>
     )
 }
