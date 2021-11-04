@@ -95,7 +95,7 @@ class Project{
         //console.log(result);
         
         return result.rows;
-    },
+    }
     /* ---------------------------------------------- */
     /**
      * Return search project
