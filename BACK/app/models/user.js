@@ -140,14 +140,15 @@ class User {
     }
     /* ---------------------------------------------- */
     /**
-     * Return getStudentsFromPromo
+     * Return all students from one promo
      * @returns [StudentsFromPromo]
      */
-    static async getStudentsFromPromo (id_promo){
+     //SELECT * FROM theuser WHERE id_promo=$1"
+    static async getStudentsFromPromo (){
         
         const query = {
-            text: "SELECT * FROM theuser WHERE id_promo=$1",
-            values: [id_promo]
+            text: "SELECT * FROM theuser LEFT JOIN promo ON theuser.id_promo = promo.id",
+            values: []
         };
         
         const result = await pool.query(query);
