@@ -87,4 +87,4 @@ const authController = {
 
 
 /* Exports authController */
-module.exports = authController;
+module.exports = authController

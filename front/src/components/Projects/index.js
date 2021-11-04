@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllProjects } from 'src/actions/projects';
 import { Card, Input } from "semantic-ui-react";
 import CardProject from "src/components/CardProject";
+import Loader from 'src/components/Loader'
 import './style.scss';
 
 export default function Projects () {
@@ -13,6 +14,10 @@ export default function Projects () {
   useEffect(() => {
     dispatch(getAllProjects())
   }, [])
+  const loader = useSelector((state) => state.projects.loader);
+  if (loader) {
+    return <Loader />;
+  }
   return (
     <div className="projects">
       <div className="projects-header">

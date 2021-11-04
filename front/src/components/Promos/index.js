@@ -4,15 +4,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllPromos } from 'src/actions/promos'
 import { Card, Input } from "semantic-ui-react";
 import CardPromo from "src/components/CardPromo";
+import Loader from 'src/components/Loader'
 import './style.scss';
 
 export default function Promos () {
   const dispatch = useDispatch();
   const allPromos = useSelector(state => state.promos.list)
   console.log(allPromos);
+  const loader = useSelector((state) => state.promos.loader);
   useEffect(() => {
     dispatch(getAllPromos())
   }, [])
+  if (loader) {
+    return <Loader />;
+  }
   return (
     <div className="promos">
       <div className="promos-header">
