@@ -2,6 +2,7 @@ const Project = require("../models/project.js");
 const Promo = require("../models/promo.js");
 const User = require("../models/user.js");
 
+
 const searchController = {
  /* Method to get the searched promotion */
  searchPromo: async (req, res) => {
@@ -35,22 +36,9 @@ const searchController = {
        res.status(500).send(error);
        res.redirect("/404");
     }
- },
-}
+ }
+};
 
 
-
-/* Exports c */
+/* Exports searchController */
 module.exports = searchController;
-
- /* Method to display the projects page */
- getAllProjects: async (req, res) => {
-    try {
-       console.log("Bienvenue sur la page des projets");
-       const projects = await Project.getAllProjects();
-       res.json(projects);
-    } catch (error) {
-       res.status(500).send(error);
-       res.redirect("/404");
-    }
- },

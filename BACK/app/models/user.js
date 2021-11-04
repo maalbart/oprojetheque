@@ -158,7 +158,6 @@ class User {
         console.log(result.rows);
         return result.rows[0];
     }
-    
 };
 
 
