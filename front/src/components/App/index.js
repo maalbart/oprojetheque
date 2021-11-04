@@ -12,7 +12,6 @@ import Projects from 'src/components/Projects';
 import Project from 'src/components/Projects/Project';
 import Students from 'src/components/Students';
 import Student from 'src/components/Students/Student';
-import Loader from 'src/components/Loader';
 import Error from 'src/components/404';
 import Team from 'src/components/Team'; 
 import Login from 'src/components/Login';
@@ -62,7 +61,7 @@ export default function App () {
       <Route>
         <Error />
       </Route>
-     </Switch>
+    </Switch>
     <Footer />
     </div>
   );

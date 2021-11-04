@@ -43,7 +43,7 @@ export default function Project () {
             {/* <Button content="Se rattacher au projet" className="project-body-button"/> */}
           </div>
           <div className="project-body-right">
-            <p className="project-body-p">Description du projet</p>
+            <p className="project-body-p">Description du projet :</p>
             <p className="project-body-description">{project.description}</p>
           </div>
         </div>
