@@ -60,23 +60,13 @@ router.get("/project/:id", projectController.getOneProject);
 router.get("/promos", promoController.getAllPromos);
 
 /**
- * Recovery of one promo 
- * @route GET /promo/:id
- * @group Projects - API to display one promo
- * @returns {object} 200 - One promo
- * @returns {Error}  default - An error has occurred
- */
-router.get("/promo/:id", promoController.getOnePromo);
-// promoController.getOnePromo 
-/**
  * Recovery of students of one promo
  * @route GET /promo/:id
  * @group Projects - API to display students of one promo 
  * @returns {object} 200 - All students of one promo
  * @returns {Error}  default - An error has occurred
  */
-// router.get("/promo/:id", promoController.getStudentsFromPromo);
-
+router.get("/promo/:id", promoController.getOnePromo);
 
 
 /***************************************/
