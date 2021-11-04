@@ -10,7 +10,7 @@ const studentController = require('./controllers/studentController.js')
 const authController = require('./controllers/authController.js');
 // const adminController = require('./controllers/adminController.js');
 // const adminMiddleware = require("./middlewares/adminMiddleware.js");
-
+//const searchController = require('./controllers/searchController.js');
 
 /***************************************/
 /*          HOMEPAGE                   */
@@ -92,6 +92,14 @@ router.get("/student/:id", studentController.getOneStudent);
 
 
 /*****************************************/
+/*      ROAD OF SEARCH                   */
+/*****************************************/
+router.post("/promos/search", searchController.searchPromo);
+router.post("/projects/search", searchController.searchProject);
+router.post("/students/search", searchController.searchStudent);
+
+
+/*****************************************/
 /*      ROAD OF LOGIN / DISCONNECT       */
 /*****************************************/
 /**
@@ -120,6 +128,7 @@ router.post("/connection", authController.loginUser)
  * @returns {Error}  default - An error has occurred 
  */
 router.post("/disconnect", authController.disconnection) 
+
 
 
 /***************************************/
