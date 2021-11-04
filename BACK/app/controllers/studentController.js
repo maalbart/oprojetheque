@@ -26,6 +26,14 @@ const studentController = {
             res.redirect("/404");
         }
     },
+    /* ---------------------------------------------- */
+    /* Method that displays a student's class and project */
+    getPromoAndProjetForOneStudent: async (req, res) => {
+
+
+    },
+    /* ---------------------------------------------- */
+    /* Method that displays a student's class and project */ 
     profilStudent: (req, res, next) => {
         console.log("Je suis dans la methode profil dans le studentCOntroller!");
         // res.redirect("/404");

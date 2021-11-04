@@ -66,7 +66,17 @@ router.get("/promos", promoController.getAllPromos);
  * @returns {object} 200 - One promo
  * @returns {Error}  default - An error has occurred
  */
-router.get("/promo/:id", promoController.getOnePromo);
+// router.get("/promo/:id", promoController.getOnePromo);
+router.get("/promo/:id", promoController.getStudentsFromPromo);
+
+/**
+ * Recovery of one promo
+ * @route GET /promo/:id
+ * @group Projects - API to display one promo
+ * @returns {object} 200 - One promo
+ * @returns {Error}  default - An error has occurred
+ */
+ router.get("/promo/:id", promoController.getOnePromo);
 
 
 /***************************************/
@@ -94,9 +104,9 @@ router.get("/student/:id", studentController.getOneStudent);
 /*****************************************/
 /*      ROAD OF SEARCH                   */
 /*****************************************/
-router.post("/promos/search", searchController.searchPromo);
-router.post("/projects/search", searchController.searchProject);
-router.post("/students/search", searchController.searchStudent);
+// router.post("/promos/search", searchController.searchPromo);
+// router.post("/projects/search", searchController.searchProject);
+// router.post("/students/search", searchController.searchStudent);
 
 
 /*****************************************/

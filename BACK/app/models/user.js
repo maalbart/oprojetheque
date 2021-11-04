@@ -53,7 +53,6 @@ class User {
 
         const dbresult = await pool.query(query);
 
-
         const studentsDB = dbresult.rows;
         const result = [];
 
@@ -79,9 +78,9 @@ class User {
         // console.log("voici l'id", id);
 
         const result = await pool.query(query);
-        console.log("Resultat de getOneStudent", result);
+        // console.log("Resultat de getOneStudent", result);
 
-        console.log("Nous sommes dans la methode getOneStudent du model");
+        console.log("Nous sommes dans la methode getOneStudent du model User");
         console.log(result.rows);
         return result.rows[0];
     }
@@ -114,7 +113,7 @@ class User {
             values: [id, firstname, lastname, email, password, biography, avatar, id_promo, id_project, id_therole]
         };
 
-        console.log("Me voici dans la methode addStudent du model student");
+        // console.log("Me voici dans la methode addStudent du model student");
 
         const result = await pool.query(query);
         // console.log(result);
@@ -141,6 +140,25 @@ class User {
     }
     /* ---------------------------------------------- */
     /**
+     * Return getStudentsFromPromo
+     * @returns [StudentsFromPromo]
+     */
+    static async getStudentsFromPromo (id_promo){
+        
+        const query = {
+            text: "SELECT * FROM theuser WHERE id_promo=$1",
+            values: [id_promo]
+        };
+        
+        const result = await pool.query(query);
+        // console.log("Resultat de getStudentsFromPromo", result);
+
+        console.log("Nous sommes dans la methode getStudentsFromPromo du model User");
+        console.log(result.rows);
+        return result.rows;
+    }
+    /* ---------------------------------------------- */
+    /**
      * Return getUserEmail
      * @returns [getUserEmail]
      */
@@ -149,7 +167,7 @@ class User {
             text: "SELECT * FROM theuser WHERE theuser.email=$1",
             values: [email]
         };
-        console.log("voici l'email", email);
+        // console.log("voici l'email", email);
 
         const result = await pool.query(query);
         console.log("Resultat de getOneUser", result);
