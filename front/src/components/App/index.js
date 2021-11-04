@@ -16,6 +16,7 @@ import Error from 'src/components/404';
 import Team from 'src/components/Team'; 
 import Login from 'src/components/Login';
 import Contact from 'src/components/Contact';
+import Admin from 'src/components/Admin';
 
 // == Composant
 export default function App () {
@@ -53,6 +54,9 @@ export default function App () {
       </Route>
       <Route path="/contact">
         <Contact />
+      </Route>
+      <Route path="/admin">
+        <Admin />
       </Route>
       <Route>
         <Error />

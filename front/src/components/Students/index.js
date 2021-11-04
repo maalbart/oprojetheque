@@ -4,15 +4,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAllStudents } from 'src/actions/students';
 import { Card, Input } from "semantic-ui-react";
 import CardStudent from "src/components/CardStudent";
+import Loader from 'src/components/Loader'
 import './style.scss';
 
 export default function Students () {
   const dispatch = useDispatch()
   const allStudents = useSelector((state) => state.students.list)
   console.log(allStudents);
+  const loader = useSelector((state) => state.students.loader);
   useEffect(() => {
     dispatch(getAllStudents())
   }, [])
+  if (loader) {
+    return <Loader />;
+  }
   return (
     <div className="students">
       <div className="students-header">
