@@ -60,13 +60,23 @@ router.get("/project/:id", projectController.getOneProject);
 router.get("/promos", promoController.getAllPromos);
 
 /**
- * Recovery of one promo
+ * Recovery of one promo 
  * @route GET /promo/:id
  * @group Projects - API to display one promo
  * @returns {object} 200 - One promo
  * @returns {Error}  default - An error has occurred
  */
 router.get("/promo/:id", promoController.getOnePromo);
+// promoController.getOnePromo 
+/**
+ * Recovery of students of one promo
+ * @route GET /promo/:id
+ * @group Projects - API to display students of one promo 
+ * @returns {object} 200 - All students of one promo
+ * @returns {Error}  default - An error has occurred
+ */
+// router.get("/promo/:id", promoController.getStudentsFromPromo);
+
 
 
 /***************************************/
@@ -90,13 +100,23 @@ router.get("/students", studentController.getAllStudents);
  */
 router.get("/student/:id", studentController.getOneStudent);
 
+/**
+ * Recovery of student's promo and project
+ * @route GET /student/:id
+ * @group Projects - API to display one student, his promo and his project
+ * @returns {object} 200 - One student with his promo and his project
+ * @returns {Error}  default - An error has occurred
+ */
+ router.get("/student/:id", studentController.getPromoAndProjetForOneStudent);
+
+
 
 /*****************************************/
 /*      ROAD OF SEARCH                   */
 /*****************************************/
-router.post("/promos/search", searchController.searchPromo);
-router.post("/projects/search", searchController.searchProject);
-router.post("/students/search", searchController.searchStudent);
+// router.post("/promos/search", searchController.searchPromo);
+// router.post("/projects/search", searchController.searchProject);
+// router.post("/students/search", searchController.searchStudent);
 
 
 /*****************************************/
