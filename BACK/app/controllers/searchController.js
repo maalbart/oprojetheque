@@ -40,7 +40,6 @@ const searchController = {
 
 
 
-
 /* Exports c */
 module.exports = searchController;
 

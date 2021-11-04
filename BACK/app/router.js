@@ -10,7 +10,7 @@ const studentController = require('./controllers/studentController.js')
 const authController = require('./controllers/authController.js');
 // const adminController = require('./controllers/adminController.js');
 // const adminMiddleware = require("./middlewares/adminMiddleware.js");
-
+//const searchController = require('./controllers/searchController.js');
 
 /***************************************/
 /*          HOMEPAGE                   */
