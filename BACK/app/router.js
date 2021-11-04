@@ -94,9 +94,9 @@ router.get("/student/:id", studentController.getOneStudent);
 /*****************************************/
 /*      ROAD OF SEARCH                   */
 /*****************************************/
-router.post("/promos/search", searchController.searchPromo);
-router.post("/projects/search", searchController.searchProject);
-router.post("/students/search", searchController.searchStudent);
+// router.post("/promos/search", searchController.searchPromo);
+// router.post("/projects/search", searchController.searchProject);
+// router.post("/students/search", searchController.searchStudent);
 
 
 /*****************************************/
