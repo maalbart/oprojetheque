@@ -87,7 +87,7 @@ class Project{
         };
         // console.log("Me voici dans la methode projectsRandom du model project");
         const result = await pool.query(query);
-        //console.log(result);
+        // console.log(result);
         return result.rows;
     }
     /* ---------------------------------------------- */
@@ -103,7 +103,7 @@ class Project{
         };
         // console.log("Me voici dans la methode de recherche d'un project du model project");
         const result = await pool.query(query);
-        //console.log(result);
+        // console.log(result);
         return result.rows;
     }
     /* ---------------------------------------------- */
@@ -148,7 +148,7 @@ class Project{
         };
         // console.log ("voici l'id", id);
         const result = await pool.query(query); 
-        //console.log("Resultat de getOneProject", result);
+        // console.log("Resultat de getOneProject", result);
         // console.log("Nous sommes dans la methode getOneProject du model");
         // console.log(result.rows);
         return result.rows; 

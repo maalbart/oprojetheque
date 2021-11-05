@@ -148,7 +148,7 @@ class User {
      */
     static async getStudentsFromPromo (id){
         const query = {
-            text: "SELECT * FROM theuser WHERE id_promo=$1",
+            text: "SELECT * FROM theuser WHERE id_promo=$1 AND id_therole=2",
             values: [id]
         };  
         const result = await pool.query(query);
