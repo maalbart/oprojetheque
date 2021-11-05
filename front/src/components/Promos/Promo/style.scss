@@ -1,20 +1,23 @@
 @use 'src/styles/vars';
 
-.promo-content-header {
-  background-color: vars.$homepageBackgroundColor;
+.promo-content {
+  background-color: #D83A37;
   color: vars.$textColor;
   font-family: 'Raleway', 'Roboto', sans-serif;
+
+  &-header {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 4em 0 4em 0;
-
+  
   &-identity-img {
   width: 5%;
-  }
+    }
   
   &-description-date, &-description-referent {
     font-weight: normal;
+    }
   }
 }
 

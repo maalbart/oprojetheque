@@ -22,8 +22,9 @@ export default function Student () {
     <div className="student">
       <div className="student-header">
           <img src={student.avatar} alt="avatar de student" className="student-header-img"/>
-          <p className="student-header-description">{student.biography}</p>
           <h2>{student.firstname} {student.lastname}</h2>
+          <p className="student-header-description">{student.biography}</p>
+          
       </div>
       <div className="student-body">
           <h3 className="student-body-titles">Promotion</h3> 
@@ -35,4 +36,3 @@ export default function Student () {
   )
 }
 
-// h1 = { name } a rajouter
