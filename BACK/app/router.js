@@ -10,10 +10,11 @@ const studentController = require('./controllers/studentController.js')
 const authController = require('./controllers/authController.js');
 // const adminController = require('./controllers/adminController.js');
 // const adminMiddleware = require("./middlewares/adminMiddleware.js");
-//const searchController = require('./controllers/searchController.js');
+// const searchController = require('./controllers/searchController.js');
+
 
 /***************************************/
-/*          HOMEPAGE                   */
+/*              HOMEPAGE               */
 /***************************************/
 /**
  * Home page of the website
@@ -26,7 +27,7 @@ router.get("/", mainController.homePage);
 
 
 /***************************************/
-/*          ROADS OF PROJECTS          */
+/*          PROJECTS ROUTES            */
 /***************************************/
 /**
  * Recovery of all projects
@@ -48,7 +49,7 @@ router.get("/project/:id", projectController.getOneProject);
 
 
 /***************************************/
-/*          ROADS OF PROMOS         */
+/*          PROMOS ROUTES              */
 /***************************************/
 /**
  * Recovery of all promos
@@ -70,7 +71,7 @@ router.get("/promo/:id", promoController.getOnePromo);
 
 
 /***************************************/
-/*          ROADS OF STUDENTS          */
+/*          STUDENTS ROUTES            */
 /***************************************/
 /**
  * Recovery of all students
@@ -89,20 +90,10 @@ router.get("/students", studentController.getAllStudents);
  * @returns {Error}  default - An error has occurred
  */
 router.get("/student/:id", studentController.getOneStudent);
-// studentController.getOneStudent
-/**
- * Recovery of student's promo and project
- * @route GET /student/:id
- * @group Projects - API to display one student, his promo and his project
- * @returns {object} 200 - One student with his promo and his project
- * @returns {Error}  default - An error has occurred
- */
-//  router.get("/student/:id", studentController.getPromoAndProjetForOneStudent);
-
 
 
 /*****************************************/
-/*      ROAD OF SEARCH                   */
+/*             SEARCH ROUTE              */
 /*****************************************/
 // router.post("/promos/search", searchController.searchPromo);
 // router.post("/projects/search", searchController.searchProject);
@@ -110,12 +101,12 @@ router.get("/student/:id", studentController.getOneStudent);
 
 
 /*****************************************/
-/*      ROAD OF LOGIN / DISCONNECT       */
+/*      LOGIN/DISCONNECTION ROUTE        */
 /*****************************************/
 /**
  * Connection page
  * @route GET /connection
- * @group Connection - API to connection
+ * @group Connection - API to connect
  * @returns {object} 200 - Connection
  * @returns {Error}  default - An error has occurred 
  */
@@ -124,12 +115,13 @@ router.get("/connection", authController.connection);
 /**
  * Connection page
  * @route POST /connection
- * @group Connection - API to connection
+ * @group Connection - API to connect
  * @returns {object} 200 - Submission of the login form
  * @returns {Error}  default - An error has occurred 
  */
 router.post("/connection", authController.loginUser) 
 
+//! ATTENTION - A CHECKER
 /**
  * Disconnection page
  * @route POST /disconnect
@@ -142,7 +134,7 @@ router.post("/disconnect", authController.disconnection)
 
 
 /***************************************/
-/*          ROADS OF ADMIN             */
+/*          ADMIN ROUTES               */
 /***************************************/
 //! TEST ALL ADMIN ROADS
 /* Express allows us to chain middlewares / controllers by a next
