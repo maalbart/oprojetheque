@@ -23,14 +23,14 @@ INSERT INTO "promo" ("id", "name", "logo", "starting_date", "ending_date") VALUE
 -- Table "project"
 ---------------------------
 INSERT INTO "project" ("id", "name", "logo", "description", "site_link", "site_screen", "youtube_link", "id_promo") VALUES
-(1, 'Le mur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635942378/oProjetheque/logo%20project/Screenshot_2021-11-03_132427_g644re.png', 'Espace de travail commun avec des personnes qui opèrent dans le même milieu créatif', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635709034/oProjetheque/screen/LeMur_jk1ucq.png', 'lien', 1),
-(2, 'Livre Hero', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635941621/oProjetheque/logo%20project/Logo_Livre_H%C3%A9ro_ok_xvnuui.png', 'Histoire dont on est le héros', 'lien', 'lien', 'lien', 1),
+(1, 'Le mur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062074/oProjetheque/logo%20project/lemur_logo_ap1etk.png', 'Espace de travail commun avec des personnes qui opèrent dans le même milieu créatif', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635709034/oProjetheque/screen/LeMur_jk1ucq.png', 'lien', 1),
+(2, 'Livre Hero', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062078/oProjetheque/logo%20project/livrehero_t6lnfa.png', 'Histoire dont on est le héros', 'lien', 'lien', 'lien', 1),
 (3, 'Kid Oz Anges', 'lien', 'Espace qui répertorie des activités pour enfants', 'lien', 'lien', 'lien', 1),
-(4, 'Mentor me', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635942568/oProjetheque/logo%20project/Logo_Mentor_Me_ok_z9chrj.png', 'Plateforme pour aider son prochain', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635942078/oProjetheque/screen/mentor_me_ok_xfhnst.png', 'lien', 1),
+(4, 'Mentor me', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062080/oProjetheque/logo%20project/mentorme_q4tpbp.png', 'Plateforme pour aider son prochain', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635942078/oProjetheque/screen/mentor_me_ok_xfhnst.png', 'lien', 1),
 (5, 'Paradize', 'lien', 'Recherche de lieu de vacances', 'lien', 'lien', 'lien', 1),
 (6, 'Compostons', 'lien', 'Géolocalisation et tuto pour le compostage', 'lien', 'lien', 'lien', 1),
-(7, 'oProjetheque', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635928892/oProjetheque/logo%20project/Logo_rouge_xfgypy.png', 'Listing des projets des étudiants ', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635512183/oProjetheque/screen/acc_v1_r3cdhc.png', 'lien', 1),
-(8, 'LDO transport', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635928889/oProjetheque/logo%20project/Asset_1_dlok6c.png', 'Logistique de transport', 'lien', 'lien', 'lien', 1),
+(7, 'oProjetheque', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062087/oProjetheque/logo%20project/oprojetheque_logo_hybride_xlzyaa.png', 'Listing des projets des étudiants ', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635512183/oProjetheque/screen/acc_v1_r3cdhc.png', 'lien', 1),
+(8, 'LDO transport', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062072/oProjetheque/logo%20project/ldo_1_fmnfyr.png', 'Logistique de transport', 'lien', 'lien', 'lien', 1),
 (9, 'Bristol', 'lien', 'Site collaboratif de partage de fiches méthodologiques', 'lien', 'lien', 'lien', 1);
 
 
