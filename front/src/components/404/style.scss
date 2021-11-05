@@ -1,0 +1,17 @@
+@use 'src/styles/vars';
+
+.error {
+  background-color: vars.$homepageBackgroundColor;
+  color: vars.$textColor;
+  font-family: 'Raleway', 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0 2em 0;
+    &-benjicowboy {
+      border-radius: 5%;
+    }
+    &-benjicowboy:hover {
+      transform: scaleX(-1);
+    }
+}
