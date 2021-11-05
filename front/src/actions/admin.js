@@ -1,9 +1,9 @@
 // ACTION TYPES
-export const HANDLE_ITEM_CLICK = 'HANDLE_ITEM_CLICK'
+export const HANDLE_CHANGE_DROPDOWN_VALUE = 'HANDLE_CHANGE_DROPDOWN_VALUE'
 
 // ACTION CREATORS
-export const handleItemClick = (value) => ({
-  type: HANDLE_ITEM_CLICK,
+export const handleChangeDropdownValue = (value) => ({
+  type: HANDLE_CHANGE_DROPDOWN_VALUE,
   value,
 })
 
