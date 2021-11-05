@@ -4,9 +4,10 @@
     background-color: vars.$homepageBackgroundColor;
     color: vars.$textColor;
     width: 100%;
-    height: 92vh;
+   // height: 100vh; si on met ca ca fait glisser le footer sous les cards
     display: flex;
     flex-direction: column;
+
     &-presentation {
         margin: 4em 0;
     }    
@@ -25,11 +26,7 @@
         margin: 2em 15em 2em 15em;
     }
     
-    &-suggest {
+    &-suggest, &-cards {
       padding: 3em 2em 3em 2em;
-      
-      &-cards {
-        
-      }
     }
 }

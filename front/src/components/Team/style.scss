@@ -5,9 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:auto;
+  background-color: #D83A37;
   padding: 2em 0 0 0;
   height: 100vh;
+
   &-presentation{
     color: vars.$textColor;
     padding-top: 2em;

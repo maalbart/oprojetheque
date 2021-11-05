@@ -36,4 +36,3 @@ export default function Student () {
   )
 }
 
-// h1 = { name } a rajouter
