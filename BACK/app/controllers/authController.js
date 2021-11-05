@@ -8,29 +8,34 @@ const jwtSecret = 'IIUFHW98YW4TFHJCX7fr4r90ixjjnxcxe98208eJIHXKSIFOR9T2KAK';
 // const saltRounds = 10; // Hasher 10 times the password to make it more complex
 
 const authController = {
+    /*****************************************/
+    /*               CONNECTION              */
+    /*****************************************/
     /* Method for the student to log in */
     connection: (req, res, next) => {
         res.render("connection/login");
     },
-    /* ---------------------------------------------- */
-    /* Method for the user to connect*/
+    /*****************************************/
+    /*               LOGIN                   */
+    /*****************************************/
+    /* Method for the user to connect */
     loginUser: async (req, res, next) => {
         // data entered in the login form 
         const form = req.body;
-        console.log("J'affiche ce qu'il y a dans mon req.body", form);
+        // console.log("J'affiche ce qu'il y a dans mon req.body", form);
 
         // check that none of the sent properties are null!
         const isOnePropertyNull = !(form.email && form.password);
 
         if (isOnePropertyNull) {
-            /* send an error message */
+            // send an error message 
             res.send("Veuillez renseigner tous les champs pour vous connecter!");
         } else {
             // check that the email is in the right format
             if (validator.validate(form.email)) {
                 // returns true if it's an email
-                console.log("L'email est au bon format!");
-                console.log("MON FORM.EMAIL", form.email);
+                // console.log("L'email est au bon format!");
+                // console.log("MON FORM.EMAIL", form.email);
             } else {
                 //Send error response here
                 res.status(400).send({
@@ -53,7 +58,7 @@ const authController = {
                             algorithm: 'HS256',
                             expiresIn: '1h'
                         };
-                        console.log('200', user.firstname);
+                        // console.log('200', user.firstname);
                         res.json({
                             logged: true,
                             firstname: user.firstname,
@@ -75,15 +80,17 @@ const authController = {
             console.log(error);
         }
     },
-    /* ---------------------------------------------- */
-    /* method for the student to disconnect*/
+    /*****************************************/
+    /*                LOGOUT                 */
+    /*****************************************/
+    /* Method for the student to disconnect*/
     disconnection: (req, res, next) => {
         // destruction of the session to disconnect the user
         req.session.user = null;
         // redirection to the home page
         res.redirect("/");
     }
-}
+};
 
 
 /* Exports authController */
