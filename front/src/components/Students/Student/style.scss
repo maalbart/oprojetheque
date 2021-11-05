@@ -1,0 +1,22 @@
+@use 'src/styles/vars';
+
+.student-header {
+  background-color: vars.$homepageBackgroundColor;
+  color: vars.$textColor;
+  font-family: 'Raleway', 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 4em 0 4em 0;
+  align-items: center;
+  &-img {
+    max-width: 20%;
+  }
+}
+
+.student-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: vars.$textColor;
+  font-family: 'Raleway', 'Roboto', sans-serif;
+}
