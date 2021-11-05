@@ -84,6 +84,22 @@ class User {
         console.log(result.rows);
         return result.rows[0];
     }
+    //  
+    static async getStudentandProjectFromStudent(id) {
+        const query = {
+            text: "SELECT * FROM project WHERE id=$1",
+            values: [id]
+        };
+        // console.log("voici l'id", id);
+
+        const result = await pool.query(query);
+        // console.log("Resultat de getOneStudent", result);
+
+        console.log("Nous sommes dans la methode getStudentandProjectFromStudent");
+        console.log(result.rows);
+        return result.rows;
+    }
+    
      /* ---------------------------------------------- */
     /**
      * Return search student
@@ -146,6 +162,20 @@ class User {
     static async getStudentsFromPromo (id){
         const query = {
             text: "SELECT * FROM theuser WHERE id_promo=$1",
+            values: [id]
+        };
+        
+        const result = await pool.query(query);
+        // console.log("Resultat de getStudentsFromPromo", result);
+
+        console.log("Nous sommes dans la methode getStudentsFromPromo du model User");
+        console.log(result.rows);
+        return result.rows;
+    }
+
+    static async getStudentsFromProject (id){
+        const query = {
+            text: "SELECT * FROM theuser WHERE id_project=$1",
             values: [id]
         };
         

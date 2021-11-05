@@ -82,14 +82,14 @@ router.get("/promo/:id", promoController.getOnePromo);
 router.get("/students", studentController.getAllStudents);
 
 /**
- * Recovery of one student
+ * Recovery of one student of one 
  * @route GET /student/:id
  * @group Projects - API to display one student
  * @returns {object} 200 - One student
  * @returns {Error}  default - An error has occurred
  */
 router.get("/student/:id", studentController.getOneStudent);
-
+// studentController.getOneStudent
 /**
  * Recovery of student's promo and project
  * @route GET /student/:id
@@ -97,7 +97,7 @@ router.get("/student/:id", studentController.getOneStudent);
  * @returns {object} 200 - One student with his promo and his project
  * @returns {Error}  default - An error has occurred
  */
- router.get("/student/:id", studentController.getPromoAndProjetForOneStudent);
+//  router.get("/student/:id", studentController.getPromoAndProjetForOneStudent);
 
 
 

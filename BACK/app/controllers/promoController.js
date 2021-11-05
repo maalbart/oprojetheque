@@ -29,7 +29,7 @@ const promoController = {
          res.status(500).send(error);
          res.redirect("/404");
       }
-      next();
+      next()
 
    },
 
