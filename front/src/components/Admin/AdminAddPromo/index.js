@@ -1,58 +1,43 @@
-import { Form, Input, TextArea, Button, Select } from 'semantic-ui-react'
+import { Form, Input, Button, Dropdown } from 'semantic-ui-react'
 import './style.scss'
 
 export default function AdminAddPromo () {
-  const genderOptions = [
-    { key: 'm', text: 'Male', value: 'male' },
-    { key: 'f', text: 'Female', value: 'female' },
-    { key: 'o', text: 'Other', value: 'other' },
-  ]
   
   return (
     <Form>
+      <Form.Field
+        id='form-input-control-promo-name'
+        control={Input}
+        label='Nom de la promo'
+        placeholder='Nom de la promo'
+      />
     <Form.Group widths='equal'>
       <Form.Field
-        id='form-input-control-first-name'
+        id='form-input-control-starting-date'
         control={Input}
-        label='First name'
-        placeholder='First name'
+        type='date'
+        label='Date de début'
+        placeholder='Date de début'
       />
       <Form.Field
-        id='form-input-control-last-name'
+        id='form-input-control-ending-date'
         control={Input}
-        label='Last name'
-        placeholder='Last name'
-      />
-      <Form.Field
-        control={Select}
-        options={genderOptions}
-        label={{ children: 'Gender', htmlFor: 'form-select-control-gender' }}
-        placeholder='Gender'
-        search
-        searchInput={{ id: 'form-select-control-gender' }}
+        type='date'
+        label='Date de fin'
+        placeholder='Date de Fin'
       />
     </Form.Group>
-    <Form.Field
-      id='form-textarea-control-opinion'
-      control={TextArea}
-      label='Opinion'
-      placeholder='Opinion'
+    <Input
+      id='form-input-control-avatar'
+      type='file'
+      accept='.jpg, .png, .svg'
+      label='Avatar de la promotion'
+      labelPosition='right'
     />
     <Form.Field
-      id='form-input-control-error-email'
-      control={Input}
-      label='Email'
-      placeholder='joe@schmoe.com'
-      error={{
-        content: 'Please enter a valid email address',
-        pointing: 'below',
-      }}
-    />
-    <Form.Field
-      id='form-button-control-public'
+      id='form-button-control-promo'
       control={Button}
-      content='Confirm'
-      label='Label with htmlFor'
+      content='Créer la promotion'
     />
   </Form>
   )
