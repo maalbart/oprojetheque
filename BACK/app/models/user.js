@@ -14,7 +14,7 @@ class User {
         this.id_promo = object.id_promo;
         this.id_project = object.id_project;
         this.id_therole = object.id_therole;
-        console.log("Mon objet user", object);
+        // console.log("Mon objet user", object);
     }
 
     async save() {
@@ -42,7 +42,7 @@ class User {
     /* ---------------------------------------------- */
     /**
     * Return all students
-    * @returns [Students]
+    * @returns [students]
     */
     static async getAllStudents() {
         const query = {
@@ -50,17 +50,13 @@ class User {
             text: "SELECT * FROM theuser WHERE theuser.id_therole=$1 ORDER BY firstname",
             values: [2]
         };
-
         const dbresult = await pool.query(query);
-
         const studentsDB = dbresult.rows;
         const result = [];
-
         // Loop on the elements returned by the database  & creation of the Student instances
         for (const studentDB of studentsDB) {
             result.push(new User(studentDB));
         }
-
         // return a table of instances Student
         return result;
 
@@ -68,7 +64,7 @@ class User {
     /* ---------------------------------------------- */
     /**
      * Return one student
-     * @returns [Student]
+     * @returns [student]
      */
     static async getOneStudent(id) {
         const query = {
@@ -76,17 +72,32 @@ class User {
             values: [id]
         };
         // console.log("voici l'id", id);
-
         const result = await pool.query(query);
         // console.log("Resultat de getOneStudent", result);
-
-        console.log("Nous sommes dans la methode getOneStudent du model User");
-        console.log(result.rows);
+        // console.log("Nous sommes dans la methode getOneStudent du model User");
+        // console.log(result.rows);
         return result.rows[0];
+    }
+    /* ---------------------------------------------- */
+    /**
+     * Return promo and project from student
+     * @returns [promo and project from student]
+     */ 
+    static async getStudentandProjectFromStudent(id) {
+        const query = {
+            text: "SELECT * FROM project WHERE id=$1",
+            values: [id]
+        };
+        // console.log("voici l'id", id);
+        const result = await pool.query(query);
+        // console.log("Resultat de getOneStudent", result);
+        // console.log("Nous sommes dans la methode getStudentandProjectFromStudent");
+        // console.log(result.rows);
+        return result.rows;
     }
      /* ---------------------------------------------- */
     /**
-     * Return search student
+     * Return searched student
      * @returns [search student]
      */
      static async researchStudent(){
@@ -95,71 +106,77 @@ class User {
             text:"SELECT firstname, lastname FROM theuser",
             values:[]
         };
-        console.log("Me voici dans la methode de recherche d'un student du model user");
-        
+        // console.log("Me voici dans la methode de recherche d'un student du model user"); 
         const result = await pool.query(query);
-        //console.log(result);
-        
+        //console.log(result);    
         return result.rows;
     }
     /* ---------------------------------------------- */
     /**
      * Return new student
-     * @returns [addStudent]
+     * @returns [new student]
      */
     static async addStudent() {
         const query = {
             text: "INSERT INTO theuser (id, firstname, lastname, email, password, biography, avatar, id_promo, id_project, id_therole) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)",
             values: [id, firstname, lastname, email, password, biography, avatar, id_promo, id_project, id_therole]
         };
-
         // console.log("Me voici dans la methode addStudent du model student");
-
         const result = await pool.query(query);
         // console.log(result);
-
         return result.rows;
     }
     /* ---------------------------------------------- */
     /**
      * Return update student
-     * @returns [updateStudent]
+     * @returns [update student]
      */
     static async updateStudent() {
         const query = {
             text: "UPDATE theuser SET id=$1, firstname=$2, lastname=$3, email=$4, password=$5, biography=$6, avatar=$7, id_promo=$8, id_project=$9, id_therole=$10",
             values: [id, firstname, lastname, email, password, biography, avatar, id_promo, id_project, id_therole]
         };
-
-        console.log("Me voici dans la methode updateStudent du model user");
-
+        // console.log("Me voici dans la methode updateStudent du model user");
         const result = await pool.query(query);
         // console.log(result);
-
         return result.rows;
     }
     /* ---------------------------------------------- */
     /**
-     * Return all students from one promo
-     * @returns [StudentsFromPromo]
+     * Return all students from promo
+     * @returns [students from promo]
      */
     static async getStudentsFromPromo (id){
         const query = {
-            text: "SELECT * FROM theuser WHERE id_promo=$1",
+            text: "SELECT * FROM theuser WHERE id_promo=$1 AND id_therole=2",
             values: [id]
-        };
-        
+        };  
         const result = await pool.query(query);
         // console.log("Resultat de getStudentsFromPromo", result);
-
-        console.log("Nous sommes dans la methode getStudentsFromPromo du model User");
-        console.log(result.rows);
+        // console.log("Nous sommes dans la methode getStudentsFromPromo du model User");
+        // console.log(result.rows);
         return result.rows;
     }
     /* ---------------------------------------------- */
     /**
-     * Return getUserEmail
-     * @returns [getUserEmail]
+     * Return students from project
+     * @returns [students from project]
+     */
+    static async getStudentsFromProject (id){
+        const query = {
+            text: "SELECT * FROM theuser WHERE id_project=$1",
+            values: [id]
+        };       
+        const result = await pool.query(query);
+        // console.log("Resultat de getStudentsFromPromo", result);
+        // console.log("Nous sommes dans la methode getStudentsFromPromo du model User");
+        // console.log(result.rows);
+        return result.rows;
+    }
+    /* ---------------------------------------------- */
+    /**
+     * Return user email
+     * @returns [user email]
      */
     static async getOneUser(email) {
         const query = {
@@ -167,12 +184,10 @@ class User {
             values: [email]
         };
         // console.log("voici l'email", email);
-
         const result = await pool.query(query);
-        console.log("Resultat de getOneUser", result);
-
-        console.log("Nous sommes dans la methode getOneUser du model");
-        console.log(result.rows);
+        // console.log("Resultat de getOneUser", result);
+        // console.log("Nous sommes dans la methode getOneUser du model");
+        // console.log(result.rows);
         return result.rows[0];
     }
 };
