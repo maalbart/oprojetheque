@@ -1,8 +1,9 @@
-import { Form, Input, Button, Dropdown } from 'semantic-ui-react'
+import { useSelector, useDispatch } from 'react-redux'
+import { Form, Input, Button } from 'semantic-ui-react'
 import './style.scss'
 
 export default function AdminAddPromo () {
-  
+  //! Voir middleware user.js pour la requete post de adminAddPromo
   return (
     <Form>
       <Form.Field

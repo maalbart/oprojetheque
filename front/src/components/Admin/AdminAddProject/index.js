@@ -46,7 +46,6 @@ export default function AdminAddProject () {
         label="Etudiant référent du projet"
         fluid
         selection
-        allowAdditions
         options={handleChangeList(dropdownValue)}/>
     </Form.Field>
     <Button type='submit'>Créer le projet</Button>
