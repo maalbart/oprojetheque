@@ -14,9 +14,9 @@ INSERT INTO "therole" ("id", "name") VALUES
 -- Table "promo"
 ---------------------------
 INSERT INTO "promo" ("id", "name", "logo", "starting_date", "ending_date") VALUES
-(1, 'Valhalla', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635511371/oProjetheque/logo/O_rouge_un0lb8.png', '07 juin 2021', '19 novembre 2021'),
-(2, 'Astro', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635511366/oProjetheque/logo/logo_O_bleu_htx4nh.png', '04 janvier 2021', '19 juin 2021'),
-(3, 'Tipix', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635511369/oProjetheque/logo/O_jaune_hrarf1.png', '03 mai 2021', '15 octobre 2021');
+(1, 'Valhalla', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636120089/oProjetheque/logo/logo-valhalla_efxxff.png', '07 juin 2021', '19 novembre 2021'),
+(2, 'Astro', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636120087/oProjetheque/logo/logo-promo2_siw77q.png', '04 janvier 2021', '19 juin 2021'),
+(3, 'Tipix', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636120084/oProjetheque/logo/logo-promo1_gdvx3y.png', '03 mai 2021', '15 octobre 2021');
 
 
 ---------------------------
