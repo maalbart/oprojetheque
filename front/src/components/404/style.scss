@@ -3,7 +3,7 @@
 .error {
   background-color: vars.$homepageBackgroundColor;
   color: vars.$textColor;
-  font-family: 'Raleway', 'Roboto', sans-serif;
+  font-family: vars.$font;
   display: flex;
   flex-direction: column;
   align-items: center;

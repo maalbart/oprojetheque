@@ -3,7 +3,7 @@
 .student-header {
   background-color: #D83A37;
   color: vars.$textColor;
-  font-family: 'Raleway', 'Roboto', sans-serif;
+  font-family: vars.$font;
   display: flex;
   flex-direction: column;
   padding: 4em 0 4em 0;
@@ -15,12 +15,35 @@
 }
 
 .student-body {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  align-content: center;
+  grid-template-columns: 4;
+  grid-gap: 10px;
   justify-content: space-around;
-  align-items: center;
   background-color: #D83A37;
   color: vars.$textColor;
   padding-bottom: 4em;
-  font-family: 'Raleway', 'Roboto', sans-serif;
+  font-family: vars.$font;
+  border: burlywood 3px;
 }
+
+.student-body-promo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.student-body-projet {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.student-body-stack {
+  grid-column: 3;
+  grid-row: 1
+}
+
+.student-body-social {
+  grid-column: 4;
+  grid-row: 1
+}
+

@@ -8,7 +8,7 @@
   background-color: vars.$homepageBackgroundColor;
   padding: 4em 0;
   height: 85.1vh;
-  font-family: 'Raleway', 'Roboto', sans-serif;
+  font-family: vars.$font;
   font-weight: bold;
   color: vars.$textColor;
   &-description {

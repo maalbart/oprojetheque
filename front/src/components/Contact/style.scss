@@ -7,6 +7,7 @@
   justify-content: center;
   background-color: vars.$homepageBackgroundColor;
   color: vars.$textColor;
+  font-family: vars.$font;
   padding: 2em 0;
   height: 85.1vh;
   
@@ -14,6 +15,5 @@
     padding: 1em 0;
     font-size: 200%;
     font-weight: bold;
-    font-family: 'Raleway', 'Roboto', sans-serif;
   }
 }
