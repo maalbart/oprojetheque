@@ -4,11 +4,16 @@
     background-color: vars.$backgroundColor;
     min-width: 100vw;
     max-width: 100vw;
+    height: 10vh;
     font-family: vars.$font;
     color: vars.$textColor;
     display: flex;
     flex-direction: row; 
-    align-items: space-around;
+    align-items: center;
     justify-content: space-around;
     padding: 1em 0;
+}
+
+.menubar-center {
+  align-self: center;
 }
