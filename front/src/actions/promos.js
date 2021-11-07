@@ -8,8 +8,9 @@ export const SAVE_ONE_PROMO = 'SAVE_ONE_PROMO'
 export const getAllPromos = () => ({
   type: GET_ALL_PROMOS,
 })
-export const getOnePromo = () => ({
+export const getOnePromo = (id) => ({
   type: GET_ONE_PROMO,
+  id
 })
 export const savePromos = (list) => ({
   type: SAVE_PROMOS,

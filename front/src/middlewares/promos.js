@@ -19,7 +19,8 @@ const promosMiddleware = (store) => (next) => (action) => {
     } 
     case GET_ONE_PROMO: {
       next(action);
-      axios.get('https://o-projetheque.herokuapp.com/promo/1')
+      const id = action.id
+      axios.get(`https://o-projetheque.herokuapp.com/promo/${id}`)
       .then((response) => {
         console.log(response)
         const promoData = response.data

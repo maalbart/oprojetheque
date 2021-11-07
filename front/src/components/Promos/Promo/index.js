@@ -5,18 +5,20 @@ import Loader from 'src/components/Loader'
 import './style.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
-import { Redirect } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 import { getOnePromo } from 'src/actions/promos'
 
 
 export function Promo () {
   const dispatch = useDispatch()
+  const { id } = useParams()
+  console.log(id)
   const promo = useSelector((state) => (state.promos.studentsByOnePromo));
   const loader = useSelector((state) => state.promos.loader);
 
   console.log(promo.studentsFromPromo)
   useEffect(() => {
-    dispatch(getOnePromo())
+    dispatch(getOnePromo(id))
   }, []);
   if (loader) {
     return <Loader />;

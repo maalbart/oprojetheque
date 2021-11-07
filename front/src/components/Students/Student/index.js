@@ -1,34 +1,47 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
-import { findStudent } from 'src/selectors/students'
 import './style.scss'
-import { Redirect, useLocation, useParams } from 'react-router-dom';
+import { Redirect, useParams, Link } from 'react-router-dom';
+import { getOneStudent } from 'src/actions/students';
+import Loader from 'src/components/Loader';
 
 
 export default function Student () {
+  const dispatch = useDispatch()
   const { id } = useParams();
   console.log(id)
-  const student = useSelector((state) => findStudent(state.students.list, id));
+  const student = useSelector((state) => (state.students.oneStudent));
   console.log(student)
-  const location = useLocation();
+  const loader = useSelector((state) => state.students.loader)
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
+    dispatch(getOneStudent(id))
+  }, []);
+  if (loader) {
+    return <Loader />
+  }
   if (!student) {
     return <Redirect to="/error" />;
   }
   return (
     <div className="student">
       <div className="student-header">
-          <img src={student.avatar} alt="avatar de student" className="student-header-img"/>
-          <h2>{student.firstname} {student.lastname}</h2>
-          <p className="student-header-description">{student.biography}</p>
+          <img src={student.studentId.avatar} alt="avatar de student" className="student-header-img"/>
+          <h2>{student.studentId.firstname} {student.studentId.lastname}</h2>
+          <p className="student-header-description">{student.studentId.biography}</p>
           
       </div>
       <div className="student-body">
-          <h3 className="student-body-titles">Promotion</h3> 
-          <h3 className="student-body-titles">Projet</h3> 
+          <h3 className="student-body-titles">Promotion</h3>
+          <p>{student.promoFromStudent[0].name}</p>
+          <Link to={`/promo/${student.promoFromStudent[0].id_promo}`} >
+            <img src={student.promoFromStudent[0].logo} alt="logo promotion" />
+          </Link>
+          <h3 className="student-body-titles">Projet</h3>
+          <p>{student.projectFromStudent[0].name}</p>
+          <Link to={`/project/${student.projectFromStudent[0].id_project}`} >
+            <img src={student.projectFromStudent[0].logo} alt="logo promotion" />
+          </Link>
           <h3 className="student-body-titles">Stack Technique</h3> 
           <h3 className="student-body-titles">Reseaux Sociaux</h3>
       </div>
