@@ -9,3 +9,12 @@ export function findPromo(promos, searchedPromoId) {
   console.log(promo)
   return promo;
 }
+export function filteredSearch(promos, search) {
+  if (!search) {
+    return promos
+  } else {
+    const filteredPromos = promos.filter(promo => promo.name.toLowerCase().includes(search))
+    console.log(filteredPromos)
+    return filteredPromos
+  }
+}

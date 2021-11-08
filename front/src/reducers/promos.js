@@ -1,9 +1,10 @@
-import { GET_ALL_PROMOS, SAVE_PROMOS, GET_ONE_PROMO, SAVE_ONE_PROMO } from 'src/actions/promos';
+import { GET_ALL_PROMOS, SAVE_PROMOS, GET_ONE_PROMO, SAVE_ONE_PROMO, CHANGE_SEARCH } from 'src/actions/promos';
 
 export const initialState = {
   list: [],
   loader: true,
-  studentsByOnePromo: []
+  studentsByOnePromo: [],
+  search: ''
 }
 
 const promosReducer = (state = initialState, action = {}) => {
@@ -29,6 +30,11 @@ const promosReducer = (state = initialState, action = {}) => {
         ...state,
         loader: false,
         studentsByOnePromo: action.promoData
+      }
+    case CHANGE_SEARCH:
+      return {
+        ...state,
+        [action.key]: action.value
       }
     default:
       return state;
