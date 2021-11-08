@@ -63,7 +63,8 @@ const authController = {
                             logged: true,
                             firstname: user.firstname,
                             lastname: user.lastname,
-                            token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions),
+                            id_therole: user.id_therole,
+                            token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
                         })
                     } catch (error) {
                         console.log('401, UNAUTHORIZED');
@@ -85,8 +86,6 @@ const authController = {
     /*****************************************/
     /* Method for the student to disconnect*/
     disconnection: (req, res, next) => {
-        // destruction of the session to disconnect the user
-        req.session.user = null;
         // redirection to the home page
         res.redirect("/");
     }

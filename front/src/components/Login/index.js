@@ -25,9 +25,7 @@ export default function Login () {
     evt.preventDefault();
     dispatch(handleLogin());
   };
-  const onChange = (evt) => {
-    dispatch(changeField(evt.target.value), 'email')
-  }
+  
   return (
     <div className="login-form">
       <p className="login-form-description">Connectez-vous</p>

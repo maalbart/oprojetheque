@@ -12,8 +12,14 @@
     align-items: center;
     justify-content: space-around;
     padding: 1em 0;
+
+    &-menubar-center {
+      align-self: center;
+
+      &-header-logo {
+        width: 30%;
+      }
+    
+  }
 }
 
-.menubar-center {
-  align-self: center;
-}
