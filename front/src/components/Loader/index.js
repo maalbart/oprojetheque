@@ -1,10 +1,11 @@
 import React from 'react'
-import SpinnerGIF from 'src/assets/SpinnerGIF.gif';
+import SpinnerGIF from 'src/assets/donut.gif';
+import './style.scss';
 
 export default function Loader() {
   return (
-    <div>
-      <img src={SpinnerGIF} alt=""/>
+    <div className="spinner">
+      <img src={SpinnerGIF} alt="" className='spinnergif' />
     </div>
   )
 }
