@@ -1,8 +1,9 @@
-import { GET_ALL_STUDENTS, SAVE_STUDENTS, SAVE_ONE_STUDENT, GET_ONE_STUDENT } from 'src/actions/students';
+import { GET_ALL_STUDENTS, SAVE_STUDENTS, SAVE_ONE_STUDENT, GET_ONE_STUDENT, CHANGE_SEARCH } from 'src/actions/students';
 
 export const initialState = {
   list: [],
-  loader: true
+  loader: true,
+  search: ''
 }
 
 const studentsReducer = (state = initialState, action = {}) => {
@@ -28,6 +29,11 @@ const studentsReducer = (state = initialState, action = {}) => {
         ...state,
         loader: false,
         oneStudent: action.studentData
+      }
+    case CHANGE_SEARCH:
+      return {
+        ...state,
+        [action.key]: action.value
       }
     default:
       return state;
