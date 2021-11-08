@@ -3,6 +3,7 @@
 .promos {
     background-color: vars.$homepageBackgroundColor;
     color: vars.$textColor;
+    font-family: vars.$font;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,7 +17,6 @@
     &-title {
       width: fit-content;
       padding-top: 1em;
-      font-family: 'Raleway', 'Roboto', sans-serif;
       font-size: 350%;
     }
     &-searchbar {
@@ -28,7 +28,6 @@
       }
     }
     &-description {
-        font-family: 'Raleway', 'Roboto', sans-serif;
         text-align: center;
         margin: 2em 15em 2em 15em;
         width: fit-content;

@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   background-color: #D83A37;
+  font-family: vars.$font;
   padding: 2em 0 0 0;
   height: 100vh;
 
@@ -14,7 +15,6 @@
     padding-top: 2em;
     margin-top: 6em;
       &-description{
-      font-family: 'Raleway', 'Roboto', sans-serif;
       font-size: 2em;
       font-weight: 700;
     }

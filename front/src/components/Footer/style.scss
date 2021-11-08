@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: space-around;
   background-color: vars.$backgroundColor;
+  font-family: vars.$font;
   &-logo {
     width: 5%;
     height: auto;
@@ -23,13 +24,11 @@
       margin: 0 2em 0 0;
       font-size: 1.5em;
       color: vars.$textColor;
-      font-family: 'Raleway', 'Roboto', sans-serif;
     }
     &-arrow {
       font-size: 2em;
       font-weight: bold;
       color: vars.$textColor;
-      font-family: 'Raleway', 'Roboto', sans-serif;
     }
   }
 }

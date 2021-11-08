@@ -3,8 +3,8 @@
 .project {
   background-color: #FFB400;
   color: vars.$textColor;
-  font-family: 'Raleway', 'Roboto', sans-serif;
-
+  font-family: vars.$font;
+  
   &-content-header {
     display: flex;
     flex-direction: row-reverse;

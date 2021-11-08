@@ -3,7 +3,7 @@
 .promo-content {
   background-color: #D83A37;
   color: vars.$textColor;
-  font-family: 'Raleway', 'Roboto', sans-serif;
+  font-family: vars.$font;
 
   &-header {
   display: flex;
