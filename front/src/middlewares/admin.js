@@ -1,11 +1,42 @@
 import axios from "axios";
-import { SUBMIT_PROMO_FORM } from 'src/actions/admin'
+import { SUBMIT_PROMO_FORM, ADMIN_GET_ALL_PROMOS, adminSavePromos, ADMIN_GET_ALL_STUDENT_FROM_PROMO, adminSaveStudentsFromPromos } from 'src/actions/admin'
 
 const adminMiddlewares = (store) => (next) => (action) => {
   switch (action.type) {
-    case SUBMIT_PROMO_FORM:
+    case ADMIN_GET_ALL_PROMOS: {
+      next(action);
+      axios.get('https://o-projetheque.herokuapp.com/promos')
+      .then((response) => {
+        console.log(response)
+        const promos = response.data
+        console.log(promos)
+        store.dispatch(adminSavePromos(promos));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+      break;
+    }
+    case ADMIN_GET_ALL_STUDENT_FROM_PROMO: {
+      next(action);
+      axios.get('https://o-projetheque.herokuapp.com/students')
+      .then((response) => {
+        console.log(response)
+        const studentsFromPromo = response.data
+        console.log(studentsFromPromo)
+        store.dispatch(adminSaveStudentsFromPromos(studentsFromPromo));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+      break;
+    }
+    case SUBMIT_PROMO_FORM: {
       next(action)
-      axios.post('https://o-projetheque.herokuapp.com/admin', { newPromo })
+      const state = store.getState()
+      axios.post('https://o-projetheque.herokuapp.com/admin', {
+
+      })
         .then((response) => {
           console.log(response)
         })
@@ -13,6 +44,7 @@ const adminMiddlewares = (store) => (next) => (action) => {
           console.error(error);
         });
       break;
+    }
     default:
       next(action);
   }
