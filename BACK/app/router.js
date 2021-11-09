@@ -93,8 +93,6 @@ router.get("/students", studentController.getAllStudents);
 router.get("/student/:id", studentController.getOneStudent);
 
 
-
-
 /*****************************************/
 /*      LOGIN/DISCONNECTION ROUTE        */
 /*****************************************/
@@ -114,7 +112,16 @@ router.get("/connection", authController.connection);
  * @returns {object} 200 - Submission of the login form
  * @returns {Error}  default - An error has occurred 
  */
-router.post("/connection", authController.loginUser) 
+// router.post("/connection", authController.loginStudent); 
+
+/**
+ * Connection page
+ * @route POST /connection
+ * @group Connection - API to connect as admin
+ * @returns {object} 200 - Submission of the login form
+ * @returns {Error}  default - An error has occurred 
+ */
+//  router.post("/connection", authController.loginAdmin); 
 
 //! ATTENTION - A CHECKER
 /**
@@ -124,8 +131,7 @@ router.post("/connection", authController.loginUser)
  * @returns {object} 200 - Submission of disconnect form
  * @returns {Error}  default - An error has occurred 
  */
-router.post("/disconnect", authController.disconnection) 
-
+// router.post("/disconnect", authController.disconnection); 
 
 /***************************************/
 /*          ADMIN ROUTES               */
@@ -136,15 +142,17 @@ Admin route with methods to add projects, promos and students
 Verification that the user, who wants to use the route /admin, has the role of admin, then chain the methods add and update of the 3 tables
 */ 
 
-/******* Projects management *******/
+// router.get("/admin", adminController.PromosWithStudents);
+
+// /******* Projects management *******/
 // router.post("/admin", adminMiddleware.isAdmin, adminController.addProject);
 // router.patch("/admin", adminMiddleware.isAdmin, adminController.updateProject);
 
-// /******* Promos management *******/
+//  /******* Promos management *******/
 // router.post("/admin", adminMiddleware.isAdmin, adminController.addPromo);
 // router.patch("/admin", adminMiddleware.isAdmin,adminController.updatePromo); 
 
-// /******* Students management *******/
+//  /******* Students management *******/
 // router.post("/admin", adminMiddleware.isAdmin, adminController.addStudent)
 // router.patch("/admin", adminMiddleware.isAdmin, adminController.updateStudent); 
 

@@ -28,7 +28,7 @@ INSERT INTO "project" ("id", "name", "logo", "description", "site_link", "site_s
 (3, 'Kid Oz Anges', 'lien', 'Espace qui répertorie des activités pour enfants', 'lien', 'lien', 'lien', 1),
 (4, 'Mentor me', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062080/oProjetheque/logo%20project/mentorme_q4tpbp.png', 'Plateforme pour aider son prochain', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635942078/oProjetheque/screen/mentor_me_ok_xfhnst.png', 'lien', 1),
 (5, 'Paradize', 'lien', 'Recherche de lieu de vacances', 'lien', 'lien', 'lien', 1),
-(6, 'Compostons', 'lien', 'Géolocalisation et tuto pour le compostage', 'lien', 'lien', 'lien', 1),
+(6, 'CompOstons', 'lien', 'Géolocalisation et tuto pour le compostage', 'lien', 'lien', 'lien', 1),
 (7, 'oProjetheque', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062087/oProjetheque/logo%20project/oprojetheque_logo_hybride_xlzyaa.png', 'Listing des projets des étudiants ', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635512183/oProjetheque/screen/acc_v1_r3cdhc.png', 'lien', 1),
 (8, 'LDO transport', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062072/oProjetheque/logo%20project/ldo_1_fmnfyr.png', 'Logistique de transport', 'lien', 'lien', 'lien', 1),
 (9, 'Bristol', 'lien', 'Site collaboratif de partage de fiches méthodologiques', 'lien', 'lien', 'lien', 1);
@@ -45,7 +45,7 @@ INSERT INTO "theuser" ("id", "firstname", "lastname","email","password", "biogra
 (5, 'Damien', 'Courcoux', 'damien@oclock.io', 'valhalla5', 'Développeur Fullstack spécialité React', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022146/oProjetheque/gateau/tarte_des_alpes_1_hilimz.png', 1, 2, 2),
 (6, 'Guillaume', 'Bodart', 'guillaume@oclock.io', 'valhalla6', 'Développeur Fullstack spécialité React', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022143/oProjetheque/gateau/religieuse_1_y4q1uf.png', 1, 2, 2),
 (7, 'Maxence', 'Tassery', 'maxence@oclock.io', 'valhalla7', 'Développeur Fullstack spécialité React', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022069/oProjetheque/gateau/puit_d_amour_ghsrve.png', 1, 2, 2),
-(8, 'Mickael', 'Orloff', 'mickael@oclock.io', 'valhalla8', 'Développeur Fullstack spécialité React', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022064/oProjetheque/gateau/pommes_amour_2_tlsabn.png', 1, 2, 2),
+(8, 'Mikhael', 'Orloff', 'mickael@oclock.io', 'valhalla8', 'Développeur Fullstack spécialité React', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022064/oProjetheque/gateau/pommes_amour_2_tlsabn.png', 1, 2, 2),
 (9, 'Alexandre', 'Morvan', 'alexandre@oclock.io', 'valhalla9', 'Développeur Fullstack spécialité React', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022059/oProjetheque/gateau/paris_brest_1_o3ewte.png', 1, 2, 2),
 (10, 'Fabien', 'Naveau', 'fabien@oclock.io', 'valhalla10', 'Développeur Fullstack spécialité Data/API', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022054/oProjetheque/gateau/pain_au_chocolat_1_ympmpn.png', 1, 3, 2),
 (11, 'Frederic', 'Tron', 'fred@oclock.io', 'valhalla11', 'Développeur Fullstack spécialité Data/API', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022048/oProjetheque/gateau/muffin_vanille_chocolat_1_edjzjt.png', 1, 3, 2),
@@ -89,8 +89,9 @@ INSERT INTO "theuser" ("id", "firstname", "lastname","email","password", "biogra
 (49, 'Clément', 'Uther', 'clement@oclock.io', 'oclock6', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022157/oProjetheque/gateau/trio_muffin_1_1_lohmcm.png', 1, 6, 1),
 (50, 'Alexis', 'Vincent', 'alexis@oclock.io', 'oclock7', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022007/oProjetheque/gateau/gateau_chocolat_noir_1_dlgtpo.png', 1, 7, 1),
 (51, 'Yann', 'Gouilloux', 'yann@oclock.io', 'oclock8', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021984/oProjetheque/gateau/cupcake_rose_chocolat_1_a8xbuy.png', 1, 8, 1),
-(52, 'Quentin', 'Logie', 'quentin@oclock.io', 'oclock9', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 1, 9, 1);
-
+(52, 'Quentin', 'Logie', 'quentin@oclock.io', 'oclock9', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 1, 9, 1),
+(53, 'Sophie', 'Fonfeque', 'sophief@oclock.io', 'valhalla44', 'Développeuse Fullstack spécialité Data/API', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 2, 1, 2),
+(54, 'James', 'Bond', 'james@oclock.io', 'valhalla44', 'Développeur Fullstack spécialité Data/API', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 3, 1, 2);
 
 -- PostGres with type serial does not automatically increment the sequence attached to the column!
 -- It is therefore necessary to update the current value of each of the sequences by selecting the maximum id of each table

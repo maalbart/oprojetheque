@@ -41,14 +41,14 @@ class User {
     }
     /* ---------------------------------------------- */
     /**
-    * Return all students
+    * Return all students 
     * @returns [students]
     */
     static async getAllStudents() {
         const query = {
             // Display all users with the role of student and sorted by firstname
-            text: "SELECT * FROM theuser WHERE theuser.id_therole=$1 ORDER BY firstname",
-            values: [2]
+            text: "SELECT * FROM theuser WHERE theuser.id_therole=2 ORDER BY firstname",
+            values: []
         };
         const dbresult = await pool.query(query);
         const studentsDB = dbresult.rows;
@@ -61,6 +61,28 @@ class User {
         return result;
 
     }
+    /* ---------------------------------------------- */
+    /**
+    * Return all students of all promos
+    * @returns [all students of all promos]
+    */
+    //  static async getAllStudentsAccordingToPromo() {
+    //     const query = {
+    //         // Display all promotions and all students
+    //         text: "SELECT * FROM theuser",
+    //         values: []
+    //     };
+    //     const dbresult = await pool.query(query);
+    //     const studentsDB = dbresult.rows;
+    //     const result = [];
+    //     // Loop on the elements returned by the database  & creation of the Student instances
+    //     for (const studentDB of studentsDB) {
+    //         result.push(new User(studentDB));
+    //     }
+    //     // return a table of instances Student
+    //     return result;
+
+    // }
     /* ---------------------------------------------- */
     /**
      * Return one student
@@ -160,12 +182,12 @@ class User {
     }
     /* ---------------------------------------------- */
     /**
-     * Return user email
-     * @returns [user email]
+     * Return student login
+     * @returns [student login]
      */
-    static async getOneUser(email) {
+    static async getOneLoginStudent(email) {
         const query = {
-            text: "SELECT * FROM theuser WHERE theuser.email=$1",
+            text: "SELECT * FROM theuser WHERE theuser.email=$1 AND theuser.id_therole=2 ",
             values: [email]
         };
         // console.log("voici l'email", email);
@@ -175,6 +197,25 @@ class User {
         // console.log(result.rows);
         return result.rows[0];
     }
+    /* ---------------------------------------------- */
+    /**
+     * Return admin login
+     * @returns [admin login] 
+     */
+     static async getOneLoginAdmin(email) {
+        const query = {
+            text: "SELECT * FROM theuser WHERE theuser.email=$1 AND theuser.id_therole=1",
+            values: [email]
+        };
+        // console.log("voici l'email", email);
+        const result = await pool.query(query);
+        // console.log("Resultat de getOneUser", result);
+        // console.log("Nous sommes dans la methode getOneUser du model");
+        // console.log(result.rows);
+        return result.rows[0];
+    }
+    
+    
 };
 
 

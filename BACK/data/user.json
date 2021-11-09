@@ -6,7 +6,7 @@
                 "email":"julien@oclock.io",
                 "password": "valhalla1",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022160/oProjetheque/gateau/trio_muffin_2_2_iikeyl.png",
                 "id_promo":1,
                 "id_project":1,
                 "id_therole": 2
@@ -19,7 +19,7 @@
                 "email":"JC@oclock.io",
                 "password": "valhalla2",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022157/oProjetheque/gateau/trio_muffin_1_1_lohmcm.png",
                 "id_promo":1,
                 "id_project":1,
                 "id_therole": 2
@@ -31,7 +31,7 @@
                 "email":"ariana@oclock.io",
                 "password": "valhalla3",
                 "biography":"Développeuse Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022154/oProjetheque/gateau/tas_de_macarons_2_rqp29w.png",
                 "id_promo":1,
                 "id_project":1,
                 "id_therole": 2
@@ -43,7 +43,7 @@
                 "email":"antoine@oclock.io",
                 "password": "valhalla4",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022149/oProjetheque/gateau/tas_de_donuts_1_njkiem.png",
                 "id_promo":1,
                 "id_project":1,
                 "id_therole": 2
@@ -55,7 +55,7 @@
                 "email":"damien@oclock.io",
                 "password": "valhalla5",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022146/oProjetheque/gateau/tarte_des_alpes_1_hilimz.png",
                 "id_promo":1,
                 "id_project":2,
                 "id_therole": 2
@@ -67,7 +67,7 @@
                 "email":"guillaume@oclock.io",
                 "password": "valhalla6",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022143/oProjetheque/gateau/religieuse_1_y4q1uf.png",
                 "id_promo":1,
                 "id_project":2,
                 "id_therole": 2
@@ -79,7 +79,7 @@
                 "email":"maxence@oclock.io",
                 "password": "valhalla7",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022069/oProjetheque/gateau/puit_d_amour_ghsrve.png",
                 "id_promo":1,
                 "id_project":2,
                 "id_therole": 2
@@ -91,7 +91,7 @@
                 "email":"mickael@oclock.io",
                 "password": "valhalla8",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022064/oProjetheque/gateau/pommes_amour_2_tlsabn.png",
                 "id_promo":1,
                 "id_project":2,
                 "id_therole": 2
@@ -103,7 +103,7 @@
                 "email":"alexandre@oclock.io",
                 "password": "valhalla9",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022059/oProjetheque/gateau/paris_brest_1_o3ewte.png",
                 "id_promo":1,
                 "id_project":2,
                 "id_therole": 2
@@ -115,7 +115,7 @@
                 "email":"fabien@oclock.io",
                 "password": "valhalla10",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022054/oProjetheque/gateau/pain_au_chocolat_1_ympmpn.png",
                 "id_promo":1,
                 "id_project":3,
                 "id_therole": 2
@@ -127,7 +127,7 @@
                 "email":"fred@oclock.io",
                 "password": "valhalla11",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022048/oProjetheque/gateau/muffin_vanille_chocolat_1_edjzjt.png",
                 "id_promo":1,
                 "id_project":3,
                 "id_therole": 2
@@ -139,7 +139,7 @@
                 "email":"yanis@oclock.io",
                 "password": "valhalla12",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022045/oProjetheque/gateau/muffin_pepites_1_fpqfhr.png",
                 "id_promo":1,
                 "id_project":3,
                 "id_therole": 2
@@ -151,7 +151,7 @@
                 "email":"cossi@oclock.io",
                 "password": "valhalla13",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022041/oProjetheque/gateau/merveilleux_1_uedd0d.png",
                 "id_promo":1,
                 "id_project":3,
                 "id_therole": 2
@@ -163,7 +163,7 @@
                 "email":"alexandre@oclock.io",
                 "password": "valhalla14",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022038/oProjetheque/gateau/madeleines_1_a28d7r.png",
                 "id_promo":1,
                 "id_project":3,
                 "id_therole": 2
@@ -175,7 +175,7 @@
                 "email":"thibault@oclock.io",
                 "password": "valhalla15",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022034/oProjetheque/gateau/macarons_roses_1_dnxmh1.png",
                 "id_promo":1,
                 "id_project":4,
                 "id_therole": 2
@@ -188,7 +188,7 @@
                 "email":"florentC@oclock.io",
                 "password": "valhalla16",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022031/oProjetheque/gateau/macarons_caramel_1_qydcjl.png",
                 "id_promo":1,
                 "id_project":4,
                 "id_therole": 2
@@ -200,7 +200,7 @@
                 "email":"david@oclock.io",
                 "password": "valhalla17",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022027/oProjetheque/gateau/macarons_bleu_2_tpnvhn.png",
                 "id_promo":1,
                 "id_project":4,
                 "id_therole": 2
@@ -212,7 +212,7 @@
                 "email":"marion@oclock.io",
                 "password": "valhalla18",
                 "biography":"Développeuse Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022022/oProjetheque/gateau/macaron_rose_1_xo9h1e.png",
                 "id_promo":1,
                 "id_project":4,
                 "id_therole": 2
@@ -224,7 +224,7 @@
                 "email":"wilfried@oclock.io",
                 "password": "valhalla19",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022017/oProjetheque/gateau/gaufres_fraises_1_r1ikge.png",
                 "id_promo":1,
                 "id_project":4,
                 "id_therole": 2
@@ -237,7 +237,7 @@
                 "email":"romain@oclock.io",
                 "password": "valhalla20",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022012/oProjetheque/gateau/gaufres_1_olymsf.png",
                 "id_promo":1,
                 "id_project":5,
                 "id_therole": 2
@@ -249,7 +249,7 @@
                 "email":"erwin@oclock.io",
                 "password": "valhalla21",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022007/oProjetheque/gateau/gateau_chocolat_noir_1_dlgtpo.png",
                 "id_promo":1,
                 "id_project":5,
                 "id_therole": 2
@@ -261,7 +261,7 @@
                 "email":"pims@oclock.io",
                 "password": "valhalla22",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022002/oProjetheque/gateau/gateau_chocolat_1_bpwq9p.png",
                 "id_promo":1,
                 "id_project":5,
                 "id_therole": 2
@@ -273,7 +273,7 @@
                 "email":"benjamin@oclock.io",
                 "password": "valhalla23",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021997/oProjetheque/gateau/donut_rose_1_m6rxeh.png",
                 "id_promo":1,
                 "id_project":5,
                 "id_therole": 2
@@ -285,7 +285,7 @@
                 "email":"pierrejoel@oclock.io",
                 "password": "valhalla24",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021992/oProjetheque/gateau/donut_chocolat_2_yhehba.png",
                 "id_promo":1,
                 "id_project":5,
                 "id_therole": 2
@@ -297,7 +297,7 @@
                 "email":"florianV@oclock.io",
                 "password": "valhalla25",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021988/oProjetheque/gateau/cupcake_rose_vanille_1_lgs7sm.png",
                 "id_promo":1,
                 "id_project":6,
                 "id_therole": 2
@@ -309,7 +309,7 @@
                 "email":"faustino@oclock.io",
                 "password": "valhalla26",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021984/oProjetheque/gateau/cupcake_rose_chocolat_1_a8xbuy.png",
                 "id_promo":1,
                 "id_project":6,
                 "id_therole": 2
@@ -321,7 +321,7 @@
                 "email":"delphine@oclock.io",
                 "password": "valhalla27",
                 "biography":"Développeuse Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021981/oProjetheque/gateau/cupcake_chocolat_cerise_1_uc6p3k.png",
                 "id_promo":1,
                 "id_project":6,
                 "id_therole": 2
@@ -333,7 +333,7 @@
                 "email":"marc@oclock.io",
                 "password": "valhalla28",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021978/oProjetheque/gateau/cupcake_bleu_2_rfpx2h.png",
                 "id_promo":1,
                 "id_project":6,
                 "id_therole": 2
@@ -345,7 +345,7 @@
                 "email":"loic@oclock.io",
                 "password": "valhalla29",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png",
                 "id_promo":1,
                 "id_project":6,
                 "id_therole": 2
@@ -357,7 +357,7 @@
                 "email":"celia.letort@oclock.io",
                 "password": "valhalla30",
                 "biography":"Développeuse Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png",
                 "id_promo":1,
                 "id_project":7,
                 "id_therole": 2
@@ -369,7 +369,7 @@
                 "email":"sophie.bayram@oclock.io",
                 "password": "valhalla31",
                 "biography":"Développeuse Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021971/oProjetheque/gateau/biscuits_confiture_1_zntavq.png",
                 "id_promo":1,
                 "id_project":7,
                 "id_therole": 2
@@ -381,7 +381,7 @@
                 "email":"elias@oclock.io",
                 "password": "valhalla32",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022154/oProjetheque/gateau/tas_de_macarons_2_rqp29w.png",
                 "id_promo":1,
                 "id_project":7,
                 "id_therole": 2
@@ -393,7 +393,7 @@
                 "email":"emilien@oclock.io",
                 "password": "valhalla33",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022160/oProjetheque/gateau/trio_muffin_2_2_iikeyl.png",
                 "id_promo":1,
                 "id_project":7,
                 "id_therole": 2
@@ -405,7 +405,7 @@
                 "email":"morgan@oclock.io",
                 "password": "valhalla34",
                 "biography":"Développeuse Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022157/oProjetheque/gateau/trio_muffin_1_1_lohmcm.png",
                 "id_promo":1,
                 "id_project":7,
                 "id_therole": 2
@@ -417,7 +417,7 @@
                 "email":"thomas@oclock.io",
                 "password": "valhalla35",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022143/oProjetheque/gateau/religieuse_1_y4q1uf.png",
                 "id_promo":1,
                 "id_project":8,
                 "id_therole": 2
@@ -429,7 +429,7 @@
                 "email":"remiH@oclock.io",
                 "password": "valhalla36",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022149/oProjetheque/gateau/tas_de_donuts_1_njkiem.png",
                 "id_promo":1,
                 "id_project":8,
                 "id_therole": 2
@@ -441,7 +441,7 @@
                 "email":"paulo@oclock.io",
                 "password": "valhalla37",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022064/oProjetheque/gateau/pommes_amour_2_tlsabn.png",
                 "id_promo":1,
                 "id_project":8,
                 "id_therole": 2
@@ -453,7 +453,7 @@
                 "email":"helene@oclock.io",
                 "password": "valhalla38",
                 "biography":"Développeuse Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022069/oProjetheque/gateau/puit_d_amour_ghsrve.png",
                 "id_promo":1,
                 "id_project":8,
                 "id_therole": 2
@@ -465,7 +465,7 @@
                 "email":"basile@oclock.io",
                 "password": "valhalla39",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022059/oProjetheque/gateau/paris_brest_1_o3ewte.png",
                 "id_promo":1,
                 "id_project":8,
                 "id_therole": 2
@@ -477,7 +477,7 @@
                 "email":"remiV@oclock.io",
                 "password": "valhalla40",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022054/oProjetheque/gateau/pain_au_chocolat_1_ympmpn.png",
                 "id_promo":1,
                 "id_project":9,
                 "id_therole": 2
@@ -489,7 +489,7 @@
                 "email":"tony@oclock.io",
                 "password": "valhalla41",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022048/oProjetheque/gateau/muffin_vanille_chocolat_1_edjzjt.png",
                 "id_promo":1,
                 "id_project":9,
                 "id_therole": 2
@@ -501,7 +501,7 @@
                 "email":"jeremy@oclock.io",
                 "password": "valhalla42",
                 "biography":"Développeur Fullstack spécialité React",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022045/oProjetheque/gateau/muffin_pepites_1_fpqfhr.png",
                 "id_promo":1,
                 "id_project":9,
                 "id_therole": 2
@@ -513,7 +513,7 @@
                 "email":"michel@oclock.io",
                 "password": "valhalla43",
                 "biography":"Développeur Fullstack spécialité Data/API",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022041/oProjetheque/gateau/merveilleux_1_uedd0d.png",
                 "id_promo":1,
                 "id_project":9,
                 "id_therole": 2
@@ -525,7 +525,7 @@
                 "email":"simon@oclock.io",
                 "password": "oclock1",
                 "biography":"Je suis Helper",
-                "avatar": "lien",
+                "avatar": "lihttps://res.cloudinary.com/dieupu7jn/image/upload/v1636022034/oProjetheque/gateau/macarons_roses_1_dnxmh1.pngen",
                 "id_promo":1,
                 "id_project":1,
                 "id_therole": 1
@@ -537,7 +537,7 @@
                 "email":"benji@oclock.io",
                 "password": "oclock2",
                 "biography":"Je suis Professeur",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022031/oProjetheque/gateau/macarons_caramel_1_qydcjl.png",
                 "id_promo":1,
                 "id_project":2,
                 "id_therole": 1
@@ -549,7 +549,7 @@
                 "email":"marcc@oclock.io",
                 "password": "oclock3",
                 "biography":"Je suis Helper",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022027/oProjetheque/gateau/macarons_bleu_2_tpnvhn.png",
                 "id_promo":1,
                 "id_project":3,
                 "id_therole": 1
@@ -561,7 +561,7 @@
                 "email":"jordan@oclock.io",
                 "password": "oclock4",
                 "biography":"Je suis Helper",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022022/oProjetheque/gateau/macaron_rose_1_xo9h1e.png",
                 "id_promo":1,
                 "id_project":4,
                 "id_therole": 1
@@ -573,7 +573,7 @@
                 "email":"benoit@oclock.io",
                 "password": "oclock5",
                 "biography":"Je suis Professeur",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022154/oProjetheque/gateau/tas_de_macarons_2_rqp29w.png",
                 "id_promo":1,
                 "id_project":5,
                 "id_therole": 1
@@ -585,7 +585,7 @@
                 "email":"clement@oclock.io",
                 "password": "oclock6",
                 "biography":"Je suis Professeur",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022157/oProjetheque/gateau/trio_muffin_1_1_lohmcm.png",
                 "id_promo":1,
                 "id_project":6,
                 "id_therole": 1
@@ -597,7 +597,7 @@
                 "email":"alexis@oclock.io",
                 "password": "oclock7",
                 "biography":"Je suis Professeur",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636022007/oProjetheque/gateau/gateau_chocolat_noir_1_dlgtpo.png",
                 "id_promo":1,
                 "id_project":7,
                 "id_therole": 1
@@ -609,7 +609,7 @@
                 "email":"yann@oclock.io",
                 "password": "oclock8",
                 "biography":"Je suis Professeur",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021984/oProjetheque/gateau/cupcake_rose_chocolat_1_a8xbuy.png",
                 "id_promo":1,
                 "id_project":8,
                 "id_therole": 1
@@ -621,7 +621,7 @@
                 "email":"quentin@oclock.io",
                 "password": "oclock9",
                 "biography":"Je suis Professeur",
-                "avatar": "lien",
+                "avatar": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png",
                 "id_promo":1,
                 "id_project":9,
                 "id_therole": 1

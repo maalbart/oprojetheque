@@ -90,7 +90,7 @@ class Project{
         // console.log(result);
         return result.rows;
     }
-    
+
     /* ---------------------------------------------- */
     /**
      * Return new project
