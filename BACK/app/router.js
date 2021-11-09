@@ -8,7 +8,7 @@ const projectController = require('./controllers/projectController.js');
 const promoController = require('./controllers/promoController.js');
 const studentController = require('./controllers/studentController.js')
 const authController = require('./controllers/authController.js');
-const adminController = require('./controllers/adminController.js');
+// const adminController = require('./controllers/adminController.js');
 // const adminMiddleware = require("./middlewares/adminMiddleware.js");
 // const contactController = require('./controllers/contactController.js');
 
@@ -144,7 +144,7 @@ Admin route with methods to add projects, promos and students
 Verification that the user, who wants to use the route /admin, has the role of admin, then chain the methods add and update of the 3 tables
 */ 
 
-router.get("/admin", adminController.PromosWithStudents);
+// router.get("/admin", adminController.PromosWithStudents);
 
 // /******* Projects management *******/
 // router.post("/admin", adminMiddleware.isAdmin, adminController.addProject);
