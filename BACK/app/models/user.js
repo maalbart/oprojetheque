@@ -47,8 +47,8 @@ class User {
     static async getAllStudents() {
         const query = {
             // Display all users with the role of student and sorted by firstname
-            text: "SELECT * FROM theuser WHERE theuser.id_therole=$1 ORDER BY firstname",
-            values: [2]
+            text: "SELECT * FROM theuser WHERE theuser.id_therole=2 ORDER BY firstname",
+            values: []
         };
         const dbresult = await pool.query(query);
         const studentsDB = dbresult.rows;
