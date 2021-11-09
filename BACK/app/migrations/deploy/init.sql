@@ -57,7 +57,7 @@ CREATE TABLE "theuser" (
     "avatar" text,
     --foreign key 
     "id_promo" int NOT NULL REFERENCES "promo"("id"),
-    "id_project" int NOT NULL REFERENCES "project"("id"),
+    "id_project" int REFERENCES "project"("id"),
     "id_therole" int NOT NULL REFERENCES "therole"("id")
 );
 
