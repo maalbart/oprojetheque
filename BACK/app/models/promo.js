@@ -131,23 +131,6 @@ class Promo {
         // console.log(result.rows);
         return result.rows;
     }
-    // static async getAllStudentsAccordingToPromo() {
-    //     const query = {
-    //         // Display all promotions and all students
-    //         text: "SELECT * FROM promo RIGHT JOIN theuser ON promo.id=theuser.id_promo",
-    //         values: []
-    //     };
-    //     const dbresult = await pool.query(query);
-    //     const studentsDB = dbresult.rows;
-    //     const result = [];
-    //     // Loop on the elements returned by the database  & creation of the Student instances
-    //     for (const studentDB of studentsDB) {
-    //         result.push(new User(studentDB));
-    //     }
-    //     // return a table of instances Student
-    //     return result;
-
-    // }
 };
 
 

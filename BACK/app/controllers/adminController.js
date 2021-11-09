@@ -4,18 +4,6 @@ const User = require("../models/user.js");
 
 
 const adminController = {
-    // PromosWithStudents: async (req, res) => {
-    //     try {
-    //         console.log("Je suis dans la méthode PromosWithStudents de l'adminController")
-    //         //const promos = await Promo.getAllPromos();
-    //         const students = await User.getAllStudentsAccordingToPromo();
-    //         // console.log("promos", promos);
-    //         console.log("students", students);
-    //         res.json(students);
-    //     } catch (error) {
-    //         res.status(500).send(error);
-    //     }
-    // },
     /*****************************************/
     /*               PROJECT                 */
     /*****************************************/

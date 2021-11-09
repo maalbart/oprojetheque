@@ -90,6 +90,10 @@ class Project{
         // console.log(result);
         return result.rows;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> parent of 1aed69fd (Merge branch 'main' into onsentape)
     /* ---------------------------------------------- */
     /**
      * Return new project
