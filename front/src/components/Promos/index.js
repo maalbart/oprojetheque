@@ -24,6 +24,7 @@ export default function Promos () {
         <h1 className="promos-title">Les promotions</h1>
         <p className="promos-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente deserunt libero dicta nesciunt eius commodi fuga voluptate natus reprehenderit voluptates vitae, sit eum? Rem deserunt ea doloremque ex qui labore.
         Possimus cumque et numquam deleniti quas accusamus itaque. Error nemo, totam vitae ipsam ea quo rerum sint eveniet sed dolorem labore natus expedita culpa! Dolor quis fugiat dolore culpa.</p>
+        {/* C'est la searchbar */}
         <Input action='Rechercher' placeholder='Rechercher une promotion' className="promos-searchbar" />
       </div>
       <div className="promos-list">
