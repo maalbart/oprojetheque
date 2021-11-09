@@ -18,8 +18,8 @@ const authController = {
     /*****************************************/
     /*               LOGIN                   */
     /*****************************************/
-    /* Method for the user to connect */
-    loginUser: async (req, res, next) => {
+    /* Method for the student to connect */
+    loginStudent: async (req, res, next) => {
         // data entered in the login form 
         const form = req.body;
         // console.log("J'affiche ce qu'il y a dans mon req.body", form);
@@ -46,14 +46,14 @@ const authController = {
 
         try {
             // recovery of the user by mail
-            const user = await User.getOneUser(form.email);
+            const student = await User.getOneLoginStudent(form.email);
 
             // check that the user is well found
-            if (user) {
+            if (student) {
                 // verification that the password is correct
-                if ((form.password, user.password)) {
+                if (form.password, theuser.password) {
                     try {
-                        const jwtContent = { userId: user.id };
+                        const jwtContent = { userId: theuser.id };
                         const jwtOptions = {
                             algorithm: 'HS256',
                             expiresIn: '1h'
@@ -61,9 +61,9 @@ const authController = {
                         // console.log('200', user.firstname);
                         res.json({
                             logged: true,
-                            firstname: user.firstname,
-                            lastname: user.lastname,
-                            id_therole: user.id_therole,
+                            firstname: theuser.firstname,
+                            lastname: theuser.lastname,
+                            id_therole: theuser.id_therole,
                             token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
                         })
                     } catch (error) {
@@ -74,7 +74,75 @@ const authController = {
                 res.redirect("/");
             }
             else {
-                console.log(error);
+                res.status(401).json({
+                    message: "Auth failed"
+                  });
+                res.redirect("/404");
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    /* ---------------------------------------------- */
+    /* Method for the admin to connect */
+    loginAdmin: async(req, res, next) => {
+        // data entered in the login form 
+        const form = req.body;
+        // console.log("J'affiche ce qu'il y a dans mon req.body", form);
+
+        // check that none of the sent properties are null!
+        const isOnePropertyNull = !(form.email && form.password);
+
+        if (isOnePropertyNull) {
+            // send an error message 
+            res.send("Veuillez renseigner tous les champs pour vous connecter!");
+        } else {
+            // check that the email is in the right format
+            if (validator.validate(form.email)) {
+                // returns true if it's an email
+                // console.log("L'email est au bon format!");
+                // console.log("MON FORM.EMAIL", form.email);
+            } else {
+                //Send error response here
+                res.status(400).send({
+                    message: "This is an error"
+                });
+            }
+        }
+
+        try {
+            // recovery of the admin by mail
+            const isAdmin = await User.getOneLoginAdmin(form.email);
+
+            // check that the admin is well found
+            if(isAdmin){
+                // verification thaht the password is correct
+                if(form.password, theuser.password){
+                    try {
+                        const jwtContent = { userId: theuser.id };
+                        const jwtOptions = { 
+                            expiresIn: '1h'
+                        };
+
+                        // console.log('200', theuser.firstname);
+                        res.json({
+                            logged: true,
+                            firstname: theuser.firstname,
+                            lastname: theuser.lastname,
+                            id_therole: theuser.id_therole,
+                            token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
+                        })
+                    } catch (error) {
+                        console.log('401, UNAUTHORIZED');
+                        res.redirect("/404");
+                    }
+                } 
+                res.redirect("/");
+            } 
+            else {
+                res.status(401).json({
+                    message: "Auth failed"
+                  });
                 res.redirect("/404");
             }
         } catch (error) {
