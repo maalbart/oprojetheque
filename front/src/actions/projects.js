@@ -4,6 +4,7 @@ export const SAVE_PROJECTS = 'SAVE_PROJECTS'
 export const GET_ALL_PROJECTS = 'GET_ALL_PROJECTS'
 export const GET_ONE_PROJECT = 'GET_ONE_PROJECT'
 export const SAVE_ONE_PROJECT = 'SAVE_ONE_PROJECT'
+export const CHANGE_SEARCH = 'CHANGE_SEARCH'
 
 // ACTION CREATORS
 export const getRandomProjects = () => ({
@@ -23,4 +24,9 @@ export const getOneProject = (id) => ({
 export const saveOneProject = (projectData) => ({
   type: SAVE_ONE_PROJECT,
   projectData
+});
+export const changeSearch = (value, key) => ({
+  type: CHANGE_SEARCH,
+  key,
+  value
 })

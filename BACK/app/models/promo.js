@@ -66,22 +66,7 @@ class Promo {
         // console.log(result.rows);
         return result.rows[0];
     }
-    /* ---------------------------------------------- */
-    /**
-     * Return searched promo
-     * @returns [search promo]
-     */
-     static async researchPromo(){
-        const query = {
-            // display of research
-            text:"SELECT name FROM promo",
-            values:[]
-        };
-        // console.log("Me voici dans la methode de recherche d'une promo du model promo");
-        const result = await pool.query(query);
-        //console.log(result);
-        return result.rows;
-    }
+    
     /* ---------------------------------------------- */
     /**
      * Return promo from project

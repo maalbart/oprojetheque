@@ -11,6 +11,7 @@ const authController = require('./controllers/authController.js');
 // const adminController = require('./controllers/adminController.js');
 // const adminMiddleware = require("./middlewares/adminMiddleware.js");
 // const searchController = require('./controllers/searchController.js');
+const contactController = require('./controllers/contactController.js');
 
 
 /***************************************/
@@ -92,12 +93,6 @@ router.get("/students", studentController.getAllStudents);
 router.get("/student/:id", studentController.getOneStudent);
 
 
-/*****************************************/
-/*             SEARCH ROUTE              */
-/*****************************************/
-// router.post("/promos/search", searchController.searchPromo);
-// router.post("/projects/search", searchController.searchProject);
-// router.post("/students/search", searchController.searchStudent);
 
 
 /*****************************************/
@@ -132,7 +127,6 @@ router.post("/connection", authController.loginUser)
 router.post("/disconnect", authController.disconnection) 
 
 
-
 /***************************************/
 /*          ADMIN ROUTES               */
 /***************************************/
@@ -155,6 +149,10 @@ Verification that the user, who wants to use the route /admin, has the role of a
 // router.patch("/admin", adminMiddleware.isAdmin, adminController.updateStudent); 
 
 
+/***************************************/
+/*          CONTACT ROUTE              */
+/***************************************/
+// router.post("/contact", contactController.sendContact) 
 
 /* Exportation of router */
  module.exports = router;

@@ -6,10 +6,14 @@ import { Card, Input } from "semantic-ui-react";
 import CardStudent from "src/components/CardStudent";
 import Loader from 'src/components/Loader'
 import './style.scss';
+import { filteredSearch } from "src/selectors/students";
+import { changeSearch } from "src/actions/students";
+
 
 export default function Students () {
   const dispatch = useDispatch()
-  const allStudents = useSelector((state) => state.students.list)
+  const search = useSelector((state) => state.students.search)
+  const allStudents = useSelector((state) => filteredSearch(state.students.list, search))
   console.log(allStudents);
   const loader = useSelector((state) => state.students.loader);
   useEffect(() => {
@@ -24,7 +28,16 @@ export default function Students () {
         <h1 className="students-title">Les étudiants</h1>
         <p className="students-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente deserunt libero dicta nesciunt eius commodi fuga voluptate natus reprehenderit voluptates vitae, sit eum? Rem deserunt ea doloremque ex qui labore.
         Possimus cumque et numquam deleniti quas accusamus itaque. Error nemo, totam vitae ipsam ea quo rerum sint eveniet sed dolorem labore natus expedita culpa! Dolor quis fugiat dolore culpa.</p>
-        <Input action='Rechercher' placeholder='Rechercher un étudiant' className="students-searchbar" />
+        <Input
+          name='rechercher'
+          placeholder='Rechercher un étudiant'
+          className="students-searchbar"
+          value={search}
+          onChange={(event) => {
+            event.preventDefault()
+            dispatch(changeSearch(event.target.value, 'search'))
+          }}
+        />
       </div>
       <div className="students-list">
         <Card.Group 

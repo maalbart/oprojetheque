@@ -95,22 +95,7 @@ class User {
         // console.log(result.rows);
         return result.rows;
     }
-     /* ---------------------------------------------- */
-    /**
-     * Return searched student
-     * @returns [search student]
-     */
-     static async researchStudent(){
-        const query = {
-            // display of research
-            text:"SELECT firstname, lastname FROM theuser",
-            values:[]
-        };
-        // console.log("Me voici dans la methode de recherche d'un student du model user"); 
-        const result = await pool.query(query);
-        //console.log(result);    
-        return result.rows;
-    }
+    
     /* ---------------------------------------------- */
     /**
      * Return new student
@@ -148,7 +133,7 @@ class User {
      */
     static async getStudentsFromPromo (id){
         const query = {
-            text: "SELECT * FROM theuser WHERE id_promo=$1 AND id_therole=2",
+            text: "SELECT * FROM theuser WHERE id_promo=$1 ",//  AND id_therole=2
             values: [id]
         };  
         const result = await pool.query(query);
@@ -164,7 +149,7 @@ class User {
      */
     static async getStudentsFromProject (id){
         const query = {
-            text: "SELECT * FROM theuser WHERE id_project=$1",
+            text: "SELECT * FROM theuser WHERE id_project=$1 AND id_therole=2",
             values: [id]
         };       
         const result = await pool.query(query);
