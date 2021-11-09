@@ -3,7 +3,7 @@ import { HANDLE_CHANGE_DROPDOWN_VALUE, ADMIN_SAVE_PROMOS, ADMIN_GET_ALL_PROMOS, 
 export const initialState = {
   promos : [],
   loader: true,
-  dropdownValue: 1,
+  dropdownValue: '',
   studentsFromPromo: [],
 }
 

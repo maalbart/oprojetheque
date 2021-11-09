@@ -28,8 +28,8 @@ const promosReducer = (state = initialState, action = {}) => {
     case SAVE_ONE_PROMO:
       return {
         ...state,
+        studentsByOnePromo: action.promoData,
         loader: false,
-        studentsByOnePromo: action.promoData
       }
     case CHANGE_SEARCH:
       return {
