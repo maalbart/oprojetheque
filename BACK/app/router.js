@@ -92,8 +92,6 @@ router.get("/students", studentController.getAllStudents);
 router.get("/student/:id", studentController.getOneStudent);
 
 
-
-
 /*****************************************/
 /*           LOGIN/LOGOUT ROUTE          */
 /*****************************************/
@@ -113,7 +111,7 @@ router.get("/connection", authController.connection);
  * @returns {object} 200 - Submission of the login form
  * @returns {Error}  default - An error has occurred 
  */
-router.post("/connection", authController.loginStudent) 
+// router.post("/connection", authController.loginStudent); 
 
 /**
  * Connection page
@@ -122,7 +120,7 @@ router.post("/connection", authController.loginStudent)
  * @returns {object} 200 - Submission of the login form
  * @returns {Error}  default - An error has occurred 
  */
- router.post("/connection", authController.loginAdmin) 
+//  router.post("/connection", authController.loginAdmin); 
 
 //! ATTENTION - A CHECKER
 /**
@@ -132,7 +130,7 @@ router.post("/connection", authController.loginStudent)
  * @returns {object} 200 - Submission of disconnect form
  * @returns {Error}  default - An error has occurred 
  */
-router.post("/disconnect", authController.disconnection) 
+// router.post("/disconnect", authController.disconnection); 
 
 
 /***************************************/
