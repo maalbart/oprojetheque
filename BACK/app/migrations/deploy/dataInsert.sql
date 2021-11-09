@@ -89,10 +89,9 @@ INSERT INTO "theuser" ("id", "firstname", "lastname","email","password", "biogra
 (49, 'Clément', 'Uther', 'clement@oclock.io', 'oclock6', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022157/oProjetheque/gateau/trio_muffin_1_1_lohmcm.png', 1, 6, 1),
 (50, 'Alexis', 'Vincent', 'alexis@oclock.io', 'oclock7', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636022007/oProjetheque/gateau/gateau_chocolat_noir_1_dlgtpo.png', 1, 7, 1),
 (51, 'Yann', 'Gouilloux', 'yann@oclock.io', 'oclock8', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021984/oProjetheque/gateau/cupcake_rose_chocolat_1_a8xbuy.png', 1, 8, 1),
-(52, 'Quentin', 'Logie', 'quentin@oclock.io', 'oclock9', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 1, 9, 1);
-INSERT INTO "theuser" ("id", "firstname", "lastname","email","password", "biography","avatar","id_promo", "id_therole") VALUES
-(53, 'Sophie', 'Fonfeque', 'sophief@oclock.io', 'valhalla44', 'Développeuse Fullstack spécialité Data/API', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 2, 2),
-(54, 'James', 'Bond', 'james@oclock.io', 'valhalla44', 'Développeur Fullstack spécialité Data/API', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 3, 2);
+(52, 'Quentin', 'Logie', 'quentin@oclock.io', 'oclock9', 'Je suis Professeur', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 1, 9, 1),
+(53, 'Sophie', 'Fonfeque', 'sophief@oclock.io', 'valhalla44', 'Développeuse Fullstack spécialité Data/API', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 2, 1, 2),
+(54, 'James', 'Bond', 'james@oclock.io', 'valhalla44', 'Développeur Fullstack spécialité Data/API', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636021974/oProjetheque/gateau/cookies_1_uewmdx.png', 3, 1, 2);
 
 -- PostGres with type serial does not automatically increment the sequence attached to the column!
 -- It is therefore necessary to update the current value of each of the sequences by selecting the maximum id of each table
