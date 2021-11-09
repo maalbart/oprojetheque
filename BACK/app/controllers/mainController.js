@@ -13,7 +13,7 @@ const mainController = {
             // console.log("Voici un random de tous les projets", projects);
         } catch (error){
             res.status(500).send(error);
-            res.redirect("/404");
+            //res.redirect("/404");
         }
      }
 };
