@@ -1,4 +1,4 @@
-/* import { Card, Image } from 'semantic-ui-react' */
+/* import { Card, Image } from 'semantic-ui-react' */ 
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './style.scss'

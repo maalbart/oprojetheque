@@ -9,17 +9,15 @@ export default function CardProject ({
   logo,
 }) {
   return (
-    <Card>
-      <Link to={`/project/${id}`}>
-        <Image src={logo} wrapped ui={false} />
-      </Link>
-      <Card.Content>
-        <Card.Header>{name}</Card.Header>
-          <Card.Description>
-            {description}
-          </Card.Description>
-      </Card.Content>
-    </Card>
+  <Link to={`/project/${id}`}>
+  <div className="card">
+    <div className="card-body">
+      <img src={logo} className='card-img'/>
+      <h3 className="card-title">{name}</h3>
+      <p className="card-description">{description}</p>
+    </div>
+  </div>
+  </Link>
   )
 }
 

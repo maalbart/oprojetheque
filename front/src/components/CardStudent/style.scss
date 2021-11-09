@@ -1,0 +1,37 @@
+@use 'src/styles/vars';
+
+.card {
+  background-color: vars.$homepageBackgroundColor;
+  font-family: vars.$font; 
+  color: vars.$textColor;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
+  margin: 2em;
+
+
+  /* tentatives pour sizer les cards
+&-card-avatar {
+  display: block;
+  width: 360px;
+  } 
+ */
+  /* &-card-body {
+    width: 360px;
+    height: 480px;
+  } */
+  
+  &-card-title:active, &-card-description:active {
+    font-family: vars.$font; 
+    color: vars.$textColor;
+  }
+}
+
+.card:hover {
+  background-color: vars.$backgroundColorHover;
+  color: vars.$textColorHover;
+
+  &-card-title:hover:active, &-card-description:hover:active {
+    font-family: vars.$font; 
+    color: vars.$textColorHover;
+  }
+}

@@ -22,9 +22,9 @@ export default function Students () {
     <div className="students">
       <div className="students-header">
         <h1 className="students-title">Les étudiants</h1>
-        <p className="students-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente deserunt libero dicta nesciunt eius commodi fuga voluptate natus reprehenderit voluptates vitae, sit eum? Rem deserunt ea doloremque ex qui labore.
-        Possimus cumque et numquam deleniti quas accusamus itaque. Error nemo, totam vitae ipsam ea quo rerum sint eveniet sed dolorem labore natus expedita culpa! Dolor quis fugiat dolore culpa.</p>
-        <Input action='Rechercher' placeholder='Rechercher un étudiant' className="students-searchbar" />
+        <p className="students-description">Tous les étudiants d'O'Clock depuis la création de l'école.</p>
+        {/* attention changement action='rechercher' pour icon loupe */}
+        <Input icon='search' placeholder='Rechercher un étudiant' className="students-searchbar" />
       </div>
       <div className="students-list">
         <Card.Group 
