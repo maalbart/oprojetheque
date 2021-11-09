@@ -19,7 +19,7 @@ const authController = {
     /*               LOGIN                   */
     /*****************************************/
     /* Method for the user to connect */
-    loginUser: async (req, res, next) => {
+    loginStudent: async (req, res, next) => {
         // data entered in the login form 
         const form = req.body;
         // console.log("J'affiche ce qu'il y a dans mon req.body", form);
@@ -39,7 +39,7 @@ const authController = {
             } else {
                 //Send error response here
                 res.status(400).send({
-                    message: "This is an error"
+                    message: "Erreur"
                 });
             }
         }
@@ -61,9 +61,9 @@ const authController = {
                         // console.log('200', user.firstname);
                         res.json({
                             logged: true,
-                            firstname: student.firstname,
-                            lastname: student.lastname,
-                            id_therole: student.id_therole,
+                            firstname: user.firstname,
+                            lastname: user.lastname,
+                            id_therole: user.id_therole,
                             token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
                         })
                     } catch (error) {

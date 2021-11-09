@@ -35,7 +35,7 @@ class Promo {
      */
     static async getAllPromos() {
         const query = {
-            text: "SELECT * FROM promo",
+            text: "SELECT * FROM promo ORDER BY name",
             values: []
         };
         const dbresult = await pool.query(query);

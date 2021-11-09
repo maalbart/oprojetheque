@@ -113,7 +113,7 @@ router.get("/connection", authController.connection);
  * @returns {object} 200 - Submission of the login form
  * @returns {Error}  default - An error has occurred 
  */
-router.post("/connection", authController.loginUser) 
+router.post("/connection", authController.loginStudent) 
 
 //! ATTENTION - A CHECKER
 /**
