@@ -10,7 +10,8 @@ const studentController = require('./controllers/studentController.js')
 const authController = require('./controllers/authController.js');
 // const adminController = require('./controllers/adminController.js');
 // const adminMiddleware = require("./middlewares/adminMiddleware.js");
-// const contactController = require('./controllers/contactController.js');
+// const searchController = require('./controllers/searchController.js');
+const contactController = require('./controllers/contactController.js');
 
 
 /***************************************/
@@ -93,7 +94,7 @@ router.get("/student/:id", studentController.getOneStudent);
 
 
 /*****************************************/
-/*           LOGIN/LOGOUT ROUTE          */
+/*      LOGIN/DISCONNECTION ROUTE        */
 /*****************************************/
 /**
  * Connection page
@@ -131,7 +132,6 @@ router.get("/connection", authController.connection);
  * @returns {Error}  default - An error has occurred 
  */
 // router.post("/disconnect", authController.disconnection); 
-
 
 /***************************************/
 /*          ADMIN ROUTES               */

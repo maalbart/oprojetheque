@@ -61,9 +61,9 @@ const authController = {
                         // console.log('200', student.firstname);
                         res.json({
                             logged: true,
-                            firstname: student.firstname,
-                            lastname: student.lastname,
-                            id_therole: student.id_therole,
+                            firstname: user.firstname,
+                            lastname: user.lastname,
+                            id_therole: user.id_therole,
                             token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
                         })
                     } catch (error) {
