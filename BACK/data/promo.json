@@ -2,22 +2,22 @@
     {
         "id": 1,
         "name": "Valhalla",
-        "logo": "lien",
-        "starting_date": "2021-06-07",
-        "ending_date": "2021-11-19"
+        "logo": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636120089/oProjetheque/logo/logo-valhalla_efxxff.png",
+        "starting_date": "07 juin 2021",
+        "ending_date": "19 novembre 2021"
     },
     {
         "id": 2,
         "name": "Astro",
-        "logo": "lien",
-        "starting_date": "2021-01-04",
-        "ending_date": "2021-06-19"
+        "logo": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636120087/oProjetheque/logo/logo-promo2_siw77q.png",
+        "starting_date": "04 janvier 2021",
+        "ending_date": "19 juin 2021"
     },
     {
         "id": 3,
         "name": "Tipix",
-        "logo": "lien",
-        "starting_date": "2021-05-03",
-        "ending_date": "2021-10-15"
+        "logo": "https://res.cloudinary.com/dieupu7jn/image/upload/v1636120084/oProjetheque/logo/logo-promo1_gdvx3y.png",
+        "starting_date": "03 mai 2021",
+        "ending_date": "15 octobre 2021"
     }
 ]
