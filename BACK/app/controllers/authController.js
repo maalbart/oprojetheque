@@ -23,7 +23,7 @@ const authController = {
     loginStudent: async (req, res, next) => {
         // data entered in the login form 
         const form = req.body;
-        // console.log("J'affiche ce qu'il y a dans mon req.body", form);
+        console.log("J'affiche ce qu'il y a dans mon req.body", form);
 
         // check that none of the sent properties are null!
         const isOnePropertyNull = !(form.email && form.password);
