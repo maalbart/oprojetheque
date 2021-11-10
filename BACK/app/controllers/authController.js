@@ -36,7 +36,7 @@ const authController = {
             if (validator.validate(form.email)) {
                 console.log("L'email est au bon format!");
                 console.log("MON FORM.EMAIL", form.email);
-                return true; //if it's an email
+                // return true; //if it's an email
             } else {
                 //Send error response here
                 res.status(400).send({
