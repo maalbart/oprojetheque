@@ -159,6 +159,24 @@ transporter.verify((error, success) => {
     console.log("Le serveur est prêt à prendre nos messages!");
   }
 });
-
+// 2. after parsing it, create a mail object with from, to, subject and text properties.
+const mailOptions = {
+  from: req.body.email,
+  to: process.env.EMAIL,
+  subject: 'Message from oProjetheque',
+  text:req.body.message,
+};  
+console.log("le mailOptions", mailOptions);
+  
+// 3. use transporter.sendMail() to send the email and done
+transporter.sendMail(mailOptions, (err, info) => {
+console.log("voici l'erreur",err);
+  if (err) {
+    res.status(500).send("Something went wrong.");
+  } else {
+    console.log("les info",info.response)
+    res.status(200).send("Email successfully sent to recipient!");
+  }
+});
 
 
