@@ -48,9 +48,10 @@ const authController = {
         try {
             // recovery of the user by mail
             const student = await User.getLoginStudent(form.email);
-            console.log ("Je suis le student", student);
+            console.log ("Je suis le student");
             // check that the user is well found
             if (student) {
+                console.log("je suis dans le if du student", student);
                 // verification that the password is correct
                 if (form.password == student.password) {
                     
@@ -60,14 +61,14 @@ const authController = {
                             expiresIn: '1h'
                         };
                         console.log('200', student.firstname);
-                        const monRes = res.json({
+                        res.json({
                             logged: true,
                             firstname: student.firstname,
                             lastname: student.lastname,
                             id_therole: student.id_therole,
                             token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
                         })
-                        console.log("le res.json",monRes);
+                        //console.log("le res.json",monRes);
                     
                 }
             }
