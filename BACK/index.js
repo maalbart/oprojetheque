@@ -152,13 +152,13 @@ app.post('/upload',
 
 /* Verify connection configuration */
 /* Verify this connection to make the credentials are correct and Nodemailer is authorized to send emails from that address.*/
-transporter.verify((error, success) => {
-  if(error){
-    console.log(error);
-  } else {
-    console.log("Le serveur est prêt à prendre nos messages!");
-  }
-});
+// transporter.verify((error, success) => {
+//   if(error){
+//     console.log(error);
+//   } else {
+//     console.log("Le serveur est prêt à prendre nos messages!");
+//   }
+// });
 
 
 

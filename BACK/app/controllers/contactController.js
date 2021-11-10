@@ -19,6 +19,13 @@ const contactController = {
           rejectUnauthorized: false
       },
       });
+      transporter.verify((error, success) => {
+        if(error){
+          console.log(error);
+        } else {
+          console.log("Le serveur est prêt à prendre nos messages!");
+        }
+      });
       // console.log('voici le req',req);
         try{
             // // 1. accepts the form data submitted and parses it using multiparty
