@@ -48,7 +48,7 @@ const authController = {
         try {
             // recovery of the user by mail
             const student = await User.getLoginStudent(form.email);
-
+            console.log ("Je suis le student", student);
             // check that the user is well found
             if (student) {
                 // verification that the password is correct
