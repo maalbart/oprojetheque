@@ -10,13 +10,13 @@ import './style.scss';
 
 export default function Promos () {
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllPromos())
+  }, [])
   const search = useSelector((state) => state.promos.search)
   const allPromos = useSelector(state => filteredSearch(state.promos.list, search))
   console.log(allPromos);
   const loader = useSelector((state) => state.promos.loader);
-  useEffect(() => {
-    dispatch(getAllPromos())
-  }, [])
   if (loader) {
     return <Loader />;
   }
