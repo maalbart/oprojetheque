@@ -137,18 +137,18 @@ app.post('/upload',
 /* ------------------------------------- */
 /* Nodemailer configuration */
 /* Note: Gmail users need to allow third party access to let Nodemailer send emails. So turn on the 'Less Secure Apps' settings by following instructions here.*/
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com", // replace with your email provider
-  port: 587, // default
-  auth: {
-    user: process.env.EMAIL,//'oprojetheque@gmail.com'
-    pass: process.env.PASS,//'oProjetheque@2021'
-  },
-  tls: {
-    // do not fail on invalid certs
-    rejectUnauthorized: false
-},
-});
+// const transporter = nodemailer.createTransport({
+//   host: "smtp.gmail.com", // replace with your email provider
+//   port: 587, // default
+//   auth: {
+//     user: process.env.EMAIL,//'oprojetheque@gmail.com'
+//     pass: process.env.PASS,//'oProjetheque@2021'
+//   },
+//   tls: {
+//     // do not fail on invalid certs
+//     rejectUnauthorized: false
+// },
+// });
 
 /* Verify connection configuration */
 /* Verify this connection to make the credentials are correct and Nodemailer is authorized to send emails from that address.*/

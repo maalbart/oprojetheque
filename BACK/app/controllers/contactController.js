@@ -1,10 +1,24 @@
 // const multiparty = require("multiparty");
 const contactController = {
+  
     /*****************************************/
     /*               CONTACT PAGE            */
     /*****************************************/
     /* Method to display the contact page */
+    
     sendContact:async(req,res)=>{
+      const transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com", // replace with your email provider
+        port: 587, // default
+        auth: {
+          user: process.env.EMAIL,//'oprojetheque@gmail.com'
+          pass: process.env.PASS,//'oProjetheque@2021'
+        },
+        tls: {
+          // do not fail on invalid certs
+          rejectUnauthorized: false
+      },
+      });
       // console.log('voici le req',req);
         try{
             // // 1. accepts the form data submitted and parses it using multiparty
@@ -37,6 +51,7 @@ const contactController = {
             res.status(500).send(error);
             // res.redirect("/404");
         }
+        
         // 3. use transporter.sendMail() to send the email and done
         transporter.sendMail(mailOptions, (err, info) => {
           console.log("voici l'erreur",err);
