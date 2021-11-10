@@ -122,8 +122,8 @@ router.get("/connection", authController.connection);
  * @returns {Error}  default - An error has occurred 
  */
 //! A checker (sinon faire deux routes, une /student et une autre /admin)
-router.post("/connection", authController.loginStudent, authController.loginAdmin); 
-
+router.post("/connection", authController.loginStudent); 
+//router.post("/connection", authController.loginStudent, authController.loginAdmin); 
 
 //! ATTENTION - A CHECKER
 /**
