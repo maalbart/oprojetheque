@@ -16,10 +16,10 @@ const contactController = {
             
                 // 2. after parsing it, create a mail object with from, to, subject and text properties.
                 const mail = {
-                    from: data.name,
+                    from: data.email,
                     to: process.env.EMAIL,
                     subject: data.subject,
-                    text: `${data.name} <${data.email}> \n${data.message}`,
+                    text: `<${data.email}> \n${data.message}`,
                   };  
                     
                 // 3. use transporter.sendMail() to send the email and done

@@ -80,6 +80,23 @@ class User {
     }
     /* ---------------------------------------------- */
     /**
+     * Return one student profile
+     * @returns [student profile]
+     */
+    static async getStudentProfile(id) {
+        const query = {
+            text: "SELECT id, firstname, lastname, email, biography, avatar, id_promo, id_project FROM theuser WHERE id=$1",
+            values: [id]
+        };
+        // console.log("voici l'id", id);
+        const result = await pool.query(query);
+        // console.log("Resultat de getStudentProfile", result);
+        // console.log("Nous sommes dans la methode getStudentProfile du model User");
+        // console.log(result.rows);
+        return result.rows[0];
+    }
+    /* ---------------------------------------------- */
+    /**
      * Return new student
      * @returns [new student]
      */
@@ -157,23 +174,23 @@ class User {
         // console.log(result.rows);
         return result.rows;
     }
-    /* ---------------------------------------------- */
-    /**
-     * Return admin email
-     * @returns [admin email]
-     */
-    static async getLoginAdmin(email) {
-        const query = {
-            text: "SELECT * FROM theuser WHERE email=$1 AND id_therole=1",
-            values: [email]
-        };
-        // console.log("voici l'email", email);
-        const result = await pool.query(query);
-        // console.log("Resultat de getOneUser", result);
-        // console.log("Nous sommes dans la methode getOneUser du model");
-        // console.log(result.rows);
-        return result.rows[0];
-    }
+    // /* ---------------------------------------------- */
+    // /**
+    //  * Return admin email
+    //  * @returns [admin email]
+    //  */
+    // static async getLoginAdmin(email) {
+    //     const query = {
+    //         text: "SELECT * FROM theuser WHERE email=$1 AND id_therole=1",
+    //         values: [email]
+    //     };
+    //     // console.log("voici l'email", email);
+    //     const result = await pool.query(query);
+    //     // console.log("Resultat de getOneUser", result);
+    //     // console.log("Nous sommes dans la methode getOneUser du model");
+    //     // console.log(result.rows);
+    //     return result.rows[0];
+    // }
 };
 
 
