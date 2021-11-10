@@ -7,28 +7,28 @@ const contactController = {
     sendContact:async(req,res)=>{
       // console.log('voici le req',req);
         try{
-            // 1. accepts the form data submitted and parses it using multiparty
-            const form = new multiparty.Form();
-            // console.log('voici le form',form);
-            const data = {};
-            // console.log('data', data);
-            const {email, message} = fields;
-            form.parse(req, function(err, fields) {
-                console.log(fields);
-                Object.keys(fields).forEach(function (property) {
-                    data[property] = fields[property].toString();
-                });
+            // // 1. accepts the form data submitted and parses it using multiparty
+            // const form = new multiparty.Form();
+            // // console.log('voici le form',form);
+            // const data = {};
+            // // console.log('data', data);
+            // const {email, message} = fields;
+            // form.parse(req, function(err, fields) {
+            //     console.log(fields);
+            //     Object.keys(fields).forEach(function (property) {
+            //         data[property] = fields[property].toString();
+            //     });
             
                 // 2. after parsing it, create a mail object with from, to, subject and text properties.
-                const mail = {
-                    from: data.email,
+                const mailOptions = {
+                    from: req.body.email,
                     to: process.env.EMAIL,
-                    subject: data.subject,
-                    text: `<${data.email}> \n${data.message}`,
+                    subject: 'Message from oProjetheque',
+                    text:req.body.message,
                   };  
                     
                 // 3. use transporter.sendMail() to send the email and done
-                transporter.sendMail(mail, (err, data) => {
+                transporter.sendMail(mailOptions, (err, data) => {
                     if (err) {
                       console.log(err);
                       res.status(500).send("Something went wrong.");
@@ -36,7 +36,7 @@ const contactController = {
                       res.status(200).send("Email successfully sent to recipient!");
                     }
                   });
-            });
+            // });
                 
         
             
