@@ -53,7 +53,7 @@ const authController = {
             if (student) {
                 // verification that the password is correct
                 if (form.password == student.password) {
-                    try {
+                    
                         const jwtContent = { studentId: student.id };
                         const jwtOptions = {
                             algorithm: 'HS256',
@@ -68,11 +68,7 @@ const authController = {
                             token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
                         })
                         console.log("le res.json",monRes);
-                    } catch (error) {
-                        console.log('401, UNAUTHORIZED');
-                        // res.redirect("/404");
-                    }
-                    return monRes;
+                    
                 }
             }
             else {
