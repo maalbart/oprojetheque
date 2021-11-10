@@ -21,8 +21,8 @@ const adminController = {
     /* Method to update project */
     updateProject: async (req, res) => {
         try {
-            // console.log("Je suis dans la méthode updateProject de l'adminController")
-            const updateProject = await Project.updateProject(req.body)
+            // console.log("Je suis dans la méthode updateProject de l'adminController");
+            const updateProject = await Project.updateProject(req.body);
             res.json(updateProject);
         } catch (error) {
             res.status(500).send(error);

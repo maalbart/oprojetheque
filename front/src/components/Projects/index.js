@@ -5,11 +5,14 @@ import { getAllProjects } from 'src/actions/projects';
 import { Card, Input } from "semantic-ui-react";
 import CardProject from "src/components/CardProject";
 import Loader from 'src/components/Loader'
+import { filteredSearch } from "src/selectors/projects";
 import './style.scss';
+import { changeSearch } from "src/actions/projects";
 
 export default function Projects () {
   const dispatch = useDispatch();
-  const allProjects = useSelector((state) => state.projects.list)
+  const search = useSelector((state) => state.projects.search)
+  const allProjects = useSelector((state) => filteredSearch(state.projects.list, search))
   console.log(allProjects);
   useEffect(() => {
     dispatch(getAllProjects())
@@ -24,7 +27,17 @@ export default function Projects () {
         <h1 className="projects-title">Les projets</h1>
         <p className="projects-description">Tous les projets d'apothéose des étudiants d'O'Clock !</p>
         {/* attention changement action='rechercher' pour icon loupe */}
-        <Input icon='search' placeholder='Rechercher un projet' className="projects-searchbar" />
+        <Input
+          icon='search'
+          placeholder='Rechercher un projet'
+          className="projects-searchbar"
+          name='rechercher'
+          value={search}
+          onChange={(event) => {
+            event.preventDefault()
+            dispatch(changeSearch(event.target.value, 'search'))
+          }}
+        />
       </div>
       <div className="projects-list">
         <Card.Group 

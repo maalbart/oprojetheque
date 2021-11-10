@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllPromos } from 'src/actions/promos'
+import { getAllPromos, changeSearch } from 'src/actions/promos'
+import { filteredSearch } from "src/selectors/promos";
 import { Card, Input } from "semantic-ui-react";
 import CardPromo from "src/components/CardPromo";
 import Loader from 'src/components/Loader'
@@ -9,7 +10,8 @@ import './style.scss';
 
 export default function Promos () {
   const dispatch = useDispatch();
-  const allPromos = useSelector(state => state.promos.list)
+  const search = useSelector((state) => state.promos.search)
+  const allPromos = useSelector(state => filteredSearch(state.promos.list, search))
   console.log(allPromos);
   const loader = useSelector((state) => state.promos.loader);
   useEffect(() => {
@@ -25,7 +27,17 @@ export default function Promos () {
         <p className="promos-description">Toutes les promotions d'étudiants d'O'Clock !</p>
         {/* C'est la searchbar */}
         {/* attention changement action='rechercher' pour icon loupe */}
-        <Input icon='search' placeholder='Rechercher une promotion' className="promos-searchbar" />
+        <Input
+          icon='search'
+          name='rechercher'
+          placeholder='Rechercher une promotion'
+          className="promos-searchbar"
+          value={search}
+          onChange={(event) => {
+            event.preventDefault()
+            dispatch(changeSearch(event.target.value, 'search'))
+          }}
+        />
       </div>
       <div className="promos-list">
         <Card.Group 

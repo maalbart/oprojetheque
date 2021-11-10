@@ -90,22 +90,7 @@ class Project{
         // console.log(result);
         return result.rows;
     }
-    /* ---------------------------------------------- */
-    /**
-     * Return searched project
-     * @returns [project search]
-     */
-     static async researchProject(){
-        const query = {
-            // display of research
-            text:"SELECT name FROM project",
-            values:[]
-        };
-        // console.log("Me voici dans la methode de recherche d'un project du model project");
-        const result = await pool.query(query);
-        // console.log(result);
-        return result.rows;
-    }
+
     /* ---------------------------------------------- */
     /**
      * Return new project
