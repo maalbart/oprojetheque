@@ -5,6 +5,8 @@ export const initialState = {
   email: '',
   password: '',
   username: '',
+  firstname: '',
+  lastname: '',
   loggedMessage: 'Bienvenue',
 };
 
@@ -18,7 +20,8 @@ const userReducer = (state = initialState, action = {}) => {
     case SAVE_USER:
       return {
         ...state,
-        username: action.user.pseudo,
+        firstname: action.user.firstname,
+        lastname: action.user.lastname,
         logged: true,
       };
     case HANDLE_DISCONNECT:
