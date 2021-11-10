@@ -1,4 +1,4 @@
-//const multiparty = require("multiparty");
+const multiparty = require("multiparty");
 const contactController = {
     /*****************************************/
     /*               CONTACT PAGE            */
