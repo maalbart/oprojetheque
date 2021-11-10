@@ -36,7 +36,7 @@ router.get("/", mainController.homePage);
  * @returns {object} 200 - Contact admin
  * @returns {Error}  default - An error has occurred
  */
- router.post("/", contactController. sendContact);
+ router.post("/contact", contactController. sendContact);
 
 
 /***************************************/
@@ -170,12 +170,6 @@ Verification that the user, who wants to use the route /admin, has the role of a
 // /******* Students management *******/
 // router.post("/admin", adminMiddleware.isAdmin, adminController.addStudent)
 // router.patch("/admin", adminMiddleware.isAdmin, adminController.updateStudent); 
-
-
-/***************************************/
-/*          CONTACT ROUTE              */
-/***************************************/
-// router.post("/contact", contactController.sendContact)
 
 
 

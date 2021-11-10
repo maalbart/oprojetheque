@@ -39,10 +39,17 @@ const studentController = {
     /*           STUDENT PROFILE             */
     /*****************************************/
     /* Method that displays a student's profile */ 
-    studentProfile: (req, res, next) => {
-        // console.log("Je suis dans la methode profil dans le studentController!");
-        // res.redirect("/404");
-    }
+    studentProfile: async (req, res) => {
+        try {
+            // console.log("Bienvenue sur la page d'un student");
+            const studentProfile = await User.getStudentProfile(req.params.id);
+            res.json(studentProfile);
+            // console.log("voici le studentProfile", studentProfile);
+        } catch (error) {
+            res.status(500).send(error);
+            res.redirect("/404");
+        }
+    },
 };
 
 
