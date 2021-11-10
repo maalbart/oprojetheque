@@ -6,6 +6,10 @@ require('dotenv').config();
 const express = require('express');
 
 /* -------------------------------------* /
+/* Initialising Node-mailer */
+const nodemailer = require("nodemailer");
+
+/* -------------------------------------* /
 /* Initialising Cloudinary */
 const cloudinary = require('cloudinary');
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
@@ -17,25 +21,25 @@ const app = express();
 
 /* ------------------------------------- */
 /* Cloudinary configuration */
-cloudinary.config({ 
-    cloud_name : "dieupu7jn" , 
-    api_key : '761866131662332' , 
-    api_secret : 'Ch_tOPLd7DInTQj4S6iudmVvhEo' ,
- });
+cloudinary.config({
+  cloud_name: "dieupu7jn",
+  api_key: '761866131662332',
+  api_secret: 'Ch_tOPLd7DInTQj4S6iudmVvhEo',
+});
 
- const storage = new CloudinaryStorage({
-    cloudinary: cloudinary,
-    params: {
-      folder: "oProjethèque",
-    },
-  });
-  
-  const upload = multer({ storage: storage });
-  app.post("/", upload.single("picture"), async (req, res) => {
-    return res.json({ picture: req.file.path });
-  });
-  
-  /* ------------------------------------- */
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: "oProjethèque",
+  },
+});
+
+const upload = multer({ storage: storage });
+app.post("/", upload.single("picture"), async (req, res) => {
+  return res.json({ picture: req.file.path });
+});
+
+/* ------------------------------------- */
 /* Requiring Express-JWT*/
 const jwt = require('express-jwt');
 
@@ -89,14 +93,14 @@ app.use(function(req, res, next) {
     else{
       next();
     }
-    
 });
 app.use(cors({
-    origin: '*'}));
+  origin: '*'
+}));
 
 /* ------------------------------------- */
 /* MulterMiddleware */
-const multerMiddleware = multer({storage: storage});
+const multerMiddleware = multer({ storage: storage });
 
 /* ------------------------------------- */
 /* Port setup - support for the port chosen by the developer if there is one, otherwise 5000 */
@@ -110,21 +114,47 @@ app.use(router);
 /* ------------------------------------- */
 /* Launching server */
 app.listen(port, () => {
-    console.log(`Server started on http://localhost:${port}`);
+  console.log(`Server started on http://localhost:${port}`);
 });
 
 /* ------------------------------------- */
 /* MulterMiddleware via POST*/
 app.post('/upload',
-    multerMiddleware.single('mon-fichier'),
-    (req, res) => {
-        // At this point, MulterMiddleware already uploaded the file to Cloudinary,
-        // The uploaded image's link is accessible in "req.file"
-        const fileURL = req.file.path;
+  multerMiddleware.single('mon-fichier'),
+  (req, res) => {
+    // At this point, MulterMiddleware already uploaded the file to Cloudinary,
+    // The uploaded image's link is accessible in "req.file"
+    const fileURL = req.file.path;
 
-        console.log('Lien Cloudinary', fileURL)
+    console.log('Lien Cloudinary', fileURL)
 
-        // Here, you can save this link in your database.
+    // Here, you can save this link in your database.
 
-        res.json({ path: fileURL });
-    });
+    res.json({ path: fileURL });
+  }
+);
+
+/* ------------------------------------- */
+/* Nodemailer configuration */
+/* Note: Gmail users need to allow third party access to let Nodemailer send emails. So turn on the 'Less Secure Apps' settings by following instructions here.*/
+const transporter = nodemailer.createTransport({
+  host: "smtp.live.com", // replace with your email provider
+  port: 587, // default
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
+  }
+});
+
+/* Verify connection configuration */
+/* Verify this connection to make the credentials are correct and Nodemailer is authorized to send emails from that address.*/
+transporter.verify((error, success) => {
+  if(error){
+    console.log(error);
+  } else {
+    console.log("Le serveur est prêt à prendre nos messages!");
+  }
+});
+
+
+
