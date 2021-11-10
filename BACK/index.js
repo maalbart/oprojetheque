@@ -7,7 +7,7 @@ const express = require('express');
 
 /* -------------------------------------* /
 /* Initialising Node-mailer */
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 
 /* -------------------------------------* /
 /* Initialising Cloudinary */
