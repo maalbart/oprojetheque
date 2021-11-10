@@ -30,8 +30,8 @@ const contactController = {
                     
                 // 3. use transporter.sendMail() to send the email and done
                 transporter.sendMail(mailOptions, (err, info) => {
+                  console.log("voici l'erreur",err);
                     if (err) {
-                      console.log("voici l'erreur",err);
                       res.status(500).send("Something went wrong.");
                     } else {
                       console.log("les info",info.response)
