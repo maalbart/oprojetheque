@@ -60,26 +60,26 @@ const authController = {
                             expiresIn: '1h'
                         };
                         console.log('200', student.firstname);
-                        res.json({
-                            logged: true,
-                            firstname: student.firstname,
-                            lastname: student.lastname,
-                            id_therole: student.id_therole,
-                            token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
-                        })
-                        console.log("le res.json",res.json({
-                            logged: true,
-                            firstname: student.firstname,
-                            lastname: student.lastname,
-                            id_therole: student.id_therole,
-                            token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
-                        }))
+                        
                     } catch (error) {
                         console.log('401, UNAUTHORIZED');
                         // res.redirect("/404");
                     }
                 }
-                // res.redirect("/");
+                res.json({
+                    logged: true,
+                    firstname: student.firstname,
+                    lastname: student.lastname,
+                    id_therole: student.id_therole,
+                    token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
+                })
+                console.log("le res.json",res.json({
+                    logged: true,
+                    firstname: student.firstname,
+                    lastname: student.lastname,
+                    id_therole: student.id_therole,
+                    token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
+                }))
             }
             else {
                 res.status(401).json({
