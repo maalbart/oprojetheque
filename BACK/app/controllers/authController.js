@@ -52,7 +52,7 @@ const authController = {
             // check that the user is well found
             if (student) {
                 // verification that the password is correct
-                if (form.password, student.password) {
+                if (form.password == student.password) {
                     try {
                         const jwtContent = { studentId: student.id };
                         const jwtOptions = {
