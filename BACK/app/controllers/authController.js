@@ -59,7 +59,7 @@ const authController = {
                             algorithm: 'HS256',
                             expiresIn: '1h'
                         };
-                        // console.log('200', user.firstname);
+                        console.log('200', student.firstname);
                         res.json({
                             logged: true,
                             firstname: student.firstname,
@@ -69,16 +69,16 @@ const authController = {
                         })
                     } catch (error) {
                         console.log('401, UNAUTHORIZED');
-                        res.redirect("/404");
+                        // res.redirect("/404");
                     }
                 }
-                res.redirect("/");
+                // res.redirect("/");
             }
             else {
                 res.status(401).json({
                     message: "Auth failed"
                   });
-                res.redirect("/404");
+                // res.redirect("/404");
             }
         } catch (error) {
             console.log(error);
