@@ -31,7 +31,9 @@ INSERT INTO "project" ("id", "name", "logo", "description", "site_link", "site_s
 (6, 'CompOstons', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636445880/oProjetheque/logo%20project/ocompostons-logo_fbnuhd.png', 'Géolocalisation et tuto pour le compostage', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636535225/oProjetheque/screen/composton_kk8rmk.png', 'lien', 1),
 (7, 'oProjetheque', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062087/oProjetheque/logo%20project/oprojetheque_logo_hybride_xlzyaa.png', 'Listing des projets des étudiants ', 'lien', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1635512183/oProjetheque/screen/acc_v1_r3cdhc.png', 'lien', 1),
 (8, 'LDO transport', 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636062072/oProjetheque/logo%20project/ldo_1_fmnfyr.png', 'Logistique de transport', 'lien', 'lien', 'lien', 1),
-(9, 'Bristol', 'lien', 'Site collaboratif de partage de fiches méthodologiques', 'lien', 'lien', 'lien', 1);
+(9, 'Bristol', 'lien', 'Site collaboratif de partage de fiches méthodologiques', 'lien', 'lien', 'lien', 1),
+(10, 'Projetop', 'lien', 'Site au top', 'lien', 'lien', 'lien', 2),
+(11, 'Projetoptop', 'lien', 'Site au toptop', 'lien', 'lien', 'lien', 3);
 
 
 ---------------------------
