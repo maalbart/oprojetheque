@@ -26,14 +26,15 @@ const contactController = {
                     subject: 'Message from oProjetheque',
                     text:req.body.message,
                   };  
-                  console.log("le mailOption", mailOptions);
+                  console.log("le mailOptions", mailOptions);
                     
                 // 3. use transporter.sendMail() to send the email and done
-                transporter.sendMail(mailOptions, (err, data) => {
+                transporter.sendMail(mailOptions, (err, info) => {
                     if (err) {
-                      console.log(err);
+                      console.log("voici l'erreur",err);
                       res.status(500).send("Something went wrong.");
                     } else {
+                      console.log("les info",info.response)
                       res.status(200).send("Email successfully sent to recipient!");
                     }
                   });
