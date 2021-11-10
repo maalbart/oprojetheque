@@ -67,6 +67,13 @@ const authController = {
                             id_therole: student.id_therole,
                             token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
                         })
+                        console.log("le res.json",res.json({
+                            logged: true,
+                            firstname: student.firstname,
+                            lastname: student.lastname,
+                            id_therole: student.id_therole,
+                            token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
+                        }))
                     } catch (error) {
                         console.log('401, UNAUTHORIZED');
                         // res.redirect("/404");
