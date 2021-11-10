@@ -145,10 +145,10 @@ class User {
      * Return student email
      * @returns [student email]
      */
-    static async getLoginStudent(email, password) {
+    static async getLoginStudent(email) {
         const query = {
-            text: "SELECT * FROM theuser WHERE email=$1 AND password=$2 AND id_therole=2",
-            values: [email, password]
+            text: "SELECT * FROM theuser WHERE email=$1 AND id_therole=2",
+            values: [email]
         };
         // console.log("voici l'email", email);
         const result = await pool.query(query);
