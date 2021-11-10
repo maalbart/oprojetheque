@@ -27,16 +27,16 @@ const authController = {
 
         // check that none of the sent properties are null!
         const isOnePropertyNull = !(form.email && form.password);
-
+        console.log("je suis isOnePropertyNull", isOnePropertyNull);
         if (isOnePropertyNull) {
             // send an error message 
             res.send("Veuillez renseigner tous les champs pour vous connecter!");
         } else {
             // check that the email is in the right format
             if (validator.validate(form.email)) {
+                console.log("L'email est au bon format!");
+                console.log("MON FORM.EMAIL", form.email);
                 return true; //if it's an email
-                // console.log("L'email est au bon format!");
-                // console.log("MON FORM.EMAIL", form.email);
             } else {
                 //Send error response here
                 res.status(400).send({
