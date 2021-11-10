@@ -5,6 +5,7 @@ import userReducer from './user';
 import projectsReducer from './projects'
 import adminReducer from './admin'
 import studentsReducer from './students'
+import contactReducer from './contact';
 
 const rootReducer = combineReducers({
   promos: promosReducer,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   students: studentsReducer,
   projects: projectsReducer,
   admin: adminReducer,
+  contact: contactReducer,
 });
 
 export default rootReducer;

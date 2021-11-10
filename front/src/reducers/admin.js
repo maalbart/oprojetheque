@@ -17,6 +17,7 @@ const adminReducer = (state = initialState, action = {}) => {
     case ADMIN_GET_ALL_PROMOS:
       return {
         ...state,
+        loader: true
       }
     case ADMIN_GET_ALL_STUDENT_FROM_PROMO:
       return {
@@ -27,6 +28,7 @@ const adminReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         promos: action.promos,
+        loader: false
       }
     case ADMIN_SAVE_STUDENTS_FROM_PROMOS:
       return {
