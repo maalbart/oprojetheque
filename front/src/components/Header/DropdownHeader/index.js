@@ -1,8 +1,9 @@
 import React from "react";
+import {useState} from "react"
 import './style.scss';
 
 export default function DropdownHeader () {
-  const [showMenu, setShowMenu] = usestate(false);
+  const [showMenu, setShowMenu] = useState(false)
 
   return (
     <div>
@@ -11,7 +12,7 @@ export default function DropdownHeader () {
     </button>
 
     {
-      {showMenu}
+      showMenu
         ? (
           <div className="menu">
             <button> Menu item 1 </button>
