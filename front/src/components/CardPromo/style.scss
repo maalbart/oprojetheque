@@ -1,0 +1,25 @@
+@use 'src/styles/vars';
+
+.card {
+  background-color: vars.$homepageBackgroundColor;
+  font-family: vars.$font; 
+  color: vars.$textColor;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
+  margin: 2em;
+  
+  &-card-title:active, &-card-description:active {
+    font-family: vars.$font; 
+    color: vars.$textColor;
+  }
+}
+
+.card:hover {
+  background-color: vars.$backgroundColorHover;
+  color: vars.$textColorHover;
+
+  &-card-title:hover:active, &-card-description:hover:active {
+    font-family: vars.$font; 
+    color: vars.$textColorHover;
+  }
+}

@@ -10,17 +10,15 @@ export default function CardStudent ({
   biography
 }) {
   return (
-    <Card>
-      <Link to={`/student/${id}`}>
-        <Image src={avatar} wrapped ui={false} />
-      </Link>
-      <Card.Content>
-        <Card.Header>{firstname} {lastname}</Card.Header>
-          <Card.Description>
-            {biography}
-          </Card.Description>
-      </Card.Content>
-    </Card>
+<Link to={`/student/${id}`}>
+   <div className="card">
+     <div className="card-body">
+       <img src={avatar} className="card-avatar"/>
+       <h3 className="card-title">{firstname} {lastname}</h3>
+       <p className="card-description">{biography}</p>
+     </div>
+   </div>
+  </Link>
   )
 }
 
@@ -30,3 +28,18 @@ CardStudent.propTypes = {
   biography: PropTypes.string,
   avatar: PropTypes.string,
 }
+
+
+/*  ancienne version card avec semantic ui 
+    <Card>
+    <Link to={`/student/${id}`}>
+      <Image src={avatar} wrapped ui={false} />
+    </Link>
+    <Card.Content>
+      <Card.Header>{firstname} {lastname}</Card.Header>
+        <Card.Description>
+          {biography}
+        </Card.Description>
+    </Card.Content>
+    </Card> 
+*/

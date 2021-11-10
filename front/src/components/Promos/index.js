@@ -24,9 +24,11 @@ export default function Promos () {
     <div className="promos">
       <div className="promos-header">
         <h1 className="promos-title">Les promotions</h1>
-        <p className="promos-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente deserunt libero dicta nesciunt eius commodi fuga voluptate natus reprehenderit voluptates vitae, sit eum? Rem deserunt ea doloremque ex qui labore.
-        Possimus cumque et numquam deleniti quas accusamus itaque. Error nemo, totam vitae ipsam ea quo rerum sint eveniet sed dolorem labore natus expedita culpa! Dolor quis fugiat dolore culpa.</p>
+        <p className="promos-description">Toutes les promotions d'étudiants d'O'Clock !</p>
+        {/* C'est la searchbar */}
+        {/* attention changement action='rechercher' pour icon loupe */}
         <Input
+          icon='search'
           name='rechercher'
           placeholder='Rechercher une promotion'
           className="promos-searchbar"
