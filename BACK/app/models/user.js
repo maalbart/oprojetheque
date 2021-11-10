@@ -155,7 +155,7 @@ class User {
         // console.log("Resultat de getOneUser", result);
         // console.log("Nous sommes dans la methode getOneUser du model");
         // console.log(result.rows);
-        return result.rows[0];
+        return result.rows;
     }
     /* ---------------------------------------------- */
     /**
