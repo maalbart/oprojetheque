@@ -6,10 +6,6 @@ require('dotenv').config();
 const express = require('express');
 
 /* -------------------------------------* /
-/* Initialising Node-mailer */
-// const nodemailer = require("nodemailer");
-
-/* -------------------------------------* /
 /* Initialising Cloudinary */
 const cloudinary = require('cloudinary');
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
@@ -46,9 +42,6 @@ const jwt = require('express-jwt');
 /* ------------------------------------- */
 /* Requiring jsonwebtoken */
 const jsonwebtoken = require('jsonwebtoken');
-
-/* ------------------------------------- */
-// const jwtSecret = 'IIUFHW98YW4TFHJCX7fr4r90ixjjnxcxe98208eJIHXKSIFOR9T2KAK';
 /* ------------------------------------- */
 
 /* Access rights agreement to the information of a POST via req.body -
@@ -57,12 +50,6 @@ If it is true, we can receive any type of value.
 The middleware to parse the data received especially when sending a form.
 */
 app.use(express.urlencoded({ extended: true }));
-/* ------------------------------------- */
-
-// const authorizationMiddleware = jwt({
-//     secret: jwtSecret, 
-//     algorithms: ['HS256'
-// });
 
 /* ------------------------------------- */
 /* User management through middlewares (visitor, student, admin) */
@@ -134,31 +121,6 @@ app.post('/upload',
   }
 );
 
-/* ------------------------------------- */
-/* Nodemailer configuration */
-/* Note: Gmail users need to allow third party access to let Nodemailer send emails. So turn on the 'Less Secure Apps' settings by following instructions here.*/
-// const transporter = nodemailer.createTransport({
-//   host: "smtp.gmail.com", // replace with your email provider
-//   port: 587, // default
-//   auth: {
-//     user: process.env.EMAIL,//'oprojetheque@gmail.com'
-//     pass: process.env.PASS,//'oProjetheque@2021'
-//   },
-//   tls: {
-//     // do not fail on invalid certs
-//     rejectUnauthorized: false
-// },
-// });
-
-/* Verify connection configuration */
-/* Verify this connection to make the credentials are correct and Nodemailer is authorized to send emails from that address.*/
-// transporter.verify((error, success) => {
-//   if(error){
-//     console.log(error);
-//   } else {
-//     console.log("Le serveur est prêt à prendre nos messages!");
-//   }
-// });
 
 
 
