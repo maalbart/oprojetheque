@@ -56,21 +56,21 @@ const authController = {
                 console.log("le form.password", form.password);
                 console.log("le student.password", student[0].password);
                 // verification that the password is correct
-                if (form.password == student.password) {
+                if (form.password == student[0].password) {
                     // console.log("le form.password", form.password);
                     // console.log("le student.password", student.password);
 
-                        const jwtContent = { studentId: student.id };
+                        const jwtContent = { studentId: student[0].id };
                         const jwtOptions = {
                             algorithm: 'HS256',
                             expiresIn: '1h'
                         };
-                        console.log('200', student.firstname);
+                        console.log('200', student[0].firstname);
                         res.json({
                             logged: true,
-                            firstname: student.firstname,
-                            lastname: student.lastname,
-                            id_therole: student.id_therole,
+                            firstname: student[0].firstname,
+                            lastname: student[0].lastname,
+                            id_therole: student[0].id_therole,
                             token: jsonwebtoken.sign(jwtContent, jwtSecret, jwtOptions)
                         })
                         //console.log("le res.json",monRes);
