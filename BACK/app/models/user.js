@@ -147,7 +147,7 @@ class User {
      */
     static async getLoginStudent(email) {
         const query = {
-            text: "SELECT * FROM theuser WHERE email=$1 AND id_therole=2",
+            text: "SELECT * FROM theuser WHERE email=$1",
             values: [email]
         };
         // console.log("voici l'email", email);
