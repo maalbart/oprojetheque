@@ -3,7 +3,50 @@ import { GET_ALL_STUDENTS, SAVE_STUDENTS, SAVE_ONE_STUDENT, GET_ONE_STUDENT, CHA
 export const initialState = {
   list: [],
   loader: true,
-  search: ''
+  search: '',
+  oneStudent: {
+    studentId: {
+      id: 0,
+      firstname: '',
+      lastname: '',
+      email: '',
+      password: '',
+      biography: '',
+      avatar: '',
+      id_promo: 1,
+      id_project: 1,
+      id_therole: 2
+    },
+    projectFromStudent: [{
+      id: 0,
+      name: '',
+      logo: '',
+      description: '',
+      site_link: '',
+      youtube_link: '',
+      id_promo: '',
+      firstname: '',
+      lastname: '',
+      biography: '',
+      avatar: '',
+      id_project: 1,
+      id_therole: 2,
+    }],
+    promoFromStudent: [{
+      id: 0,
+      name: '',
+      logo: '',
+      starting_date: '',
+      ending_date: '',
+      firstname: '',
+      lastname: '',
+      biography: '',
+      avatar: '',
+      id_promo: 1,
+      id_project: 1,
+      id_therole: 2,
+    }]
+  }
 }
 
 const studentsReducer = (state = initialState, action = {}) => {
