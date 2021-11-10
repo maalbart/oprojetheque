@@ -28,7 +28,7 @@ const contactController = {
         }
       });
       // console.log('voici le req',req);
-        try{
+        // try{
             // // 1. accepts the form data submitted and parses it using multiparty
             // const form = new multiparty.Form();
             // // console.log('voici le form',form);
@@ -55,10 +55,10 @@ const contactController = {
                 
         
             
-        } catch (error){
-            res.status(500).send(error);
-            // res.redirect("/404");
-        }
+        // } catch (error){
+        //     res.status(500).send(error);
+        //     // res.redirect("/404");
+        // }
         
         // 3. use transporter.sendMail() to send the email and done
         transporter.sendMail(mailOptions, (err, info) => {
