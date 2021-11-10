@@ -1,3 +1,4 @@
+const multiparty = require("multiparty");
 const contactController = {
     /*****************************************/
     /*               CONTACT PAGE            */
@@ -5,7 +6,7 @@ const contactController = {
     /* Method to display the contact page */
     sendContact:async(req,res)=>{
         try{
-            // 1. accepts the form data submitted and parse it using multiparty
+            // 1. accepts the form data submitted and parses it using multiparty
             let form = new multiparty.Form();
             let data = {};
             form.parse(req, function(err, fields) {
@@ -37,7 +38,7 @@ const contactController = {
             
         } catch (error){
             res.status(500).send(error);
-            res.redirect("/404");
+            // res.redirect("/404");
         }
      }
 };
