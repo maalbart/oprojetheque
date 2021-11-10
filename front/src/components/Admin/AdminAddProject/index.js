@@ -18,18 +18,23 @@ export default function AdminAddProject () {
 
   const handleChangeValue = (evt) => {
     const idPromo = promo.find(element => element.value == evt.target.textContent)
+    console.log(idPromo.key)
     dispatch(handleChangeDropdownValue(idPromo.key))
   }
-
+  console.log(dropdownValue)
   const handleChangeList = (dropdownValue) => {
-    const studentList = students.map((student) => {
+    const studentList = students.filter((student) => {
       if (student.id_promo == dropdownValue) {
         return { key: student.id, value: student.firstname + ' ' + student.lastname, text: student.firstname + ' ' + student.lastname  }
       }
     })
-    return studentList
+    const studentOptions = studentList.map((student) => ({
+      key: student.id, value: student.firstname + ' ' + student.lastname, text: student.firstname + ' ' + student.lastname
+    }))
+    console.log(studentOptions)
+    return studentOptions
   };
-
+  
   useEffect(() => {
     dispatch(adminGetAllPromos())
     dispatch(adminGetStudentsFromPromo())
@@ -64,6 +69,8 @@ export default function AdminAddProject () {
         fluid
         selection
         options={handleChangeList(dropdownValue)}
+        text={promo.text}
+        value={promo.key}
       />
     </Form.Field>
     <Button type='submit'>Créer le projet</Button>

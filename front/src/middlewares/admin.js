@@ -21,9 +21,7 @@ const adminMiddlewares = (store) => (next) => (action) => {
       next(action);
       axios.get('https://o-projetheque.herokuapp.com/students')
       .then((response) => {
-        console.log(response)
         const studentsFromPromo = response.data
-        console.log(studentsFromPromo)
         store.dispatch(adminSaveStudentsFromPromos(studentsFromPromo));
       })
       .catch((error) => {
