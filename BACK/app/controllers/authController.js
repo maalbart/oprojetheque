@@ -49,13 +49,16 @@ const authController = {
             // recovery of the user by mail
             const student = await User.getLoginStudent(form.email);
             console.log ("Je suis le student");
+            console.log("leform email",form.email)
             // check that the user is well found
             if (student) {
                 console.log("je suis dans le if du student", student);
+                console.log("le form.password", form.password);
+                console.log("le student.password", student.password);
                 // verification that the password is correct
                 if (form.password == student.password) {
-                    console.log("le form.password", form.password);
-                    console.log("le student.password", student.password);
+                    // console.log("le form.password", form.password);
+                    // console.log("le student.password", student.password);
 
                         const jwtContent = { studentId: student.id };
                         const jwtOptions = {
