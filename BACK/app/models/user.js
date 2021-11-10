@@ -115,7 +115,7 @@ class User {
      */
     static async getStudentsFromPromo (id){
         const query = {
-            text: "SELECT * FROM theuser WHERE id_promo=$1 ",//  AND id_therole=2
+            text: "SELECT * FROM theuser WHERE id_promo=$1 ORDER BY firstname ",//  AND id_therole=2
             values: [id]
         };  
         const result = await pool.query(query);
@@ -147,7 +147,7 @@ class User {
      */
     static async getLoginStudent(email) {
         const query = {
-            text: "SELECT * FROM theuser WHERE email=$1 AND id_therole=2",
+            text: "SELECT * FROM theuser WHERE email=$1",
             values: [email]
         };
         // console.log("voici l'email", email);
@@ -155,7 +155,7 @@ class User {
         // console.log("Resultat de getOneUser", result);
         // console.log("Nous sommes dans la methode getOneUser du model");
         // console.log(result.rows);
-        return result.rows[0];
+        return result.rows;
     }
     /* ---------------------------------------------- */
     /**
