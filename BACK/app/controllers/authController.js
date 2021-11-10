@@ -54,7 +54,9 @@ const authController = {
                 console.log("je suis dans le if du student", student);
                 // verification that the password is correct
                 if (form.password == student.password) {
-                    
+                    console.log("le form.password", form.password);
+                    console.log("le student.password", student.password);
+
                         const jwtContent = { studentId: student.id };
                         const jwtOptions = {
                             algorithm: 'HS256',
