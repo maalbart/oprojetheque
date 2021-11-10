@@ -10,11 +10,11 @@ const studentController = require('./controllers/studentController.js')
 const authController = require('./controllers/authController.js');
 // const adminController = require('./controllers/adminController.js');
 // const adminMiddleware = require("./middlewares/adminMiddleware.js");
-// const contactController = require('./controllers/contactController.js');
+const contactController = require('./controllers/contactController.js');
 
 
 /***************************************/
-/*              HOMEPAGE               */
+/*             HOME PAGE               */
 /***************************************/
 /**
  * Home page of the website
@@ -24,6 +24,19 @@ const authController = require('./controllers/authController.js');
  * @returns {Error}  default - An error has occurred
  */
 router.get("/", mainController.homePage);
+
+
+/***************************************/
+/*            CONTACT PAGE             */
+/***************************************/
+/**
+ * Contact page of the website
+ * @route POST /
+ * @group contactPage 
+ * @returns {object} 200 - Contact admin
+ * @returns {Error}  default - An error has occurred
+ */
+ router.post("/", contactController. sendContact);
 
 
 /***************************************/
