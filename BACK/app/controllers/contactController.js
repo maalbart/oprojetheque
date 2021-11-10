@@ -5,13 +5,14 @@ const contactController = {
     /*****************************************/
     /* Method to display the contact page */
     sendContact:async(req,res)=>{
-      console.log('voici le req',req);
+      // console.log('voici le req',req);
         try{
             // 1. accepts the form data submitted and parses it using multiparty
-            let form = new multiparty.Form();
-            console.log('voici le form',form);
-            let data = {};
-            console.log('data', data);
+            const form = new multiparty.Form();
+            // console.log('voici le form',form);
+            const data = {};
+            // console.log('data', data);
+            const {email, message} = fields;
             form.parse(req, function(err, fields) {
                 console.log(fields);
                 Object.keys(fields).forEach(function (property) {
