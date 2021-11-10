@@ -3,7 +3,27 @@ import { GET_RANDOM_PROJECTS, SAVE_PROJECTS, GET_ALL_PROJECTS, GET_ONE_PROJECT, 
 export const initialState = {
   list: [],
   loader: true,
-  search: ''
+  search: '',
+  oneProject: {
+    projectId: {
+      id: 0,
+      name: '',
+      logo: '',
+      description: '',
+      site_link: '',
+      site_screen: '',
+      youtube_link: '',
+      id_promo: 1
+    },
+    promoFromProject: {
+      id: 1,
+      name: '',
+      logo: '',
+      starting_date: '',
+      ending_date: ''
+    },
+    studentFromProject: []
+  }
 }
 
 const projectsReducer = (state = initialState, action = {}) => {
