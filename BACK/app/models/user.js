@@ -80,24 +80,6 @@ class User {
     }
     /* ---------------------------------------------- */
     /**
-     * Return promo and project from student
-     * @returns [promo and project from student]
-     */ 
-    static async getStudentandProjectFromStudent(id) {
-        const query = {
-            text: "SELECT * FROM project WHERE id=$1",
-            values: [id]
-        };
-        // console.log("voici l'id", id);
-        const result = await pool.query(query);
-        // console.log("Resultat de getOneStudent", result);
-        // console.log("Nous sommes dans la methode getStudentandProjectFromStudent");
-        // console.log(result.rows);
-        return result.rows;
-    }
-    
-    /* ---------------------------------------------- */
-    /**
      * Return new student
      * @returns [new student]
      */
@@ -160,12 +142,29 @@ class User {
     }
     /* ---------------------------------------------- */
     /**
-     * Return user email
-     * @returns [user email]
+     * Return student email
+     * @returns [student email]
      */
-    static async getOneUser(email) {
+    static async getLoginStudent(email) {
         const query = {
-            text: "SELECT * FROM theuser WHERE theuser.email=$1",
+            text: "SELECT * FROM theuser WHERE email=$1 AND id_therole=2",
+            values: [email]
+        };
+        // console.log("voici l'email", email);
+        const result = await pool.query(query);
+        // console.log("Resultat de getOneUser", result);
+        // console.log("Nous sommes dans la methode getOneUser du model");
+        // console.log(result.rows);
+        return result.rows[0];
+    }
+    /* ---------------------------------------------- */
+    /**
+     * Return admin email
+     * @returns [admin email]
+     */
+    static async getLoginAdmin(email) {
+        const query = {
+            text: "SELECT * FROM theuser WHERE email=$1 AND id_therole=1",
             values: [email]
         };
         // console.log("voici l'email", email);

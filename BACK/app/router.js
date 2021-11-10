@@ -91,8 +91,16 @@ router.get("/students", studentController.getAllStudents);
  */
 router.get("/student/:id", studentController.getOneStudent);
 
-
-
+/**
+ * Recovery of one student of one 
+ * @route 
+ * @group Projects - API to 
+ * @returns {object} 200 - 
+ * @returns {Error}  default - An error has occurred
+ */
+ router.get("/student/profile", studentController.studentProfile);
+ router.patch("/student/profile", studentController.studentProfile);
+ router.delete("/student/profile", studentController.studentProfile);
 
 /*****************************************/
 /*           LOGIN/LOGOUT ROUTE          */
@@ -113,7 +121,8 @@ router.get("/connection", authController.connection);
  * @returns {object} 200 - Submission of the login form
  * @returns {Error}  default - An error has occurred 
  */
-router.post("/connection", authController.loginUser) 
+//! A checker (sinon faire deux routes, une /student et une autre /admin)
+router.post("/connection", authController.loginStudent, authController.loginAdmin) 
 
 //! ATTENTION - A CHECKER
 /**
@@ -152,7 +161,9 @@ Verification that the user, who wants to use the route /admin, has the role of a
 /***************************************/
 /*          CONTACT ROUTE              */
 /***************************************/
-// router.post("/contact", contactController.sendContact) 
+// router.post("/contact", contactController.sendContact)
+
+
 
 /* Exportation of router */
  module.exports = router;
