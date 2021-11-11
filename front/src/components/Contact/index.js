@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Contact () {
   const dispatch = useDispatch()
-  const { contactMail, newMessage } = useSelector((state) => ({
-    contactMail: state.contact.contactMail,
-    newMessage: state.contact.newMessage
+  const { email, message } = useSelector((state) => ({
+    email: state.contact.email,
+    message: state.contact.message
   }))
   const submitContactForm = (evt) => {
     evt.preventDefault();
@@ -22,20 +22,22 @@ export default function Contact () {
       <Form onSubmit={submitContactForm}>
         <Form.Input
           type="email"
-          name='contactMail'
+          name='email'
+          id="email"
           placeholder='Votre E-mail'
           className='contact-form-label'
-          value={contactMail}
+          value={email}
           onChange={(event) => {
-            dispatch(changeContactField(event.target.value, 'contactMail'))
+            dispatch(changeContactField(event.target.value, 'email'))
           }}
           />
         <Form.TextArea
           placeholder='Votre message'
-          name='newMessage'
-          value={newMessage}
+          id="message"
+          name='message'
+          value={message}
           onChange={(event) => {
-            dispatch(changeContactField(event.target.value, 'newMessage'))
+            dispatch(changeContactField(event.target.value, 'message'))
           }}
         />
         <Form.Button>Envoyer</Form.Button> 

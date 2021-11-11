@@ -8,12 +8,12 @@ const contactMiddlewares = (store) => (next) => (action) => {
       const state = store.getState();
       axios.post('https://o-projetheque.herokuapp.com/contact', {
       headers: { 'Access-Control-Allow-Origin': 'http://localhost:8080/login' },
-      newMessage: state.contact.newMessage,
-      contactMail: state.contact.contactMail,
+      email: state.contact.email,
+      message: state.contact.message,
       })
       .then((response) => {
-        // const contactRes = response.data
-        console.log(response)
+        const res = response
+        console.log(res)
       })
       .catch((error) => {
         console.error(error);
