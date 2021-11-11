@@ -4,7 +4,7 @@ export const initialState = {
   logged: false,
   email: '',
   password: '',
-  username: '',
+  role: '',
   firstname: '',
   lastname: '',
   loggedMessage: 'Bienvenue',
@@ -22,6 +22,7 @@ const userReducer = (state = initialState, action = {}) => {
         ...state,
         firstname: action.user.firstname,
         lastname: action.user.lastname,
+        role: action.user.id_therole,
         logged: true,
       };
     case HANDLE_DISCONNECT:

@@ -7,9 +7,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Contact () {
   const dispatch = useDispatch()
-  const { email, message } = useSelector((state) => ({
+  const { email, message, status } = useSelector((state) => ({
     email: state.contact.email,
-    message: state.contact.message
+    message: state.contact.message,
+    status: state.contact.status
   }))
   const submitContactForm = (evt) => {
     evt.preventDefault();
@@ -19,6 +20,11 @@ export default function Contact () {
   return (
     <div className="contact-form">
       <h2 className="contact-form-title">Nous contacter</h2>
+      { 
+        status == 200 ? (<div>Votre message a bien été envoyé</div>) :
+        status == 500 ? (<div>Une erreur s'est produite, merci de réessayer plus tard</div>) :
+        null
+      }
       <Form onSubmit={submitContactForm}>
         <Form.Input
           type="email"
