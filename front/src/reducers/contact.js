@@ -1,8 +1,9 @@
-import { SUBMIT_CONTACT, CHANGE_CONTACT_FIELD } from 'src/actions/contact';
+import { SUBMIT_CONTACT, CHANGE_CONTACT_FIELD, SAVE_EMAIL_STATUS } from 'src/actions/contact';
 
 export const initialState = {
   message: '',
   email: '',
+  status: ''
 };
 
 const contactReducer = (state = initialState, action = {}) => {
@@ -15,6 +16,13 @@ const contactReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         [action.key]: action.value
+      }
+    case SAVE_EMAIL_STATUS:
+      return {
+        ...state,
+        status: action.res,
+        message: '',
+        email: '',
       }
     default:
       return state;
