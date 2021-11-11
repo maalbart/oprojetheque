@@ -1,8 +1,8 @@
 import { SUBMIT_CONTACT, CHANGE_CONTACT_FIELD } from 'src/actions/contact';
 
 export const initialState = {
-  newMessage: '',
-  contactMail: '',
+  message: '',
+  email: '',
 };
 
 const contactReducer = (state = initialState, action = {}) => {
