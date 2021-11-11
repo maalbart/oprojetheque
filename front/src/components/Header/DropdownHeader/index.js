@@ -15,9 +15,9 @@ export default function DropdownHeader () {
       showMenu
         ? (
           <div className="menu">
-            <button> Menu item 1 </button>
-            <button> Menu item 2 </button>
-            <button> Menu item 3 </button>
+            <button>Mon profil</button>
+            <button>Administration</button>
+            <button>Deconnexion</button>
           </div>
         )
         : (
