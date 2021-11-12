@@ -40,16 +40,9 @@ export default function Promos () {
         />
       </div>
       <div className="promos-list">
-        <Card.Group 
-          itemsPerRow={3}
-          stackable
-          centered
-          className="promos-list-card"
-        >
           {allPromos.map((allPromo) => (
             <CardPromo key={allPromos.id} {...allPromo} />
           ))}
-        </Card.Group>
       </div>
     </div>
   )

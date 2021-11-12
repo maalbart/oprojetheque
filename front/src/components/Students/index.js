@@ -5,10 +5,9 @@ import { getAllStudents } from 'src/actions/students';
 import { Input } from "semantic-ui-react";
 import CardStudent from "src/components/CardStudent";
 import Loader from 'src/components/Loader'
-import './style.scss';
 import { filteredSearch } from "src/selectors/students";
 import { changeSearch } from "src/actions/students";
-
+import './style.scss';
 
 export default function Students () {
   const dispatch = useDispatch()

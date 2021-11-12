@@ -1,4 +1,3 @@
-/* import { Card, Image } from 'semantic-ui-react' */ 
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './style.scss'
@@ -9,16 +8,14 @@ export default function CardPromo ({
   starting_date, 
   ending_date,
   logo,
-}) 
-
-{
+}) {
   return (
   <Link to={`/promo/${id}`}>
    <div className="card">
      <div className="card-body">
-       <img src={logo} />
-       <h3 className="card-title">{name}</h3>
-       <p className="card-description">{starting_date} - {ending_date}</p>
+       <img src={logo} className="card-body-avatar"/>
+       <h3 className="card-body-title">{name}</h3>
+       <p className="card-body-description">{starting_date} - {ending_date}</p>
      </div>
    </div>
   </Link>

@@ -5,9 +5,7 @@
     color: vars.$textColor;
     font-family: vars.$font;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     &-header {
       display: flex;
       flex-direction: column;
@@ -31,13 +29,12 @@
         margin: 2em 15em 2em 15em;
         width: fit-content;
     }
-    &-list {
+    &-list-card {
       padding: 3em 2em 3em 2em;
       display: flex;
       flex-direction: row;
-  /*     &-card {
-        chocolat test
-      } */
+      flex-wrap: wrap;
+      justify-content: center;
     }
 }
 

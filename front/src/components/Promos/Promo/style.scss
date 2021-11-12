@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 .promo-content {
-  background-color: vars.$backgroundColor;
+  background-color: vars.$homepageBackgroundColor;
   color: vars.$textColor;
   font-family: vars.$font;
 
@@ -12,7 +12,7 @@
   padding: 4em 0 4em 0;
   
   &-identity-img {
-  width: 5%;
+  width: 75%;
     }
   
   &-description-date, &-description-referent {
@@ -22,6 +22,10 @@
 }
 
 .promo-content-body {
-  padding: 4em;
+  padding: 3em 2em 3em 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 

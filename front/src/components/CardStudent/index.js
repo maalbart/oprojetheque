@@ -10,7 +10,7 @@ export default function CardStudent ({
   biography
 }) {
   return (
-<Link to={`/student/${id}`}>
+  <Link to={`/student/${id}`}>
    <div className="card">
      <div className="card-body">
        <img src={avatar} className="card-body-avatar"/>

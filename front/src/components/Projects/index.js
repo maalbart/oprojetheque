@@ -41,7 +41,6 @@ export default function Projects () {
       </div>
       <div className="projects-list">
         <div className="projects-list-card" >
-{/* max width et padding en virant card group */}
           {allProjects.map((allProject) => (
               <CardProject key={allProject.id} {...allProject} />
             ))}
