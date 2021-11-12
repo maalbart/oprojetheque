@@ -91,6 +91,7 @@ class Promo {
      */
     static async addPromo() {
         console.log("je suis dans addpromo");
+        console.log("sophie tes relou",logo)
         const query = {
             text: "INSERT INTO promo ( name, logo, starting_date, ending_date) VALUES ($1, $2, $3, $4)",
             values: [ name, logo, starting_date, ending_date]
