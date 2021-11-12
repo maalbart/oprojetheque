@@ -97,7 +97,7 @@ class Promo {
         console.log("Me voici dans la methode addPromo du model promo");
         const result = await pool.query(query);
         console.log("résultat depromojs", result);
-        return result.rows;
+        return result.rows[0];
     }
     /* ---------------------------------------------- */
     /**
