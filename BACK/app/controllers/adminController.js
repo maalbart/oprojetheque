@@ -36,6 +36,7 @@ const adminController = {
         try {
             console.log("Je suis dans la méthode addPromo de l'adminController");
             const newPromo = await Promo.addPromo(req.body);
+            console.log("mon req body", req.body);
             res.json(newPromo);
         } catch (error) {
             res.status(500).send(error);
