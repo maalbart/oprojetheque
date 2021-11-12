@@ -1,30 +1,51 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button, Dropdown } from 'semantic-ui-react'
-import { handleChangeDropdownValue } from 'src/actions/admin'
+import { handleChangeDropdownValue, adminGetAllPromos, adminGetStudentsFromPromo } from 'src/actions/admin'
+import Loader from 'src/components/Loader';
 import './style.scss'
 
 export default function AdminAddProject () {
   const dispatch = useDispatch()
   const promos = useSelector((state) => state.admin.promos)
-  console.log(promos.student)
+
+  const promo = promos.map(onePromo => ({
+    value: onePromo.name, key: onePromo.id, text: onePromo.name
+  }))
+  const students = useSelector((state) => state.admin.studentsFromPromo)
   const dropdownValue = useSelector((state) => state.admin.dropdownValue)
-  console.log(dropdownValue)
+  const loader = useSelector((state) => state.admin.loader);
+
   const handleChangeValue = (evt) => {
-    console.log(evt.target.innerText)
-    dispatch(handleChangeDropdownValue(evt.target.innerText))
+    const idPromo = promo.find(element => element.value == evt.target.textContent)
+    console.log(idPromo.key)
+    dispatch(handleChangeDropdownValue(idPromo.key))
   }
+  console.log(dropdownValue)
   const handleChangeList = (dropdownValue) => {
-    for (const list of promos) {
-      if (list.key == dropdownValue) {
-        return list.student
+    const studentList = students.filter((student) => {
+      if (student.id_promo == dropdownValue) {
+        return { key: student.id, value: student.firstname + ' ' + student.lastname, text: student.firstname + ' ' + student.lastname  }
       }
-    }
-    console.log(list.student)
-  }
+    })
+    const studentOptions = studentList.map((student) => ({
+      key: student.id, value: student.firstname + ' ' + student.lastname, text: student.firstname + ' ' + student.lastname
+    }))
+    console.log(studentOptions)
+    return studentOptions
+  };
   
+  useEffect(() => {
+    dispatch(adminGetAllPromos())
+    dispatch(adminGetStudentsFromPromo())
+  }, [])
+
+  if (loader) {
+    return <Loader />;
+  }
+
   return (
-  <Form>
+    <Form>
     <Form.Field>
       <label>Nom du projet</label>
       <input placeholder='Nom du projet' />
@@ -35,8 +56,9 @@ export default function AdminAddProject () {
         label="Promotion de l'étudiant"
         fluid
         selection
-        options={promos}
-        value={dropdownValue}
+        options={promo}
+        text={promo.text}
+        value={promo.key}
         onChange={handleChangeValue}
       />
     </Form.Field>
@@ -46,10 +68,12 @@ export default function AdminAddProject () {
         label="Etudiant référent du projet"
         fluid
         selection
-        options={handleChangeList(dropdownValue)}/>
+        options={handleChangeList(dropdownValue)}
+        text={promo.text}
+        value={promo.key}
+      />
     </Form.Field>
     <Button type='submit'>Créer le projet</Button>
   </Form>
   )
 };
-

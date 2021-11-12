@@ -48,7 +48,7 @@ export default function Student () {
         </div>
         <div className="student-body-stack">
           <h3 className="student-body-titles">Stack Technique</h3> 
-       </div>
+      </div>
         <div className="student-body-social">
           <h3 className="student-body-titles">Reseaux Sociaux</h3>
         </div>

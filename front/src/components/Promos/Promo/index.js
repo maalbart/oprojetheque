@@ -15,6 +15,7 @@ export function Promo () {
   console.log(id)
   const promo = useSelector((state) => (state.promos.studentsByOnePromo));
   const loader = useSelector((state) => state.promos.loader);
+  console.log(promo)
 
   console.log(promo.studentsFromPromo)
   useEffect(() => {

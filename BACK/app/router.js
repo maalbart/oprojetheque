@@ -10,11 +10,11 @@ const studentController = require('./controllers/studentController.js')
 const authController = require('./controllers/authController.js');
 // const adminController = require('./controllers/adminController.js');
 // const adminMiddleware = require("./middlewares/adminMiddleware.js");
-// const contactController = require('./controllers/contactController.js');
+const contactController = require('./controllers/contactController.js');
 
 
 /***************************************/
-/*              HOMEPAGE               */
+/*             HOME PAGE               */
 /***************************************/
 /**
  * Home page of the website
@@ -24,6 +24,19 @@ const authController = require('./controllers/authController.js');
  * @returns {Error}  default - An error has occurred
  */
 router.get("/", mainController.homePage);
+
+
+/***************************************/
+/*            CONTACT PAGE             */
+/***************************************/
+/**
+ * Contact page of the website
+ * @route POST /
+ * @group contactPage 
+ * @returns {object} 200 - Contact admin
+ * @returns {Error}  default - An error has occurred
+ */
+ router.post("/contact", contactController. sendContact);
 
 
 /***************************************/
@@ -122,7 +135,8 @@ router.get("/connection", authController.connection);
  * @returns {Error}  default - An error has occurred 
  */
 //! A checker (sinon faire deux routes, une /student et une autre /admin)
-router.post("/connection", authController.loginStudent, authController.loginAdmin) 
+router.post("/connection", authController.loginStudent); 
+//router.post("/connection", authController.loginStudent, authController.loginAdmin); 
 
 //! ATTENTION - A CHECKER
 /**
@@ -156,12 +170,6 @@ Verification that the user, who wants to use the route /admin, has the role of a
 // /******* Students management *******/
 // router.post("/admin", adminMiddleware.isAdmin, adminController.addStudent)
 // router.patch("/admin", adminMiddleware.isAdmin, adminController.updateStudent); 
-
-
-/***************************************/
-/*          CONTACT ROUTE              */
-/***************************************/
-// router.post("/contact", contactController.sendContact)
 
 
 

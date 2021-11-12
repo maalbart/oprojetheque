@@ -1,6 +1,7 @@
 // == Import
 import './style.scss';
 import { Route, Switch, Redirect } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
 // import components
 import Header from 'src/components/Header';
@@ -21,6 +22,8 @@ import Admin from 'src/components/Admin';
 
 // == Composant
 export default function App () {
+  const islogged = useSelector((state) => state.user.logged)
+  const role = useSelector((state) => state.user.role)
 
   return (
     <div className="app">  
@@ -54,12 +57,13 @@ export default function App () {
         <Team />
       </Route>
       <Route path="/login">
-        <Login />
+        {islogged ? <Redirect to="/" /> : <Login />}
       </Route>
       <Route path="/contact">
         <Contact />
       </Route>
       <Route path="/admin">
+        {/* {!islogged || role==1 ? <Redirect to="/login" /> : <Admin />} */}
         <Admin />
       </Route>
       <Route>

@@ -3,7 +3,16 @@ import { GET_ALL_PROMOS, SAVE_PROMOS, GET_ONE_PROMO, SAVE_ONE_PROMO, CHANGE_SEAR
 export const initialState = {
   list: [],
   loader: true,
-  studentsByOnePromo: [],
+  studentsByOnePromo: {
+    promoId: {
+      id: 1,
+      name: '',
+      logo: '',
+      starting_date: '',
+      ending_date: '',
+    },
+    studentsFromPromo: []
+  },
   search: ''
 }
 
@@ -28,8 +37,8 @@ const promosReducer = (state = initialState, action = {}) => {
     case SAVE_ONE_PROMO:
       return {
         ...state,
+        studentsByOnePromo: action.promoData,
         loader: false,
-        studentsByOnePromo: action.promoData
       }
     case CHANGE_SEARCH:
       return {

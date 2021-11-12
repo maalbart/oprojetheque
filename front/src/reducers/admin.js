@@ -1,67 +1,10 @@
-import { HANDLE_CHANGE_DROPDOWN_VALUE } from "src/actions/admin";
+import { HANDLE_CHANGE_DROPDOWN_VALUE, ADMIN_SAVE_PROMOS, ADMIN_GET_ALL_PROMOS, ADMIN_GET_ALL_STUDENT_FROM_PROMO, ADMIN_SAVE_STUDENTS_FROM_PROMOS } from "src/actions/admin";
 
 export const initialState = {
-  promos : [ 
-    {
-      'key': 'Valhalla',
-      'text': 'Valhalla',
-      'value': 'Valhalla',
-      'student' : [ 
-        {
-          'key': 'Ali Gator',
-          'text': 'Ali Gator',
-          'value': 'Ali Gator',
-        }, {
-          'key': 'Edith Orial',
-          'text': 'Edith Orial',
-          'value': 'Edith Orial',
-        }, {
-          'key': 'Gérard Manvussa',
-          'text': 'Gérard Manvussa',
-          'value': 'Gérard Manvussa',
-        }
-      ]
-    }, {
-      'key': 'Astro',
-      'text': 'Astro',
-      'value': 'Astro',
-      'student' : [ 
-        {
-          'key': 'Marie Age',
-          'text': 'Marie Age',
-          'value': 'Marie Age',
-        }, {
-          'key': 'Nestor Nade',
-          'text': 'Nestor Nade',
-          'value': 'Nestor Nade',
-        }, {
-          'key': 'Odile Deray',
-          'text': 'Odile Deray',
-          'value': 'Odile Deray',
-        }
-      ]
-    }, {
-      'key': 'Tipix',
-      'text': 'Tipix',
-      'value': 'Tipix',
-      'student' : [ 
-        {
-          'key': 'Alex Cité',
-          'text': 'Alex Cité',
-          'value': 'Alex Cité',
-        }, {
-          'key': 'Jean Cérien',
-          'text': 'Jean Cérien',
-          'value': 'Jean Cérien',
-        }, {
-          'key': 'Gérard Manvussa',
-          'text': 'Gérard Manvussa',
-          'value': 'Gérard Manvussa',
-        }
-      ]
-    }
-  ],
-  dropdownValue: 'Valhalla'
+  promos : [],
+  loader: true,
+  dropdownValue: '',
+  studentsFromPromo: [],
 }
 
 const adminReducer = (state = initialState, action = {}) => {
@@ -71,6 +14,28 @@ const adminReducer = (state = initialState, action = {}) => {
         ...state,
         dropdownValue: action.value
       };
+    case ADMIN_GET_ALL_PROMOS:
+      return {
+        ...state,
+        loader: true
+      }
+    case ADMIN_GET_ALL_STUDENT_FROM_PROMO:
+      return {
+        ...state,
+        loader: true
+      }
+    case ADMIN_SAVE_PROMOS:
+      return {
+        ...state,
+        promos: action.promos,
+        loader: false
+      }
+    case ADMIN_SAVE_STUDENTS_FROM_PROMOS:
+      return {
+        ...state,
+        studentsFromPromo: action.studentsFromPromo,
+        loader: false
+      }
     default:
       return state;
   }

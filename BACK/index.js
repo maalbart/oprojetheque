@@ -17,34 +17,31 @@ const app = express();
 
 /* ------------------------------------- */
 /* Cloudinary configuration */
-cloudinary.config({ 
-    cloud_name : "dieupu7jn" , 
-    api_key : '761866131662332' , 
-    api_secret : 'Ch_tOPLd7DInTQj4S6iudmVvhEo' ,
- });
+cloudinary.config({
+  cloud_name: "dieupu7jn",
+  api_key: '761866131662332',
+  api_secret: 'Ch_tOPLd7DInTQj4S6iudmVvhEo',
+});
 
- const storage = new CloudinaryStorage({
-    cloudinary: cloudinary,
-    params: {
-      folder: "oProjethèque",
-    },
-  });
-  
-  const upload = multer({ storage: storage });
-  app.post("/", upload.single("picture"), async (req, res) => {
-    return res.json({ picture: req.file.path });
-  });
-  
-  /* ------------------------------------- */
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: "oProjethèque",
+  },
+});
+
+const upload = multer({ storage: storage });
+app.post("/", upload.single("picture"), async (req, res) => {
+  return res.json({ picture: req.file.path });
+});
+
+/* ------------------------------------- */
 /* Requiring Express-JWT*/
 const jwt = require('express-jwt');
 
 /* ------------------------------------- */
 /* Requiring jsonwebtoken */
 const jsonwebtoken = require('jsonwebtoken');
-
-/* ------------------------------------- */
-// const jwtSecret = 'IIUFHW98YW4TFHJCX7fr4r90ixjjnxcxe98208eJIHXKSIFOR9T2KAK';
 /* ------------------------------------- */
 
 /* Access rights agreement to the information of a POST via req.body -
@@ -53,12 +50,6 @@ If it is true, we can receive any type of value.
 The middleware to parse the data received especially when sending a form.
 */
 app.use(express.urlencoded({ extended: true }));
-/* ------------------------------------- */
-
-// const authorizationMiddleware = jwt({
-//     secret: jwtSecret, 
-//     algorithms: ['HS256'
-// });
 
 /* ------------------------------------- */
 /* User management through middlewares (visitor, student, admin) */
@@ -81,15 +72,22 @@ const cors = require('cors');
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", '*');
     res.header("Access-Control-Allow-Credentials", true);
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, X_Token, Content-Type, Accept, Authorization');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    next();
+    if(req.method === 'OPTIONS'){
+      res.sendStatus(200);
+    }
+    else{
+      next();
+    }
 });
 app.use(cors({
-    origin: '*'}));
+  origin: '*'
+}));
 
 /* ------------------------------------- */
 /* MulterMiddleware */
-const multerMiddleware = multer({storage: storage});
+const multerMiddleware = multer({ storage: storage });
 
 /* ------------------------------------- */
 /* Port setup - support for the port chosen by the developer if there is one, otherwise 5000 */
@@ -103,21 +101,26 @@ app.use(router);
 /* ------------------------------------- */
 /* Launching server */
 app.listen(port, () => {
-    console.log(`Server started on http://localhost:${port}`);
+  console.log(`Server started on http://localhost:${port}`);
 });
 
 /* ------------------------------------- */
 /* MulterMiddleware via POST*/
 app.post('/upload',
-    multerMiddleware.single('mon-fichier'),
-    (req, res) => {
-        // At this point, MulterMiddleware already uploaded the file to Cloudinary,
-        // The uploaded image's link is accessible in "req.file"
-        const fileURL = req.file.path;
+  multerMiddleware.single('mon-fichier'),
+  (req, res) => {
+    // At this point, MulterMiddleware already uploaded the file to Cloudinary,
+    // The uploaded image's link is accessible in "req.file"
+    const fileURL = req.file.path;
 
-        console.log('Lien Cloudinary', fileURL)
+    console.log('Lien Cloudinary', fileURL)
 
-        // Here, you can save this link in your database.
+    // Here, you can save this link in your database.
 
-        res.json({ path: fileURL });
-    });
+    res.json({ path: fileURL });
+  }
+);
+
+
+
+
