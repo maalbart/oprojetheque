@@ -33,7 +33,7 @@ const adminController = {
     /*****************************************/
     /* Method to add new promo */
     addPromo: async (req, res) => {
-        console.log("mon req body", req);
+        console.log("mon req body", req.body);
         try {
             console.log("Je suis dans la méthode addPromo de l'adminController");
             const newPromo = await Promo.addPromo(req.body);
