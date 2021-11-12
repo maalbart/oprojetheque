@@ -36,28 +36,10 @@ const adminController = {
         console.log("mon req body", req.body);
         console.log("Je suis dans la méthode addPromo de l'adminController");
 
-        // ----------------------------
-        const monReqName = req.body.name;
-        console.log("monReqName", req.body.name);
-        // ----------------------------
-        const monReqLogo = req.body.logo;
-        console.log("monReqLogo", req.body.logo);
-        // ----------------------------
-        const monReqStarting_date = req.body.starting_date;
-        console.log("monReqStarting_date", req.body.starting_date);
-        // ----------------------------
-        const monReqEnding_date = req.body.ending_date;
-        console.log("monReqEnding_date", req.body.ending_date);
-
-        // ----------------------------
-
-        const newPromo = await Promo.addPromo(monReqName, monReqLogo, monReqStarting_date, monReqEnding_date);
+        const newPromo = await Promo.addPromo(req.body.name, req.body.logo, req.body.starting_date, req.body.ending_date);
         res.json(newPromo);
-        // try {
-            
-        // } catch (error) {
-        //     res.status(500).send(error);
-        // }
+       
+        // res.status();
     },
     /* Method to update promo */
     updatePromo: async (req, res) => {
