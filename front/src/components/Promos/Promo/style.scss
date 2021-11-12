@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 .promo-content {
-  background-color: #D83A37;
+  background-color: vars.$backgroundColor;
   color: vars.$textColor;
   font-family: vars.$font;
 

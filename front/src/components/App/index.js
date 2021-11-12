@@ -8,6 +8,7 @@ import Homepage from 'src/components/Homepage';
 import Promos from 'src/components/Promos';
 import { Promo } from 'src/components/Promos/Promo';
 import Footer from 'src/components/Footer';
+import Profile from 'src/components/Profile';
 import Projects from 'src/components/Projects';
 import Project from 'src/components/Projects/Project';
 import Students from 'src/components/Students';
@@ -33,6 +34,9 @@ export default function App () {
       </Route>
       <Route path="/promo/:id">
         <Promo />
+      </Route>
+      <Route path="/profile">
+        <Profile />
       </Route>
       <Route path="/projects">
         <Projects />

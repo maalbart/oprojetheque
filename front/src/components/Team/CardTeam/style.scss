@@ -1,32 +1,34 @@
 @use 'src/styles/vars';
 
-.card {
+.card {  
   background-color: vars.$homepageBackgroundColor;
   font-family: vars.$font; 
   color: vars.$textColor;
   border: solid 2px vars.$backgroundColorHover;
   padding: 2em;
   margin: 2em;
-  max-width: 75%;
-  
-  &-card-title:active, &-card-description:active {
+
+  &-card-title:active, &-card-job:active {
     font-family: vars.$font; 
     color: vars.$textColor;
   }
 }
 
-/* .card-img {
-  max-width: 25%;
-}
- */
-
 .card:hover {
   background-color: vars.$backgroundColorHover;
   color: vars.$textColorHover;
 
-  &-card-title:hover:active, &-card-description:hover:active {
+  &-card-title:hover:active, &-card-job:hover:active {
     font-family: vars.$font; 
     color: vars.$textColorHover;
   }
 }
 
+
+.card-img {
+  width: 100%;
+} 
+
+.card-job {
+  font-weight: normal;
+}

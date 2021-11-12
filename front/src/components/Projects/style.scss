@@ -34,12 +34,13 @@
     &-list {
       padding: 3em 2em 3em 2em;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      &-card {
-        max-width: 80%;
-      }
+      flex-direction: row;
+  /*     &-card {
+        chocolat test
+      } */
     }
 }
+
+
 
 

@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 .project {
-  background-color: #FFB400;
+  background-color: vars.$backgroundColor;
   color: vars.$textColor;
   font-family: vars.$font;
   
