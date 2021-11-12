@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 .student-header {
-  background-color: #D83A37;
+  background-color: vars.$homepageBackgroundColor;
   color: vars.$textColor;
   font-family: vars.$font;
   display: flex;
@@ -15,6 +15,47 @@
 }
 
 .student-body {
+  display: grid;
+  align-content: center;
+  grid-template-columns: 4;
+  grid-gap: 10px;
+  justify-content: space-around;
+  background-color: vars.$homepageBackgroundColor;
+  color: vars.$textColor;
+  padding-bottom: 4em;
+  font-family: vars.$font;
+
+  &-logo-promo {
+    max-width: 70%;
+  }
+
+  &-logo-project {
+    max-width: 60%;
+  }
+
+}
+
+.student-body-promo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.student-body-projet {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.student-body-stack {
+  grid-column: 3;
+  grid-row: 1
+}
+
+.student-body-social {
+  grid-column: 4;
+  grid-row: 1
+}
+
+/* .student-body {
   display: grid;
   align-content: center;
   grid-template-columns: 4;
@@ -47,4 +88,4 @@
   grid-column: 4;
   grid-row: 1
 }
-
+ */
