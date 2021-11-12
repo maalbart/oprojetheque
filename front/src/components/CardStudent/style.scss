@@ -28,10 +28,15 @@
   width: 360px;
   height: 400px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 
 .card-body-avatar {
   width: 75%;
 } 
+
 

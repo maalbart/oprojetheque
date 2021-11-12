@@ -24,6 +24,7 @@
   color: vars.$textColor;
   padding-bottom: 4em;
   font-family: vars.$font;
+  text-align: center;
 
   &-logo-promo {
     max-width: 70%;
@@ -38,54 +39,38 @@
 .student-body-promo {
   grid-column: 1;
   grid-row: 1;
-}
-
-.student-body-projet {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.student-body-stack {
-  grid-column: 3;
-  grid-row: 1
-}
-
-.student-body-social {
-  grid-column: 4;
-  grid-row: 1
-}
-
-/* .student-body {
-  display: grid;
-  align-content: center;
-  grid-template-columns: 4;
-  grid-gap: 10px;
-  justify-content: space-around;
-  background-color: #D83A37;
-  color: vars.$textColor;
-  padding-bottom: 4em;
-  font-family: vars.$font;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
   width: 360px;
-  height: 480px;
-}
-
-.student-body-promo {
-  grid-column: 1;
-  grid-row: 1;
 }
 
 .student-body-projet {
   grid-column: 2;
   grid-row: 1;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
+  width: 360px;
 }
 
 .student-body-stack {
   grid-column: 3;
-  grid-row: 1
+  grid-row: 1;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
+  width: 360px;
 }
 
 .student-body-social {
   grid-column: 4;
-  grid-row: 1
+  grid-row: 1;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
+  width: 360px;
 }
- */
+
+.student-body-promo:hover, .student-body-projet:hover, .student-body-stack:hover, .student-body-social:hover {
+  background-color: vars.$backgroundColorHover;
+  color: vars.$textColorHover;
+}
+
+

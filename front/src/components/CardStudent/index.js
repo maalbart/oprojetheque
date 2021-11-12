@@ -14,8 +14,10 @@ export default function CardStudent ({
    <div className="card">
      <div className="card-body">
        <img src={avatar} className="card-body-avatar"/>
+       <div className="card-body-text">
        <h3 className="card-body-title">{firstname} {lastname}</h3>
        <p className="card-body-description">{biography}</p>
+       </div>
      </div>
    </div>
   </Link>
