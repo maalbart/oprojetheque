@@ -1,14 +1,22 @@
-import { HANDLE_CHANGE_DROPDOWN_VALUE, ADMIN_SAVE_PROMOS, ADMIN_GET_ALL_PROMOS, ADMIN_GET_ALL_STUDENT_FROM_PROMO, ADMIN_SAVE_STUDENTS_FROM_PROMOS } from "src/actions/admin";
+import { HANDLE_CHANGE_DROPDOWN_VALUE, ADMIN_SAVE_PROMOS, ADMIN_GET_ALL_PROMOS, ADMIN_GET_ALL_STUDENT_FROM_PROMO, ADMIN_SAVE_STUDENTS_FROM_PROMOS, CHANGE_FIELD } from "src/actions/admin";
 
 export const initialState = {
   promos : [],
   loader: true,
   dropdownValue: '',
   studentsFromPromo: [],
+  projectName: '',
+  selectedPromo: '',
+  selectedStudent: '',
 }
 
 const adminReducer = (state = initialState, action = {}) => {
   switch (action.type) {
+    case CHANGE_FIELD:
+      return {
+        ...state,
+        [action.key]: action.value,
+      };
     case HANDLE_CHANGE_DROPDOWN_VALUE:
       return {
         ...state,
