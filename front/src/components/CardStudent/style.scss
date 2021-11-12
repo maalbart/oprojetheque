@@ -7,20 +7,8 @@
   border: solid 2px vars.$backgroundColorHover;
   padding: 2em;
   margin: 2em;
-
-
-  /* tentatives pour sizer les cards
-&-card-avatar {
-  display: block;
-  width: 360px;
-  } 
- */
-  /* &-card-body {
-    width: 360px;
-    height: 480px;
-  } */
   
-  &-card-title:active, &-card-description:active {
+  &-card-body-title:active, &-card-body-description:active {
     font-family: vars.$font; 
     color: vars.$textColor;
   }
@@ -30,8 +18,23 @@
   background-color: vars.$backgroundColorHover;
   color: vars.$textColorHover;
 
-  &-card-title:hover:active, &-card-description:hover:active {
+  &-card-body-title:hover:active, &-card-body-description:hover:active {
     font-family: vars.$font; 
     color: vars.$textColorHover;
   }
 }
+
+.card-body {
+  width: 360px;
+  height: 400px;
+}
+
+
+.card-body-avatar {
+  width: 75%;
+} 
+
+
+/* tentatives de resize
+display: block;
+width: 360px; */

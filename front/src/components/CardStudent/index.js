@@ -1,6 +1,6 @@
-import { Card, Image } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import './style.scss'
 
 export default function CardStudent ({ 
   id,
@@ -13,9 +13,9 @@ export default function CardStudent ({
 <Link to={`/student/${id}`}>
    <div className="card">
      <div className="card-body">
-       <img src={avatar} className="card-avatar"/>
-       <h3 className="card-title">{firstname} {lastname}</h3>
-       <p className="card-description">{biography}</p>
+       <img src={avatar} className="card-body-avatar"/>
+       <h3 className="card-body-title">{firstname} {lastname}</h3>
+       <p className="card-body-description">{biography}</p>
      </div>
    </div>
   </Link>

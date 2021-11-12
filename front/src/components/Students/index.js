@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllStudents } from 'src/actions/students';
-import { Card, Input } from "semantic-ui-react";
+import { Input } from "semantic-ui-react";
 import CardStudent from "src/components/CardStudent";
 import Loader from 'src/components/Loader'
 import './style.scss';
@@ -41,16 +41,9 @@ export default function Students () {
         />
       </div>
       <div className="students-list">
-        <Card.Group 
-          itemsPerRow={3}
-          stackable
-          centered
-          className="students-list-card"
-        >
           {allStudents.map((allStudent) => (
             <CardStudent key={allStudent.id} {...allStudent} />
           ))}
-        </Card.Group>
       </div>
     </div>
   )
