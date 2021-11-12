@@ -94,7 +94,7 @@ class Promo {
             text: "INSERT INTO promo (id, name, logo, starting_date, ending_date) VALUES ($1, $2, $3, $4, $5)",
             values: [id, name, logo, starting_date, ending_date]
         };
-        console.log("Me voici dans la methode addPromo du model promo");
+        console.log("Me voici dans la methode addPromo du model promo", query);
         const result = await pool.query(query);
         console.log("résultat depromojs", result);
         return result.rows[0];
