@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Card, Image } from 'semantic-ui-react'
+/* import { Card, Image } from 'semantic-ui-react' */
 import photo from 'src/assets/religieuse.png'
+import './style.scss'
 
-export default function CardTeam ({ title, job, description }) {
+export default function CardTeam ({ title, job }) {
   return (
-  <Card>
-    <Image src={photo} wrapped ui={false} />
-    <Card.Content>
-      <Card.Header>{title}</Card.Header>
-      <Card.Meta>{job}</Card.Meta>
-      <Card.Description>{description}</Card.Description>
-    </Card.Content>
-  </Card>
+  <div className="card">
+  <div className="card-body">
+    <img src={photo} className='card-img'/>
+    <h2 className='card-title'>{title}</h2>
+    <h3 className="card-job">{job}</h3>
+  </div>
+  </div>
   )
 }
 
@@ -22,4 +22,12 @@ CardTeam.propTypes = {
   description: PropTypes.string.isRequired,
 }
 
-// ajout lien git ou pas auquel cas rajout content extra avec modif icon pour icon git
+/* ancienne version card team
+<Card>
+<Image src={photo} wrapped ui={false} />
+<Card.Content>
+  <Card.Header>{title}</Card.Header>
+  <Card.Meta>{job}</Card.Meta>
+  <Card.Description>{description}</Card.Description>
+</Card.Content>
+</Card> */

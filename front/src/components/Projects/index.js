@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProjects } from 'src/actions/projects';
-import { Card, Input } from "semantic-ui-react";
+import { Input } from "semantic-ui-react";
 import CardProject from "src/components/CardProject";
 import Loader from 'src/components/Loader'
 import { filteredSearch } from "src/selectors/projects";
@@ -40,16 +40,11 @@ export default function Projects () {
         />
       </div>
       <div className="projects-list">
-        <Card.Group 
-          itemsPerRow={3}
-          stackable
-          centered
-          className="projects-list-card"
-        >
+        <div className="projects-list-card" >
           {allProjects.map((allProject) => (
               <CardProject key={allProject.id} {...allProject} />
             ))}
-        </Card.Group>
+        </div>
       </div>
     </div>
   )

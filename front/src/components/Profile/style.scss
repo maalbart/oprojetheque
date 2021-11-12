@@ -1,0 +1,11 @@
+@use 'src/styles/vars';
+
+.profile {
+  background-color: vars.$backgroundColor;
+  color: vars.$textColor;
+  font-family: vars.$font;
+  display: flex;
+  flex-direction: column;
+  padding: 4em 0 4em 0;
+  align-items: center;
+}

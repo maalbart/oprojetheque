@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "semantic-ui-react";
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -52,18 +51,28 @@ export default function Project () {
           </div>
         </div>
         <div className="project-footer">
-          <Card.Group
-            itemsPerRow={5}
-            stackable
-            centered
-            className="project-footer-card"
-          >
+          <div className="project-footer-card">
             {project.studentFromProject.map((student) => (
               <CardStudent key={student.id} {...student} />
             ))}
-          </Card.Group>
+          </div>
         </div>
       </div>
     </div>
   )
 }
+
+
+
+/* ancienne version avec semantic ui 
+<Card.Group
+itemsPerRow={5}
+stackable
+centered
+className="project-footer-card"
+>
+{project.studentFromProject.map((student) => (
+  <CardStudent key={student.id} {...student} />
+))}
+</Card.Group> 
+*/

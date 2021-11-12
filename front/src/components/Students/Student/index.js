@@ -36,14 +36,14 @@ export default function Student () {
           <h3 className="student-body-titles">Promotion</h3>
           <p>{student.promoFromStudent[0].name}</p>
           <Link to={`/promo/${student.promoFromStudent[0].id_promo}`} >
-            <img src={student.promoFromStudent[0].logo} alt="logo promotion" />
+            <img src={student.promoFromStudent[0].logo} alt="logo promotion" className="student-body-logo-promo"/>
           </Link>
         </div>
         <div className="student-body-projet">
           <h3 className="student-body-titles">Projet</h3>
           <p>{student.projectFromStudent[0].name}</p>
           <Link to={`/project/${student.projectFromStudent[0].id_project}`} >
-            <img src={student.projectFromStudent[0].logo} alt="logo promotion" />
+            <img src={student.projectFromStudent[0].logo} alt="logo project" className="student-body-logo-project" />
           </Link>
         </div>
         <div className="student-body-stack">

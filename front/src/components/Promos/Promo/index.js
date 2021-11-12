@@ -1,13 +1,11 @@
 import React from 'react'
-import { Card } from 'semantic-ui-react'
 import CardStudent from "src/components/CardStudent"
 import Loader from 'src/components/Loader'
-import './style.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { Redirect, useParams } from 'react-router-dom';
 import { getOnePromo } from 'src/actions/promos'
-
+import './style.scss'
 
 export function Promo () {
   const dispatch = useDispatch()
@@ -42,15 +40,9 @@ export function Promo () {
           </div>
             {/* <Button content="Projets/Etudiants" className="promo-button"/> */}
             <div className="promo-content-body">
-                <Card.Group
-                itemsPerRow={5}
-                stackable
-                centered
-                className="project-footer-card">
                   {promo.studentsFromPromo.map((student) => (
                     <CardStudent key={student.id} {...student} />
                   ))}
-                </Card.Group>
             </div>
         </div>
       </div>

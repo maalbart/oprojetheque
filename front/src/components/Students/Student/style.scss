@@ -1,7 +1,7 @@
 @use 'src/styles/vars';
 
 .student-header {
-  background-color: #D83A37;
+  background-color: vars.$homepageBackgroundColor;
   color: vars.$textColor;
   font-family: vars.$font;
   display: flex;
@@ -20,31 +20,57 @@
   grid-template-columns: 4;
   grid-gap: 10px;
   justify-content: space-around;
-  background-color: #D83A37;
+  background-color: vars.$homepageBackgroundColor;
   color: vars.$textColor;
   padding-bottom: 4em;
   font-family: vars.$font;
-  width: 360px;
-  height: 480px;
+  text-align: center;
+
+  &-logo-promo {
+    max-width: 70%;
+  }
+
+  &-logo-project {
+    max-width: 60%;
+  }
+
 }
 
 .student-body-promo {
   grid-column: 1;
   grid-row: 1;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
+  width: 360px;
 }
 
 .student-body-projet {
   grid-column: 2;
   grid-row: 1;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
+  width: 360px;
 }
 
 .student-body-stack {
   grid-column: 3;
-  grid-row: 1
+  grid-row: 1;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
+  width: 360px;
 }
 
 .student-body-social {
   grid-column: 4;
-  grid-row: 1
+  grid-row: 1;
+  border: solid 2px vars.$backgroundColorHover;
+  padding: 2em;
+  width: 360px;
 }
+
+.student-body-promo:hover, .student-body-projet:hover, .student-body-stack:hover, .student-body-social:hover {
+  background-color: vars.$backgroundColorHover;
+  color: vars.$textColorHover;
+}
+
 

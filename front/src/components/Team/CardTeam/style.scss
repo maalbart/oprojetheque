@@ -1,14 +1,14 @@
 @use 'src/styles/vars';
 
-.card {
+.card {  
   background-color: vars.$homepageBackgroundColor;
   font-family: vars.$font; 
   color: vars.$textColor;
   border: solid 2px vars.$backgroundColorHover;
   padding: 2em;
   margin: 2em;
-  
-  &-card-body-title:active, &-card-body-description:active {
+
+  &-card-title:active, &-card-job:active {
     font-family: vars.$font; 
     color: vars.$textColor;
   }
@@ -18,19 +18,17 @@
   background-color: vars.$backgroundColorHover;
   color: vars.$textColorHover;
 
-  &-card-body-title:hover:active, &-card-body-description:hover:active {
+  &-card-title:hover:active, &-card-job:hover:active {
     font-family: vars.$font; 
     color: vars.$textColorHover;
   }
 }
 
-.card-body {
-  width: 360px;
-  height: 400px;
-  text-align: center;
-}
 
-.card-body-img {
-  width: 75%;
+.card-img {
+  width: 100%;
 } 
 
+.card-job {
+  font-weight: normal;
+}

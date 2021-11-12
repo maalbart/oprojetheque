@@ -1,6 +1,6 @@
-import { Card, Image } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import './style.scss'
 
 export default function CardProject ({ 
   id,
@@ -10,13 +10,13 @@ export default function CardProject ({
 }) {
   return (
   <Link to={`/project/${id}`}>
-  <div className="card">
-    <div className="card-body">
-      <img src={logo} className='card-img'/>
-      <h3 className="card-title">{name}</h3>
-      <p className="card-description">{description}</p>
+    <div className="card">
+      <div className="card-body">
+        <img src={logo} className='card-body-img'/>
+        <h3 className="card-body-title">{name}</h3>
+        <p className="card-body-description">{description}</p>
+      </div>
     </div>
-  </div>
   </Link>
   )
 }
