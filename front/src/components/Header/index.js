@@ -22,9 +22,9 @@ export default function Header () {
       <Button content="LA TEAM" path="/team" />
       <Button content="CONTACT" path="/contact" />
       {isLogged&& (
-        <p>{loggedMessage} {firstname} {lastname}
-        <DropdownHeader />
-        </p>
+        <div>
+        <DropdownHeader loggedMessage={loggedMessage} firstname={firstname} lastname={lastname} />
+        </div>
       )}
       {!isLogged && (
         <Button content="CONNEXION" path="/login" />
