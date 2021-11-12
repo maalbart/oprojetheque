@@ -35,15 +35,9 @@ const adminController = {
     addPromo: async (req, res) => {
         console.log("mon req body", req.body);
         console.log("Je suis dans la méthode addPromo de l'adminController");
-        const monReq = [
-            req.body.name,
-            req.body.logo,
-            req.body.starting_date,
-            req.body.ending_date
-        ]
-            const newPromo = await Promo.addPromo(monReq);
-            
-            res.json(newPromo);
+        const monReq = req.body;
+        const newPromo = await Promo.addPromo(monReq.name, monReq.logo, monReq.starding_date, monReq.ending_date);
+        res.json(newPromo);
         // try {
             
         // } catch (error) {
