@@ -34,14 +34,15 @@ const adminController = {
     /* Method to add new promo */
     addPromo: async (req, res) => {
         console.log("mon req body", req.body);
-        try {
-            console.log("Je suis dans la méthode addPromo de l'adminController");
+        console.log("Je suis dans la méthode addPromo de l'adminController");
             const newPromo = await Promo.addPromo(req.body);
             
             res.json(newPromo);
-        } catch (error) {
-            res.status(500).send(error);
-        }
+        // try {
+            
+        // } catch (error) {
+        //     res.status(500).send(error);
+        // }
     },
     /* Method to update promo */
     updatePromo: async (req, res) => {
