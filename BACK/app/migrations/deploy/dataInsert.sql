@@ -127,6 +127,5 @@ INSERT INTO "theuser" ("id", "firstname", "lastname","email","password", "biogra
 SELECT setval('theuser_id_seq', (SELECT MAX(id) FROM "theuser"));
 SELECT setval('project_id_seq', (SELECT MAX(id) FROM "project"));
 SELECT setval('therole_id_seq', (SELECT MAX(id) FROM "therole"));
-
-
+SELECT setval('promo_id_seq', (SELECT MAX(id) FROM "promo"));
 COMMIT;
