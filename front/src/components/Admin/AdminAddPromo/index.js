@@ -13,9 +13,16 @@ export default function AdminAddPromo () {
         ending_date: '',
         logo: '',
       }}
-      onSubmit={async (values) => {
+      onSubmit= {async (values) => {
+        console.log(values)
         await new Promise((r) => setTimeout(r, 500));
-        axios.post('https://o-projetheque.herokuapp.com/admin', values)
+        axios.post('https://o-projetheque.herokuapp.com/admin', {
+          headers: { 'Access-Control-Allow-Origin': 'http://localhost:8080/login' },
+          name: values.name,
+          starting_date: values.starting_date,
+          ending_date: values.ending_date,
+          logo: values.logo
+        }, null, 2)
         .then((response) => {
           console.log(response)
         })
