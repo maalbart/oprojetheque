@@ -160,16 +160,16 @@ Verification that the user, who wants to use the route /admin, has the role of a
 */ 
 
 /******* Projects management *******/
-router.post("/admin", adminController.addProject);
-router.patch("/admin", adminController.updateProject);
+// router.post("/admin", adminController.addProject);
+// router.patch("/admin", adminController.updateProject);
 
 // /******* Promos management *******/
 router.post("/admin", adminController.addPromo);
-router.patch("/admin", adminController.updatePromo); 
+// router.patch("/admin", adminController.updatePromo); 
 
 // /******* Students management *******/
-router.post("/admin", adminController.addStudent)
-router.patch("/admin", adminController.updateStudent); 
+// router.post("/admin", adminController.addStudent)
+// router.patch("/admin", adminController.updateStudent); 
 
 
 
