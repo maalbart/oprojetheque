@@ -1,27 +1,51 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, Button, Dropdown } from 'semantic-ui-react'
-import { handleChangeDropdownValue, adminGetAllPromos, adminGetStudentsFromPromo } from 'src/actions/admin'
+import { Form, Button, Dropdown, Input } from 'semantic-ui-react'
+import { handleChangeDropdownValue, adminGetAllPromos, adminGetStudentsFromPromo, changeField } from 'src/actions/admin'
 import Loader from 'src/components/Loader';
 import './style.scss'
 
 export default function AdminAddProject () {
   const dispatch = useDispatch()
-  const promos = useSelector((state) => state.admin.promos)
+  // const promos = useSelector((state) => state.admin.promos)
+  const {
+    promos,
+    students,
+    dropdownValue,
+    loader,
+    projectName,
+    selectedPromo,
+    selectedStudent
+  } = useSelector((state) => ({
+    promos: state.admin.promos,
+    students: state.admin.studentsFromPromo,
+    dropdownValue: state.admin.dropdownValue,
+    loader: state.admin.loader,
+    projectName: state.admin.projectName,
+    selectedPromo: state.admin.selectedPromo,
+    selectedStudent: state.admin.selectedStudent
+  }))
 
   const promo = promos.map(onePromo => ({
     value: onePromo.name, key: onePromo.id, text: onePromo.name
   }))
-  const students = useSelector((state) => state.admin.studentsFromPromo)
-  const dropdownValue = useSelector((state) => state.admin.dropdownValue)
-  const loader = useSelector((state) => state.admin.loader);
+  // const students = useSelector((state) => state.admin.studentsFromPromo)
+  // const dropdownValue = useSelector((state) => state.admin.dropdownValue)
+  // const loader = useSelector((state) => state.admin.loader);
+
 
   const handleChangeValue = (evt) => {
     const idPromo = promo.find(element => element.value == evt.target.textContent)
-    console.log(idPromo.key)
+    console.log(idPromo)
     dispatch(handleChangeDropdownValue(idPromo.key))
   }
-  console.log(dropdownValue)
+
+  const handleAddProject = (evt) => {
+    evt.preventDefault();
+    console.log(evt);
+  }
+
+  // console.log(dropdownValue)
   const handleChangeList = (dropdownValue) => {
     const studentList = students.filter((student) => {
       if (student.id_promo == dropdownValue) {
@@ -45,13 +69,22 @@ export default function AdminAddProject () {
   }
 
   return (
-    <Form>
+    <Form onSubmit={handleAddProject}>
     <Form.Field>
-      <label>Nom du projet</label>
-      <input placeholder='Nom du projet' />
+      <input
+        type='text'
+        label='Nom du projet'
+        placeholder='Nom du projet'
+        name='projectName'
+        value={projectName}
+        onChange={(event) => {
+          dispatch(changeField(event.target.value, 'projectName'))
+        }}
+      />
     </Form.Field>
     <Form.Field>
       <Dropdown
+        label='Promotion'
         placeholder='Promotion'
         label="Promotion de l'étudiant"
         fluid
@@ -64,6 +97,7 @@ export default function AdminAddProject () {
     </Form.Field>
     <Form.Field>
       <Dropdown
+        label='Etudiant référent'
         placeholder="Nom de l'étudiant"
         label="Etudiant référent du projet"
         fluid
