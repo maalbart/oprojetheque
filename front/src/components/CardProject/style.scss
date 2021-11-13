@@ -1,6 +1,6 @@
 @use 'src/styles/vars';
 
-.card {
+.card-project {
   background-color: vars.$homepageBackgroundColor;
   font-family: vars.$font; 
   color: vars.$textColor;
@@ -8,29 +8,29 @@
   padding: 2em;
   margin: 2em;
   
-  &-card-body-title:active, &-card-body-description:active {
+  &-card-project-body-title:active, &-card-project-body-description:active {
     font-family: vars.$font; 
     color: vars.$textColor;
   }
 }
 
-.card:hover {
+.card-project:hover {
   background-color: vars.$backgroundColorHover;
   color: vars.$textColorHover;
 
-  &-card-body-title:hover:active, &-card-body-description:hover:active {
+  &-card-project-body-title:hover:active, &-card-project-body-description:hover:active {
     font-family: vars.$font; 
     color: vars.$textColorHover;
   }
 }
 
-.card-body {
-  width: 360px;
+.card-project-body {
+  width: 300px;
   height: 400px;
   text-align: center;
 }
 
-.card-body-img {
+.card-project-body-img {
   width: 75%;
 } 
 

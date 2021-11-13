@@ -1,6 +1,6 @@
 @use 'src/styles/vars';
 
-.card {
+.card-promo {
   background-color: vars.$homepageBackgroundColor;
   font-family: vars.$font; 
   color: vars.$textColor;
@@ -8,29 +8,29 @@
   padding: 2em;
   margin: 2em;
   
-  &-card-body-title:active, &-card-body-description:active {
+  &-card-promo-body-title:active, &-card-promo-body-description:active {
     font-family: vars.$font; 
     color: vars.$textColor;
   }
 }
 
-.card:hover {
+.card-promo:hover {
   background-color: vars.$backgroundColorHover;
   color: vars.$textColorHover;
 
-  &-card-body-title:hover:active, &-card-body-description:hover:active {
+  &-card-promo-body-title:hover:active, &-card-promo-body-description:hover:active {
     font-family: vars.$font; 
     color: vars.$textColorHover;
   }
 }
 
-.card-body {
+.card-promo-body {
   width: 240px;
   height: 240px;
   text-align: center;
 }
 
-.card-body-avatar {
-  width: 75%;
+.card-promo-body-avatar {
+  width: 70%;
 } 
 

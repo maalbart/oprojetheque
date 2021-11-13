@@ -1,12 +1,13 @@
 @use 'src/styles/vars';
 
-.card {  
+.card-team {  
   background-color: vars.$homepageBackgroundColor;
   font-family: vars.$font; 
   color: vars.$textColor;
   border: solid 2px vars.$backgroundColorHover;
   padding: 2em;
-  margin: 2em;
+  margin-right: 2em;
+
 
   &-card-title:active, &-card-job:active {
     font-family: vars.$font; 
@@ -14,21 +15,27 @@
   }
 }
 
-.card:hover {
+.card-team:hover {
   background-color: vars.$backgroundColorHover;
   color: vars.$textColorHover;
 
-  &-card-title:hover:active, &-card-job:hover:active {
+  &-body-title:hover:active, &-body-job:hover:active {
     font-family: vars.$font; 
     color: vars.$textColorHover;
   }
 }
 
 
-.card-img {
+.card-team-body {
+  width: 240px;
+  height: 300px;
+  text-align: center;
+}
+
+.card-team-body-img {
   width: 100%;
 } 
 
-.card-job {
+.card-team-body-job {
   font-weight: normal;
 }
