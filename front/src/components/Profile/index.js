@@ -23,8 +23,8 @@ export default function Profile () {
   }
   if (!student) {
     return <Redirect to="/error" />;
-  }
-  return ( */
+  }*/
+  return ( 
     <div className="profile">
       <div className="profile-body">
           <h2 className="profile-body-title">Avatar</h2>
@@ -52,5 +52,6 @@ export default function Profile () {
         </div>
       </div>
     </div>
+  )
 }
 

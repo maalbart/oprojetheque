@@ -30,7 +30,9 @@ const userReducer = (state = initialState, action = {}) => {
         ...state,
         email: '',
         password: '',
-        username: '',
+        firstname: '',
+        lastname: '',
+        role: '',
         logged: false,
       };
     default:

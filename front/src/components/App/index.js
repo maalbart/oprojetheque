@@ -39,7 +39,8 @@ export default function App () {
         <Promo />
       </Route>
       <Route path="/profile">
-        <Profile />
+        {!islogged ? <Redirect to="/login" /> : <Profile />}
+        {/* <Profile /> */}
       </Route>
       <Route path="/projects">
         <Projects />
@@ -63,8 +64,8 @@ export default function App () {
         <Contact />
       </Route>
       <Route path="/admin">
-        {/* {!islogged || role==1 ? <Redirect to="/login" /> : <Admin />} */}
-        <Admin />
+        {islogged && role === 1 ? <Admin /> : <Redirect to="/login" />}
+        {/* <Admin /> */}
       </Route>
       <Route>
         <Error />
