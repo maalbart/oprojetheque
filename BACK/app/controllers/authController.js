@@ -65,6 +65,7 @@ const authController = {
                         console.log('200', student[0].firstname);
                         res.json({
                             logged: true,
+                            id: student[0].id,
                             firstname: student[0].firstname,
                             lastname: student[0].lastname,
                             id_therole: student[0].id_therole,
