@@ -25,12 +25,12 @@
 }
 
 .card-project-body {
-  width: 360px;
-  height: 400px;
+  max-width: 360px;
+  max-height: 400px;
   text-align: center;
 }
 
 .card-project-body-img {
-  width: 75%;
+  max-width: 75%;
 } 
 
