@@ -2,8 +2,8 @@
 
 .menubar {
     background-color: vars.$backgroundColor;
-    min-width: 100vw;
-    max-width: 100vw;
+    min-width: 100%;
+    max-width: 100%;
     height: 10vh;
     font-family: vars.$font;
     color: vars.$textColor;
@@ -16,5 +16,40 @@
     &-header-logo {
       align-self: center;
     }
+}
+label, #toggle
+{
+    display: none;
+}
+ 
+@media all and (max-width: 991px)
+{
+    header
+    {
+        height: 60px;
+    }
+ 
+    header .menubar
+    {
+        display: none;
+        flex-direction: column;
+        background: #48435C;
+        height: 220px;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+    #toggle:checked + .menubar {
+      display: flex;
+  }
 }
 

@@ -11,19 +11,19 @@ export default function DropdownHeader ({loggedMessage, firstname, lastname}) {
   const dispatch = useDispatch()
   const role = useSelector(state => state.user.role)
   return (
-    <div>
-    <div onClick={() => setShowMenu(!showMenu)}>
+    <div className="logged">
+    <div className="logged-header" onClick={() => setShowMenu(!showMenu)}>
     {loggedMessage} {firstname} {lastname}
     </div>
 
     {
       showMenu
         ? (
-          <div className="menu">
-            <div onClick={() => setShowMenu(!showMenu)}><Link to="/profile">Mon profile</Link></div>
-            {role === 1 ? <div onClick={() => setShowMenu(!showMenu)}><Link to="/admin">Administration</Link></div> : null}
+          <div className="logged-menu">
+            <div className="logged-profile" onClick={() => setShowMenu(!showMenu)}><Link to="/profile">Mon profile</Link></div>
+            {role === 1 ? <div className="logged-admin" onClick={() => setShowMenu(!showMenu)}><Link to="/admin">Administration</Link></div> : null}
             {/* <div onClick={() => setShowMenu(!showMenu)}><Link to="/admin">Administration</Link></div> */}
-            <div onClick={() => dispatch(handleDisconnect())}><Link to="/">Deconnexion</Link></div>
+            <div className="logged-disconnect" onClick={() => dispatch(handleDisconnect())}><Link to="/">Deconnexion</Link></div>
           </div>
         )
         : (

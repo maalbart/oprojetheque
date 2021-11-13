@@ -14,21 +14,25 @@ export default function Header () {
     lastname: state.user.lastname,
   }))
   return (
-  <header className="menubar">
-      <Button content="PROJETS" path="/projects" />
-      <Button content="PROMOS" path="/promos" />
-      <Button content="ETUDIANTS" path="/students" />
-      <Link to="/"><img src={logoMug} alt='logo Mug' className='header-logo' /></Link>
-      <Button content="LA TEAM" path="/team" />
-      <Button content="CONTACT" path="/contact" />
-      {isLogged&& (
-        <div>
-        <DropdownHeader loggedMessage={loggedMessage} firstname={firstname} lastname={lastname} />
-        </div>
-      )}
-      {!isLogged && (
-        <Button content="CONNEXION" path="/login" />
-      )}
+  <header>
+    <label for="toggle">☰</label>
+    <input type="checkbox" id="toggle" />
+      <div className="menubar">
+        <Button content="PROJETS" path="/projects" />
+        <Button content="PROMOS" path="/promos" />
+        <Button content="ETUDIANTS" path="/students" />
+        <Link to="/"><img src={logoMug} alt='logo Mug' className='header-logo' /></Link>
+        <Button content="LA TEAM" path="/team" />
+        <Button content="CONTACT" path="/contact" />
+        {isLogged&& (
+          <div>
+          <DropdownHeader loggedMessage={loggedMessage} firstname={firstname} lastname={lastname} />
+          </div>
+        )}
+        {!isLogged && (
+          <Button content="CONNEXION" path="/login" />
+        )}
+      </div>
   </header>
   )
 }
