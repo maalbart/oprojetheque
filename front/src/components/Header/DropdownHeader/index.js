@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom" ;
 import { useState } from "react"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { handleDisconnect } from "src/actions/user";
 import './style.scss';
@@ -9,20 +9,21 @@ import './style.scss';
 export default function DropdownHeader ({loggedMessage, firstname, lastname}) {
   const [showMenu, setShowMenu] = useState(false)
   const dispatch = useDispatch()
-
+  const role = useSelector(state => state.user.role)
   return (
     <div>
-    <button onClick={() => setShowMenu(!showMenu)}>
+    <div onClick={() => setShowMenu(!showMenu)}>
     {loggedMessage} {firstname} {lastname}
-    </button>
+    </div>
 
     {
       showMenu
         ? (
           <div className="menu">
-            <button onClick={() => setShowMenu(!showMenu)}><Link to="/profile">Mon profile</Link></button>
-            <button onClick={() => setShowMenu(!showMenu)}><Link to="/admin">Administration</Link></button>
-            <button onClick={() => dispatch(handleDisconnect())}><Link to="/">Deconnexion</Link></button>
+            <div onClick={() => setShowMenu(!showMenu)}><Link to="/profile">Mon profile</Link></div>
+            {role === 1 ? <div onClick={() => setShowMenu(!showMenu)}><Link to="/admin">Administration</Link></div> : null}
+            {/* <div onClick={() => setShowMenu(!showMenu)}><Link to="/admin">Administration</Link></div> */}
+            <div onClick={() => dispatch(handleDisconnect())}><Link to="/">Deconnexion</Link></div>
           </div>
         )
         : (

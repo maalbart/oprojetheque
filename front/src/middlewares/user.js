@@ -14,6 +14,7 @@ const user = (store) => (next) => (action) => {
         password: state.user.password,
       })
         .then((response) => {
+          console.log(response.data)
           const actionSaveUser = saveUser(response.data);
           console.log(actionSaveUser);
           store.dispatch(actionSaveUser);
