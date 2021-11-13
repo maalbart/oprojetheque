@@ -39,6 +39,7 @@ export default function App () {
         <Promo />
       </Route>
       <Route path="/profile">
+        {!islogged ? <Redirect to="/login" /> : <Profile />}
         <Profile />
       </Route>
       <Route path="/projects">

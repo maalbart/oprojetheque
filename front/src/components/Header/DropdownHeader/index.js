@@ -1,10 +1,14 @@
 import React from "react";
-import {useState} from "react"
+import { Redirect } from "react-router-dom" ;
+import { useState } from "react"
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { handleDisconnect } from "src/actions/user";
 import './style.scss';
 
 export default function DropdownHeader ({loggedMessage, firstname, lastname}) {
   const [showMenu, setShowMenu] = useState(false)
+  const dispatch = useDispatch()
 
   return (
     <div>
@@ -16,9 +20,9 @@ export default function DropdownHeader ({loggedMessage, firstname, lastname}) {
       showMenu
         ? (
           <div className="menu">
-            <button onClick={() => setShowMenu(!showMenu)}>Mon profil</button>
+            <button onClick={() => setShowMenu(!showMenu)}><Link to="/profile">Mon profile</Link></button>
             <button onClick={() => setShowMenu(!showMenu)}><Link to="/admin">Administration</Link></button>
-            <button onClick={() => setShowMenu(!showMenu)}>Deconnexion</button>
+            <button onClick={() => dispatch(handleDisconnect())}><Link to="/">Deconnexion</Link></button>
           </div>
         )
         : (
