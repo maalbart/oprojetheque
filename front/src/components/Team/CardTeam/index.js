@@ -1,16 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-/* import { Card, Image } from 'semantic-ui-react' */
 import photo from 'src/assets/religieuse.png'
 import './style.scss'
 
 export default function CardTeam ({ title, job }) {
   return (
-  <div className="card">
-  <div className="card-body">
-    <img src={photo} className='card-img'/>
-    <h2 className='card-title'>{title}</h2>
-    <h3 className="card-job">{job}</h3>
+  <div className="card-team">
+  <div className="card-team-body">
+    <img src={photo} className='card-team-body-img'/>
+    <h2 className='card-team-body-title'>{title}</h2>
+    <h3 className="card-team-body-job">{job}</h3>
   </div>
   </div>
   )
@@ -21,6 +20,8 @@ CardTeam.propTypes = {
   job: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 }
+
+
 
 /* ancienne version card team
 <Card>

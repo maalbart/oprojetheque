@@ -11,12 +11,12 @@ export default function CardStudent ({
 }) {
   return (
   <Link to={`/student/${id}`}>
-   <div className="card">
-     <div className="card-body">
-       <img src={avatar} className="card-body-avatar"/>
-       <div className="card-body-text">
-       <h3 className="card-body-title">{firstname} {lastname}</h3>
-       <p className="card-body-description">{biography}</p>
+   <div className="card-student">
+     <div className="card-student-body">
+       <img src={avatar} className="card-student-body-avatar"/>
+       <div className="card-student-body-text">
+       <h3 className="card-student-body-title">{firstname} {lastname}</h3>
+       <p className="card-student-body-description">{biography}</p>
        </div>
      </div>
    </div>

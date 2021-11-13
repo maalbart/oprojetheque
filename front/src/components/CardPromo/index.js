@@ -11,11 +11,11 @@ export default function CardPromo ({
 }) {
   return (
   <Link to={`/promo/${id}`}>
-   <div className="card">
-     <div className="card-body">
-       <img src={logo} className="card-body-avatar"/>
-       <h3 className="card-body-title">{name}</h3>
-       <p className="card-body-description">{starting_date} - {ending_date}</p>
+   <div className="card-promo">
+     <div className="card-promo-body">
+       <img src={logo} className="card-promo-body-avatar"/>
+       <h3 className="card-promo-body-title">{name}</h3>
+       <p className="card-promo-body-description">{starting_date} - {ending_date}</p>
      </div>
    </div>
   </Link>

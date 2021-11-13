@@ -10,11 +10,11 @@ export default function CardProject ({
 }) {
   return (
   <Link to={`/project/${id}`}>
-    <div className="card">
-      <div className="card-body">
-        <img src={logo} className='card-body-img'/>
-        <h3 className="card-body-title">{name}</h3>
-        <p className="card-body-description">{description}</p>
+    <div className="card-project">
+      <div className="card-project-body">
+        <img src={logo} className='card-project-body-img'/>
+        <h3 className="card-project-body-title">{name}</h3>
+        <p className="card-project-body-description">{description}</p>
       </div>
     </div>
   </Link>

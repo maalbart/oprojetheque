@@ -13,10 +13,18 @@ export default function Team () {
             <CardTeam className='team-cards-card' title="Celia" job="Scrum Master"/>
             <CardTeam className='team-cards-card' title="Sophie" job="Product Owner"/>
             <CardTeam className='team-cards-card' title="Morgan" job="Lead Dev Front"/>
-            <CardTeam className='team-cards-card' title="Emilien" job="Referent Technique"/>
-            <CardTeam className='team-cards-card' title="Elias" job="Git Master"/>
+            <CardTeam className='team-cards-card' title="Emilien" job="Git Master"/>
+            <CardTeam className='team-cards-card' title="Elias" job="Referent Technique"/>
       </div>
     </div>
 
   )
 }
+
+
+// RAJOUTER ACCENTS ET ROLES FRONT BACK 
+
+// CELIA POMMES DAMOUR
+// EMILIEN PAIN AU CHOCOLAT 
+// ELIAS PUIT DAMOUR
+// SOPHIE CHEESECAKE
