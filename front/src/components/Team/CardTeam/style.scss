@@ -27,13 +27,13 @@
 
 
 .card-team-body {
-  width: 240px;
-  height: 300px;
+  max-width: 240px;
+  max-height: 300px;
   text-align: center;
 }
 
 .card-team-body-img {
-  width: 100%;
+  max-width: 100%;
 } 
 
 .card-team-body-job {

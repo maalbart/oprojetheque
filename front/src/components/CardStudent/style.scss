@@ -25,8 +25,8 @@
 }
 
 .card-student-body {
-  width: 240px;
-  height: 320px;
+  max-width: 240px;
+  max-height: 320px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@
 
 
 .card-student-body-avatar {
-  width: 75%;
+  max-width: 75%;
 } 
 
 
