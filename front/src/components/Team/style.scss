@@ -4,13 +4,11 @@
   background-color: vars.$homepageBackgroundColor;
   font-family: vars.$font;
   padding: 2em 0 0 0;
-  height: 100vh;
 
   &-presentation{
     color: vars.$textColor;
     padding-top: 2em;
-    margin-top: 6em;
-    margin-left: 40%;
+    text-align: center;
     
       &-description{
       font-size: 2em;
@@ -20,7 +18,7 @@
   &-cards {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 4em 0 2em 0;
   }

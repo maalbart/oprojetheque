@@ -25,12 +25,15 @@
 }
 
 .card-project-body {
+  min-width: 280px;
+  min-width: 300px;
   max-width: 360px;
   max-height: 400px;
   text-align: center;
 }
 
 .card-project-body-img {
+  min-width: 75%;
   max-width: 75%;
 } 
 
