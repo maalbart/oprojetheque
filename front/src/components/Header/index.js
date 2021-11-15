@@ -14,9 +14,10 @@ export default function Header () {
     lastname: state.user.lastname,
   }))
   return (
-  <header>
-    <label for="toggle">☰</label>
-    <input type="checkbox" id="toggle" />
+    <header>
+    <div className="header">
+      <label for="toggle">☰</label>
+      <input type="checkbox" id="toggle" />
       <div className="menubar">
         <Button content="PROJETS" path="/projects" />
         <Button content="PROMOS" path="/promos" />
@@ -33,6 +34,7 @@ export default function Header () {
           <Button content="CONNEXION" path="/login" />
         )}
       </div>
+    </div>
   </header>
   )
 }
