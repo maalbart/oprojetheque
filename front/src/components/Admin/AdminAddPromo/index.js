@@ -21,7 +21,6 @@ export default function AdminAddPromo () {
           name: values.name,
           starting_date: values.starting_date,
           ending_date: values.ending_date,
-          logo: values.logo
         }, null, 2)
         .then((response) => {
           console.log(response)
@@ -47,7 +46,7 @@ export default function AdminAddPromo () {
           name="logo"
           type="file"
         />
-        <button type="submit">Submit</button>
+        <button type="submit">Envoyer</button>
       </Form>
     </Formik>
   </div>

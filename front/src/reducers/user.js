@@ -1,7 +1,8 @@
-import { CHANGE_FIELD, SAVE_USER, HANDLE_DISCONNECT } from 'src/actions/user';
+import { CHANGE_FIELD, SAVE_USER, HANDLE_DISCONNECT, GET_PROFILE_FROM_USER } from 'src/actions/user';
 
 export const initialState = {
   logged: false,
+  id: '',
   email: '',
   password: '',
   role: '',
@@ -20,6 +21,7 @@ const userReducer = (state = initialState, action = {}) => {
     case SAVE_USER:
       return {
         ...state,
+        id: action.user.id,
         firstname: action.user.firstname,
         lastname: action.user.lastname,
         role: action.user.id_therole,
@@ -28,6 +30,7 @@ const userReducer = (state = initialState, action = {}) => {
     case HANDLE_DISCONNECT:
       return {
         ...state,
+        id: '',
         email: '',
         password: '',
         firstname: '',
