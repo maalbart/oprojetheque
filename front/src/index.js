@@ -10,7 +10,6 @@ import App from 'src/components/App';
 import store from 'src/store'
 
 // Import semantic ui 
-import 'semantic-ui-css/semantic.min.css';
 
 // == Render
 // 1. Élément React racine (celui qui contient l'ensemble de l'app)
