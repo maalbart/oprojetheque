@@ -89,11 +89,11 @@ class Promo {
      * Return new promo
      * @returns [new promo]
      */
-    static async addPromo(name, logo, starting_date, ending_date) {
+    static async addPromo(name, starting_date, ending_date) {
         console.log("je suis dans addpromo");
         const query = {
-            text: "INSERT INTO promo (name, logo, starting_date, ending_date) VALUES ($1, $2, $3, $4)",
-            values: [name, logo, starting_date, ending_date]
+            text: "INSERT INTO promo (name, starting_date, ending_date) VALUES ($1, $2, $3)",
+            values: [name, starting_date, ending_date]
         };
         console.log("Me voici dans la methode addPromo du model promo", query);
         const result = await pool.query(query);

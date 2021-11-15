@@ -11,7 +11,7 @@ export default function AdminAddPromo () {
         name: '',
         starting_date: '',
         ending_date: '',
-        logo: '',
+        // logo: '',
       }}
       onSubmit= {async (values) => {
         console.log(values)
@@ -42,7 +42,7 @@ export default function AdminAddPromo () {
 
         <label htmlFor="logo">Logo de la promo</label>
         <Field
-          id="logo"
+          // id="logo"
           name="logo"
           type="file"
         />

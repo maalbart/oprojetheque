@@ -24,12 +24,12 @@ label, #toggle
  
 @media all and (max-width: 991px)
 {
-    header
+    header .header
     {
         height: 60px;
     }
  
-    header .menubar
+    header .header .menubar
     {
         display: none;
         flex-direction: column;
@@ -50,6 +50,7 @@ label, #toggle
     }
     #toggle:checked + .menubar {
       display: flex;
+      height: 250px;
       
   }
 }

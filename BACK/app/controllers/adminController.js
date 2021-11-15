@@ -36,7 +36,7 @@ const adminController = {
         console.log("mon req body", req.body);
         console.log("Je suis dans la méthode addPromo de l'adminController");
 
-        const newPromo = await Promo.addPromo(req.body.name, req.body.logo, req.body.starting_date, req.body.ending_date);
+        const newPromo = await Promo.addPromo(req.body.name, req.body.starting_date, req.body.ending_date);
         res.json(newPromo);
        
         // res.status();
