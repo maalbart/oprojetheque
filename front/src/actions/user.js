@@ -3,6 +3,7 @@ export const CHANGE_FIELD = 'CHANGE_FIELD';
 export const HANDLE_LOGIN = 'HANDLE_LOGIN';
 export const HANDLE_DISCONNECT = 'HANDLE_DISCONNECT';
 export const SAVE_USER = 'SAVE_USER';
+export const GET_PROFILE_FROM_USER = 'GET_PROFILE_FROM_USER';
 
 // ACTION CREATORS
 export const changeField = (value, key) => ({
@@ -20,3 +21,6 @@ export const saveUser = (user) => ({
 export const handleDisconnect = () => ({
   type: HANDLE_DISCONNECT,
 });
+export const getProfileFromUser = () => ({
+  type: GET_PROFILE_FROM_USER,
+})

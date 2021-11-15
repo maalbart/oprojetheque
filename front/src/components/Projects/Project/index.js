@@ -41,8 +41,8 @@ export default function Project () {
         </div>
         <div className="project-body">
           <div className="project-body-left">
-            <img src={project.projectId.stie_screen} alt="preview du projet" className="project-body-img" />
-            <a href="#" className="project-body-link">{project.projectId.name}</a>
+            <img src={project.projectId.site_screen} alt="preview du projet" className="project-body-img" />
+            <a href={project.projectId.site_link} className="project-body-link">{project.projectId.name}</a>
             {/* <Button content="Se rattacher au projet" className="project-body-button"/> */}
           </div>
           <div className="project-body-right">
