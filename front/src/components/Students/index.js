@@ -8,6 +8,7 @@ import Loader from 'src/components/Loader'
 import { filteredSearch } from "src/selectors/students";
 import { changeSearch } from "src/actions/students";
 import './style.scss';
+import ScrollTop from "src/components/ScrollTop";
 
 export default function Students () {
   const dispatch = useDispatch()
@@ -44,6 +45,7 @@ export default function Students () {
             <CardStudent key={allStudent.id} {...allStudent} />
           ))}
       </div>
+      <ScrollTop className='scrolltop'/>
     </div>
   )
 }
