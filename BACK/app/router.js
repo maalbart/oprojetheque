@@ -9,7 +9,6 @@ const promoController = require('./controllers/promoController.js');
 const studentController = require('./controllers/studentController.js')
 const authController = require('./controllers/authController.js');
 const adminController = require('./controllers/adminController.js');
-// const adminMiddleware = require("./middlewares/adminMiddleware.js");
 const contactController = require('./controllers/contactController.js');
 
 
@@ -115,6 +114,7 @@ router.get("/student/:id", studentController.getOneStudent);
  router.patch("/student/profile", studentController.studentProfile);
  router.delete("/student/profile", studentController.studentProfile);
 
+
 /*****************************************/
 /*           LOGIN/LOGOUT ROUTE          */
 /*****************************************/
@@ -138,7 +138,7 @@ router.get("/connection", authController.connection);
 router.post("/connection", authController.loginStudent); 
 //router.post("/connection", authController.loginStudent, authController.loginAdmin); 
 
-//! ATTENTION - A CHECKER
+
 /**
  * Disconnection page
  * @route POST /disconnect
@@ -153,12 +153,6 @@ router.post("/disconnect", authController.disconnection)
 /***************************************/
 /*          ADMIN ROUTES               */
 /***************************************/
-//! TEST ALL ADMIN ROADS
-/* Express allows us to chain middlewares / controllers by a next
-Admin route with methods to add projects, promos and students
-Verification that the user, who wants to use the route /admin, has the role of admin, then chain the methods add and update of the 3 tables
-*/ 
-
 /******* Projects management *******/
 // router.post("/admin", adminController.addProject);
 // router.patch("/admin", adminController.updateProject);
@@ -170,7 +164,6 @@ router.post("/admin", adminController.addPromo);
 // /******* Students management *******/
 // router.post("/admin", adminController.addStudent)
 // router.patch("/admin", adminController.updateStudent); 
-
 
 
 /* Exportation of router */

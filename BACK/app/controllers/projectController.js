@@ -33,8 +33,7 @@ const projectController = {
       } catch (error) {
          res.status(500).send(error);
          res.redirect("/404");
-      }
-      
+      } 
    },
    /*****************************************/
    /*            PROJECT RANDOM             */

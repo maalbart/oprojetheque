@@ -41,6 +41,7 @@ const adminController = {
        
         // res.status();
     },
+    /* -----------------------------------------*/
     /* Method to update promo */
     updatePromo: async (req, res) => {
         try {

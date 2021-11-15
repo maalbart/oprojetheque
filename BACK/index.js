@@ -42,25 +42,14 @@ const jwt = require('express-jwt');
 /* ------------------------------------- */
 /* Requiring jsonwebtoken */
 const jsonwebtoken = require('jsonwebtoken');
-/* ------------------------------------- */
 
+/* ------------------------------------- */
 /* Access rights agreement to the information of a POST via req.body -
 The extented to false allows to receive only values of type string or array. 
 If it is true, we can receive any type of value.
 The middleware to parse the data received especially when sending a form.
 */
 app.use(express.urlencoded({ extended: true }));
-
-/* ------------------------------------- */
-/* User management through middlewares (visitor, student, admin) */
-/* Tracks visitors */
-// const visitorMiddleware = require("./app/middlewares/visitorMiddleware.js");
-// app.use(visitorMiddleware);
-
-/* ------------------------------------- */
-/* Update locals with user data */
-// const userMiddleware = require("./app/middlewares/userMiddleware");
-// app.use(userMiddleware);
 
 /* ------------------------------------- */
 /* Middleware that allows to display and receive json via POST */
@@ -81,6 +70,7 @@ app.use(function(req, res, next) {
       next();
     }
 });
+
 app.use(cors({
   origin: '*'
 }));
