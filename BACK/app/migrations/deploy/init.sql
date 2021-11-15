@@ -22,7 +22,7 @@ CREATE TABLE "therole" (
 CREATE TABLE "promo" (
     "id" serial PRIMARY KEY, -- the serial type is specific to POSTGRESQL, it uses functions to automatically increment the id
     "name" text NOT NULL,
-    "logo" text DEFAULT ('https://res.cloudinary.com/dieupu7jn/image/upload/v1636973758/oProjetheque/logo/logo-test-admin_ftun3c.png'),
+    "logo" text DEFAULT 'https://res.cloudinary.com/dieupu7jn/image/upload/v1636973758/oProjetheque/logo/logo-test-admin_ftun3c.png',
     "starting_date" text NOT NULL,
     "ending_date" text NOT NULL
 );
