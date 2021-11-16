@@ -1,0 +1,72 @@
+@use 'src/styles/vars';
+
+div.ui.pointing.menu{
+  background-color: vars.$textColor;
+  font-family: vars.$font;
+  & a.active.item {
+    color: vars.$homepageBackgroundColor;
+    font-size: 1em;
+    font-weight: bold;
+    &::after{
+      background-color: vars.$homepageBackgroundColor;
+    }
+  }
+  & a.item{
+    color: vars.$homepageBackgroundColor;
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+div.ui.segment.active.tab {
+  background-color: vars.$textColor;
+  font-family: vars.$font;
+  margin: 3em 0;
+  padding: 4em 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+input {
+  color: vars.$homepageBackgroundColor;
+  font-size: 1em;
+  margin: 2em 0;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+input#name {
+  background-color: vars.$textColor;
+  &::placeholder{
+    color: vars.$homepageBackgroundColor;
+    font-family: vars.$font;
+    }
+}
+input#starting_date {
+  background-color: vars.$textColor;
+  color: vars.$homepageBackgroundColor;
+  &::placeholder{
+    color: vars.$homepageBackgroundColor;
+    font-family: vars.$font;
+    }
+}
+input#ending_date {
+  background-color: vars.$textColor;
+  color: vars.$homepageBackgroundColor;
+  &::placeholder{
+    color: vars.$homepageBackgroundColor;
+    font-family: vars.$font;
+    }
+}
+
+button {
+  background-color: vars.$textColor;
+  color: vars.$homepageBackgroundColor;
+  border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+}

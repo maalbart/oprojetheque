@@ -8,9 +8,20 @@
   padding: 2em;
   margin: 3em;
   
-  &-body-title:active, &-body-description:active {
-    font-family: vars.$font; 
-    color: vars.$textColor;
+  &-body-title{
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: .3em;
+    &:active{
+      font-family: vars.$font; 
+      color: vars.$textColor;
+    }
+  }
+  &-body-description {
+    &:active{
+      font-family: vars.$font; 
+      color: vars.$textColor;
+    }
   }
 }
 

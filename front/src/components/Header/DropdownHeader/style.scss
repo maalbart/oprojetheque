@@ -1,0 +1,14 @@
+@use 'src/styles/vars';
+
+.logged-menu {
+  font-family: vars.$font;
+  color: vars.$textColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: .5em;
+  & a:hover {
+    color: vars.$textColor;
+    text-decoration: underline;
+  }
+}

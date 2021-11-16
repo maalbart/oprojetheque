@@ -17,18 +17,21 @@
   }
   &-contact {
     display: flex;
-    
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    & a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
     &-text {
       margin: 0 2em 0 0;
       font-size: 1.5em;
       color: vars.$textColor;
     }
     &-arrow {
-      font-size: 2em;
-      font-weight: bold;
-      color: vars.$textColor;
+      max-width: 36px;
     }
   }
 }

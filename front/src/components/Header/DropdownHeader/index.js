@@ -20,7 +20,7 @@ export default function DropdownHeader ({loggedMessage, firstname, lastname}) {
       showMenu
         ? (
           <div className="logged-menu">
-            <div className="logged-profile" onClick={() => setShowMenu(!showMenu)}><Link to="/profile">Mon profile</Link></div>
+            <div className="logged-profile" onClick={() => setShowMenu(!showMenu)}><Link to="/profile">Mon profil</Link></div>
             {role === 1 ? <div className="logged-admin" onClick={() => setShowMenu(!showMenu)}><Link to="/admin">Administration</Link></div> : null}
             {/* <div onClick={() => setShowMenu(!showMenu)}><Link to="/admin">Administration</Link></div> */}
             <div className="logged-disconnect" onClick={() => dispatch(handleDisconnect())}><Link to="/">Deconnexion</Link></div>

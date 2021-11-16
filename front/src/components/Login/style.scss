@@ -6,16 +6,54 @@
   align-items: center;
   justify-content: center;
   background-color: vars.$homepageBackgroundColor;
-  padding: 4em 0;
+  padding: 4em 0 0 0;
   height: 85.1vh;
   font-family: vars.$font;
   font-weight: bold;
   color: vars.$textColor;
+  text-align: center;
 
   &-description {
     font-size: 200%;
+    padding: 1em;
   }
+
   &-email, &-password, &-submit {
     padding: 1em 0 1em 0;
+  }
+}
+
+
+input#field-email.field-input, input#field-password.field-input {
+  background-color: vars.$textColor;
+  color: vars.$homepageBackgroundColor;
+  font-family: vars.$font;
+  text-align: center;
+  width: 480px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  &::placeholder{
+    color: vars.$homepageBackgroundColor
+  }
+}
+
+button.login-form-button {
+  background-color: vars.$textColor;
+  color: vars.$homepageBackgroundColor;
+  font-family: vars.$font;
+  font-weight: 700;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  padding-bottom: 2em;
+}
+
+@media all and (max-width: 991px) {
+
+  input#field-email.field-input, input#field-password.field-input {
+    width: 280px;
   }
 }

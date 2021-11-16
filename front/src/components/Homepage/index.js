@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getRandomProjects } from 'src/actions/projects';
 import CardProject from "src/components/CardProject";
 import Loader from 'src/components/Loader'
+import ScrollTop from "src/components/ScrollTop";
 import './style.scss';
 
 export default function Homepage () {
@@ -23,8 +24,9 @@ export default function Homepage () {
     <div className="homepage">
       <div className="homepage-presentation">
             <img src={logo} alt="logo-principal" className="homepage-presentation-logo"/>
-        <p className="homepage-presentation-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente deserunt libero dicta nesciunt eius commodi fuga voluptate natus reprehenderit voluptates vitae, sit eum? Rem deserunt ea doloremque ex qui labore.
-        Possimus cumque et numquam deleniti quas accusamus itaque. Error nemo, totam vitae ipsam ea quo rerum sint eveniet sed dolorem labore natus expedita culpa! Dolor quis fugiat dolore culpa.</p>
+        <p className="homepage-presentation-description"> Bienvenue sur notre site ! <br />
+        Il regroupe les projets de fin de formation des étudiants de l’école O’Clock, connus sous le nom d’Apothéose. <br />
+        Vous y trouverez également les étudiants et les promotions. </p>
       </div>
       <div className="homepage-suggest">
         <Card.Group 
@@ -38,6 +40,7 @@ export default function Homepage () {
           ))}
         </Card.Group>
       </div>
+    <ScrollTop className='scrolltop'/>
     </div>
   )
 }

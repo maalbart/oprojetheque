@@ -14,7 +14,7 @@ export default function Header () {
     lastname: state.user.lastname,
   }))
   return (
-    <header>
+    // <header>
     <div className="header">
       <label for="toggle">☰</label>
       <input type="checkbox" id="toggle" />
@@ -35,6 +35,6 @@ export default function Header () {
         )}
       </div>
     </div>
-  </header>
+  // </header>
   )
 }

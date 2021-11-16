@@ -8,7 +8,16 @@
   padding: 2em;
   margin: 2em;
   
-  &-card-project-body-title:active, &-card-project-body-description:active {
+  &-body-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+    &:active {
+      font-family: vars.$font; 
+      color: vars.$textColor;
+    }
+  }
+  &-body-description:active {
     font-family: vars.$font; 
     color: vars.$textColor;
   }

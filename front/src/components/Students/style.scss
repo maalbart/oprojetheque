@@ -15,18 +15,22 @@
       width: fit-content;
       padding-top: 1em;
       font-size: 350%;
+      font-weight: bold;
     }
     &-searchbar {
       width: 50%;
       display: flex;
       align-items: center;
+      color: vars.$homepageBackgroundColor;
+      font-family: vars.$font;
+      background-color: vars.$homepageBackgroundColor;
       .ui.button {
         font-size: 1.35rem;
       }
     }
     &-description {
         text-align: center;
-        margin: 2em 15em 2em 15em;
+        margin: 2em 1em 2em 1em;
         width: fit-content;
     }
     &-list {
@@ -42,4 +46,18 @@
   background-color: vars.$homepageBackgroundColor;
   padding: 2em 6em 2em 2em;
   text-align: right;
+}
+
+.ui.icon.input>input {
+  color: vars.$homepageBackgroundColor;
+  font-family: vars.$font;
+  background-color: vars.$textColor;
+  &::placeholder{
+    color: vars.$homepageBackgroundColor;
+    font-family: vars.$font;
+  }
+}
+
+i.search.icon {
+  color: vars.$homepageBackgroundColor;
 }

@@ -12,22 +12,49 @@ background-color: vars.$homepageBackgroundColor;
     text-align: center;
 
     &-identity, &-promo {
+      font-weight: bold;
       margin: 4em 0 4em 0;
+    }
+    &-identity-title {
+      font-size: 2em;
+    }
+    &-promo-img {
+      padding-top: 2em;
+    }
+    &-promo-name {
+      font-size: 1.8em;
     }
   }
 
   &-body {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-evenly;
     margin-bottom: 4em;
+    
+    &-img {
+      max-width: 480px;
+    }
 
     &-p {
       font-weight: bold;
+      font-size: 1.3em;
+    }
+
+    &-description {
+      padding-top: 2em;
+      max-width: 480px;
+      overflow-wrap: break-word;
     }
   }
 }
 
+.project-footer-title {
+  padding-top: 2em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
+}
 
 .project-footer-card {
   padding: 3em 2em 3em 2em;

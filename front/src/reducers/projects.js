@@ -1,4 +1,4 @@
-import { GET_RANDOM_PROJECTS, SAVE_PROJECTS, GET_ALL_PROJECTS, GET_ONE_PROJECT, SAVE_ONE_PROJECT, CHANGE_SEARCH } from "src/actions/projects";
+import { GET_RANDOM_PROJECTS, SAVE_PROJECTS, GET_ALL_PROJECTS, GET_ONE_PROJECT, SAVE_ONE_PROJECT, CHANGE_SEARCH_PROJECT } from "src/actions/projects";
 
 export const initialState = {
   list: [],
@@ -55,7 +55,7 @@ const projectsReducer = (state = initialState, action = {}) => {
         loader: false,
         oneProject: action.projectData
       }
-    case CHANGE_SEARCH:
+    case CHANGE_SEARCH_PROJECT:
       return {
         ...state,
         [action.key]: action.value
