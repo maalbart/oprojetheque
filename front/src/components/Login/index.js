@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { changeField, handleLogin, handleDisconnect } from 'src/actions/user'
-import { Button, Checkbox, Form } from "semantic-ui-react";
+import { changeField, handleLogin } from 'src/actions/user'
 import Field from './Field';
 import './style.scss';
 

@@ -10,10 +10,43 @@
   font-family: vars.$font;
   padding: 2em 0;
   height: 85.1vh;
+  text-align: center;
   
   &-title {
     padding: 1em 0;
     font-size: 200%;
     font-weight: bold;
   }
+}
+
+textarea#message {
+  height: 200px;
+  color: vars.$homepageBackgroundColor;
+  font-family: vars.$font;
+  background-color: vars.$textColor;
+
+  &::placeholder{
+    color: vars.$homepageBackgroundColor;
+    font-family: vars.$font;
+  }
+}
+
+input#email {
+  background-color: vars.$textColor;
+  &::placeholder{
+    color: vars.$homepageBackgroundColor;
+    font-family: vars.$font;
+    }
+}
+
+form.ui.form {
+  width: 600px;
+  margin-top: 2em;
+  padding: 2em;
+  
+}
+button.ui.button {
+  padding-bottom: 2em;
+  background-color: vars.$textColor;
+  color: vars.$homepageBackgroundColor;
 }

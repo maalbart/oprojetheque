@@ -1,9 +1,9 @@
-import React from "react";
-import axios from "axios";
-import { Form } from 'semantic-ui-react';
-import './style.scss';
-import { submitContact, changeContactField } from "src/actions/contact";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react"
+import axios from "axios"
+import { Form } from 'semantic-ui-react'
+import { submitContact, changeContactField } from "src/actions/contact"
+import { useDispatch, useSelector } from "react-redux"
+import './style.scss'
 
 export default function Contact () {
   const dispatch = useDispatch()
@@ -46,7 +46,7 @@ export default function Contact () {
             dispatch(changeContactField(event.target.value, 'message'))
           }}
         />
-        <Form.Button>Envoyer</Form.Button> 
+        <Form.Button className="contact-send-button">Envoyer</Form.Button> 
       </Form>
     </div>
   )
