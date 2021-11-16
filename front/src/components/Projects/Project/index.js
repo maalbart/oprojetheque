@@ -2,11 +2,13 @@ import React from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Redirect, useParams } from 'react-router-dom';
-import CardStudent from "src/components/CardStudent";
-import Loader from 'src/components/Loader';
+import { Redirect, useParams } from 'react-router-dom'
+import CardStudent from "src/components/CardStudent"
+import Loader from 'src/components/Loader'
+import { getOneProject } from "src/actions/projects"
+import ScrollTop from "src/components/ScrollTop"
 import './style.scss'
-import { getOneProject } from "src/actions/projects";
+
 
 export default function Project () {
   const dispatch = useDispatch()
@@ -29,7 +31,7 @@ export default function Project () {
       <div className="project-content">
         <div className="project-content-header">
           <div className="project-content-header-identity">
-            <h1 className="project-content-header-title">{project.projectId.name}</h1>
+            <h1 className="project-content-header-identity-title">{project.projectId.name}</h1>
               <img src={project.projectId.logo} alt="logo du projet" className="project-content-header-img"/>
           </div>
           <div className="project-content-header-promo">
@@ -41,9 +43,7 @@ export default function Project () {
         </div>
         <div className="project-body">
           <div className="project-body-left">
-            <img src={project.projectId.site_screen} alt="preview du projet" className="project-body-img" />
-            <a href={project.projectId.site_link} className="project-body-link">{project.projectId.name}</a>
-            {/* <Button content="Se rattacher au projet" className="project-body-button"/> */}
+            <a href={project.projectId.site_link}> <img src={project.projectId.site_screen} alt="preview du projet" className="project-body-img" /> </a>
           </div>
           <div className="project-body-right">
             <p className="project-body-p">Description du projet :</p>
@@ -51,6 +51,7 @@ export default function Project () {
           </div>
         </div>
         <div className="project-footer">
+          <h2 className='project-footer-title'>La team du projet :</h2>
           <div className="project-footer-card">
             {project.studentFromProject.map((student) => (
               <CardStudent key={student.id} {...student} />
@@ -58,6 +59,7 @@ export default function Project () {
           </div>
         </div>
       </div>
+    <ScrollTop className='scrolltop'/>
     </div>
   )
 }

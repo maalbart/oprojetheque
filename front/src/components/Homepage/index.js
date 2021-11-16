@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getRandomProjects } from 'src/actions/projects';
 import CardProject from "src/components/CardProject";
 import Loader from 'src/components/Loader'
+import ScrollTop from "src/components/ScrollTop";
 import './style.scss';
 
 export default function Homepage () {
@@ -38,6 +39,7 @@ export default function Homepage () {
           ))}
         </Card.Group>
       </div>
+    <ScrollTop className='scrolltop'/>
     </div>
   )
 }

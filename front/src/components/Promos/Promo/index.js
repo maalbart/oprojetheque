@@ -3,8 +3,9 @@ import CardStudent from "src/components/CardStudent"
 import Loader from 'src/components/Loader'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
-import { Redirect, useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom'
 import { getOnePromo } from 'src/actions/promos'
+import ScrollTop from "src/components/ScrollTop"
 import './style.scss'
 
 export function Promo () {
@@ -45,6 +46,7 @@ export function Promo () {
                   ))}
             </div>
         </div>
+      <ScrollTop className='scrolltop'/>
       </div>
     )
 }

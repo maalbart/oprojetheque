@@ -6,6 +6,7 @@ import { filteredSearch } from "src/selectors/promos";
 import { Card, Input } from "semantic-ui-react";
 import CardPromo from "src/components/CardPromo";
 import Loader from 'src/components/Loader'
+import ScrollTop from "src/components/ScrollTop";
 import './style.scss';
 
 export default function Promos () {
@@ -44,6 +45,7 @@ export default function Promos () {
             <CardPromo key={allPromos.id} {...allPromo} />
           ))}
       </div>
+    <ScrollTop className='scrolltop'/>
     </div>
   )
 }

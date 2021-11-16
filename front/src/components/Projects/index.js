@@ -7,6 +7,7 @@ import CardProject from "src/components/CardProject";
 import Loader from 'src/components/Loader'
 import { filteredSearch } from "src/selectors/projects";
 import './style.scss';
+import ScrollTop from "src/components/ScrollTop";
 import { changeSearch } from "src/actions/projects";
 
 export default function Projects () {
@@ -46,6 +47,7 @@ export default function Projects () {
             ))}
         </div>
       </div>
+    <ScrollTop className='scrolltop'/>
     </div>
   )
 }
