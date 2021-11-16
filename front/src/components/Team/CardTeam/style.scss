@@ -28,8 +28,20 @@
 
 .card-team-body {
   max-width: 240px;
-  max-height: 300px;
+  max-height: 360px;
   text-align: center;
+  &-title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  &-job {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  &-title, &-job, &-desc {
+    padding: 0.2em;
+  }  
 }
 
 .card-team-body-img {
