@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllPromos, changeSearch } from 'src/actions/promos'
+import { getAllPromos, changeSearchPromos } from 'src/actions/promos'
 import { filteredSearch } from "src/selectors/promos";
 import { Card, Input } from "semantic-ui-react";
 import CardPromo from "src/components/CardPromo";
@@ -36,7 +36,7 @@ export default function Promos () {
           value={search}
           onChange={(event) => {
             event.preventDefault()
-            dispatch(changeSearch(event.target.value, 'search'))
+            dispatch(changeSearchPromos(event.target.value, 'search'))
           }}
         />
       </div>

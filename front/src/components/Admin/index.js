@@ -26,7 +26,7 @@ export default function Admin () {
   ]
 
   return (
-    <div>
+    <div className="admin-panel">
       <Tab menu={{ pointing: true }} panes={panes} />
     </div>
   )

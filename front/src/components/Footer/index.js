@@ -1,5 +1,6 @@
 import React from "react";
 import logoMug from 'src/assets/logo-mug.png'
+import contactArrow from 'src/assets/contactarrow.png'
 import { Link } from "react-router-dom";
 import './style.scss';
 
@@ -9,7 +10,7 @@ export default function Footer () {
       <img src={logoMug} alt="logo Mug" className="footer-logo" />
       <div className="footer-contact">
         <Link to="contact"><p className="footer-contact-text">Contactez-nous</p>
-        <p className="footer-contact-arrow"></p></Link>
+        <img src={contactArrow} alt="" className="footer-contact-arrow"/></Link>
       </div>
       <div className="footer-socials">
         <a href="https://twitter.com/Oclock_io"><i class="big inverted grey twitter icon"></i></a>

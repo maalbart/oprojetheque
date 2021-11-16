@@ -8,7 +8,7 @@ import Loader from 'src/components/Loader'
 import { filteredSearch } from "src/selectors/projects";
 import './style.scss';
 import ScrollTop from "src/components/ScrollTop";
-import { changeSearch } from "src/actions/projects";
+import { changeSearchProject } from "src/actions/projects";
 
 export default function Projects () {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ export default function Projects () {
           value={search}
           onChange={(event) => {
             event.preventDefault()
-            dispatch(changeSearch(event.target.value, 'search'))
+            dispatch(changeSearchProject(event.target.value, 'search'))
           }}
         />
       </div>

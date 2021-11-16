@@ -40,12 +40,12 @@ export default function AdminAddPromo () {
         <label htmlFor="ending_date">Date de fin</label>
         <Field type="date" id="ending_date" name="ending_date" />
 
-        <label htmlFor="logo">Logo de la promo</label>
+        {/* <label htmlFor="logo">Logo de la promo</label>
         <Field
           // id="logo"
           name="logo"
           type="file"
-        />
+        /> */}
         <button type="submit">Envoyer</button>
       </Form>
     </Formik>

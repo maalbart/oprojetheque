@@ -10,11 +10,15 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 4em 0 4em 0;
-  
+
   &-identity-img {
   width: 75%;
     }
-  
+  &-description-title {
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
   &-description-date, &-description-referent {
     font-weight: normal;
     }

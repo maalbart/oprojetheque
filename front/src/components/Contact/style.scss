@@ -24,7 +24,6 @@ textarea#message {
   color: vars.$homepageBackgroundColor;
   font-family: vars.$font;
   background-color: vars.$textColor;
-
   &::placeholder{
     color: vars.$homepageBackgroundColor;
     font-family: vars.$font;
@@ -32,6 +31,7 @@ textarea#message {
 }
 
 input#email {
+  color: vars.$homepageBackgroundColor;
   background-color: vars.$textColor;
   &::placeholder{
     color: vars.$homepageBackgroundColor;

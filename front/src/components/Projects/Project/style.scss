@@ -15,8 +15,14 @@ background-color: vars.$homepageBackgroundColor;
       font-weight: bold;
       margin: 4em 0 4em 0;
     }
+    &-identity-title {
+      font-size: 2em;
+    }
     &-promo-img {
       padding-top: 2em;
+    }
+    &-promo-name {
+      font-size: 1.8em;
     }
   }
 
@@ -32,6 +38,7 @@ background-color: vars.$homepageBackgroundColor;
 
     &-p {
       font-weight: bold;
+      font-size: 1.3em;
     }
 
     &-description {
@@ -46,6 +53,7 @@ background-color: vars.$homepageBackgroundColor;
   padding-top: 2em;
   text-align: center;
   font-weight: bold;
+  font-size: 1.3em;
 }
 
 .project-footer-card {

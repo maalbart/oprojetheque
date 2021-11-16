@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   background-color: vars.$homepageBackgroundColor;
-  padding: 4em 0;
+  padding: 4em 0 0 0;
   height: 85.1vh;
   font-family: vars.$font;
   font-weight: bold;
@@ -48,6 +48,12 @@ button.login-form-button {
   height: 40px;
   border-radius: 5px;
   border: none;
+  padding-bottom: 2em;
 }
 
+@media all and (max-width: 991px) {
 
+  input#field-email.field-input, input#field-password.field-input {
+    width: 280px;
+  }
+}

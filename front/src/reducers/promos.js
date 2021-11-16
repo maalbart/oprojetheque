@@ -1,4 +1,4 @@
-import { GET_ALL_PROMOS, SAVE_PROMOS, GET_ONE_PROMO, SAVE_ONE_PROMO, CHANGE_SEARCH } from 'src/actions/promos';
+import { GET_ALL_PROMOS, SAVE_PROMOS, GET_ONE_PROMO, SAVE_ONE_PROMO, CHANGE_SEARCH_PROMOS } from 'src/actions/promos';
 
 export const initialState = {
   list: [],
@@ -40,7 +40,7 @@ const promosReducer = (state = initialState, action = {}) => {
         studentsByOnePromo: action.promoData,
         loader: false,
       }
-    case CHANGE_SEARCH:
+    case CHANGE_SEARCH_PROMOS:
       return {
         ...state,
         [action.key]: action.value

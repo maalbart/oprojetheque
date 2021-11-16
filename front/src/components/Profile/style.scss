@@ -4,8 +4,77 @@
   background-color: vars.$homepageBackgroundColor;
   color: vars.$textColor;
   font-family: vars.$font;
+  padding: 4em 0 4em 0;
+}
+
+.profile-header{
   display: flex;
   flex-direction: column;
-  padding: 4em 0 4em 0;
+  justify-content: space-around;
+
+  &-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  &-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
+  max-width: 80vw;
+  }
+}
+
+.profile-body-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  &-img {
+    max-width: 360px;
+    align-self: center;
+  }
+}
+
+.profile-body-bio {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 2em;
+  }
+}
+
+.profile-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  padding-top: 2em;
+
+  &-projet, &-stack, &-social {
+  border: solid 2px color vars.$textColor;
+  padding: 2em;
+  width: 360px;
+  height: 320px;
+
+    &-logo { 
+      width: 75%;
+    }
+  }
+
+  &-projet:hover, &-stack:hover, &-social:hover {
+    background-color: vars.$textColor;
+    color: vars.$homepageBackgroundColor;
+  }
+}
+
+.profile-footer-title, .profile-footer-social-title {
+    font-weight: bold;
+    padding-bottom: 2em;
 }

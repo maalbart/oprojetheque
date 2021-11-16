@@ -6,16 +6,21 @@
   font-family: vars.$font;
   display: flex;
   flex-direction: column;
-  padding: 4em 0 4em 0;
+  padding: 1em 0 4em 0;
   align-items: center;
-  
+  &-name {
+    font-weight: bold;
+    font-size: 2em;
+    margin: .5em 0;
+  }
   &-img {
     max-width: 20%;
   }
 }
 
 .student-body {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   align-content: center;
   grid-template-columns: 4;
   grid-gap: 10px;
@@ -25,7 +30,11 @@
   padding-bottom: 4em;
   font-family: vars.$font;
   text-align: center;
-
+  &-promo-name, &-project-name{
+    font-size: 1.5em;
+    margin: .4em 0;
+  }
+  
   &-logo-promo {
     max-width: 70%;
   }
