@@ -30,6 +30,7 @@ const storage = new CloudinaryStorage({
   },
 });
 
+/* Package that allows us to manage incoming files in HTTP requests*/
 const upload = multer({ storage: storage });
 app.post("/", upload.single("picture"), async (req, res) => {
   return res.json({ picture: req.file.path });
@@ -99,14 +100,12 @@ app.listen(port, () => {
 app.post('/upload',
   multerMiddleware.single('mon-fichier'),
   (req, res) => {
-    // At this point, MulterMiddleware already uploaded the file to Cloudinary,
-    // The uploaded image's link is accessible in "req.file"
+    // at this point, MulterMiddleware already uploaded the file to Cloudinary, the uploaded image's link is accessible in "req.file"
     const fileURL = req.file.path;
 
-    console.log('Lien Cloudinary', fileURL)
+    // console.log('Lien Cloudinary', fileURL)
 
-    // Here, you can save this link in your database.
-
+    // save this link in your database
     res.json({ path: fileURL });
   }
 );

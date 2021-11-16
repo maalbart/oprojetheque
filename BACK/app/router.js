@@ -30,7 +30,7 @@ router.get("/", mainController.homePage);
 /***************************************/
 /**
  * Contact page of the website
- * @route POST /
+ * @route POST /contact
  * @group contactPage 
  * @returns {object} 200 - Contact admin
  * @returns {Error}  default - An error has occurred
